@@ -1,31 +1,40 @@
 import { GridTileImage } from '@/components/grid/tile';
-import type { Product } from '@/lib/type';
-import Link from 'next/link';
-import { getCollectionProducts } from '@/lib/server/index';
+import type { Offre } from '@/lib/type/product';
+import { GetOffre } from '@/lib/server/get';
 
-function ThreeItemGridItem({item,size,priority}: {item: Product|any;size: 'full' | 'half';priority?: boolean}) {
+import Link from 'next/link';
+
+function ThreeItemGridItem({
+  item,
+  size,
+  priority
+}: {
+  item: Offre;
+  size: 'full' | 'half';
+  priority?: boolean;
+}) {
   return (
     <div
       className={size === 'full' ? 'md:col-span-4 md:row-span-2' : 'md:col-span-2 md:row-span-1'}
     >
       <Link
         className="relative block aspect-square h-full w-full"
-        href={`/product/${item.slug}`}
+        href={`/product/${item.path}`}
         prefetch={true}
       >
         <GridTileImage
-          src={"/assets/baby-cap-black.png"}
+          src={item.featuredImage.url}
           fill
           sizes={
             size === 'full' ? '(min-width: 768px) 66vw, 100vw' : '(min-width: 768px) 33vw, 100vw'
           }
           priority={priority}
-          alt={"item.title"}
+          alt={item.name}
           label={{
             position: size === 'full' ? 'center' : 'bottom',
-            title: "easy",
-            amount: "125",
-            currencyCode: "tnd"
+            title: item.name as string,
+            amount: item.priceRange,
+            currencyCode:"tnd"
           }}
         />
       </Link>
@@ -36,12 +45,12 @@ function ThreeItemGridItem({item,size,priority}: {item: Product|any;size: 'full'
 export async function ThreeItemGrid() {
   // Collections that start with `hidden-*` are hidden from the search page.
   //todo make this with real data 
-  const homepageItems = await getCollectionProducts({
-    collection: 'hidden-homepage-featured-items'
-  })
+  const homepage = await GetOffre();
+  const homepageItems=homepage?.body
+  if (!homepageItems || !homepageItems || !homepageItems) return null;
 
-  if (!homepageItems[0] || !homepageItems[1] || !homepageItems[2]) return null;
-  const [firstProduct, secondProduct, thirdProduct] = homepageItems;  
+  const [firstProduct, secondProduct, thirdProduct] = homepageItems;
+
   return (
     <section className="mx-auto grid max-w-screen-2xl gap-4 px-4 pb-4 md:grid-cols-6 md:grid-rows-2 lg:max-h-[calc(100vh-200px)]">
       <ThreeItemGridItem size="full" item={firstProduct} priority={true} />

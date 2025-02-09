@@ -1,5 +1,5 @@
 
-//import CartModal from '@/components/cart/modal';
+import CartModal from '@/components/cart/modal';
 import LogoSquare from '@/components/logo-square';
 
 import Link from 'next/link';
@@ -17,12 +17,12 @@ export async function Navbar() {
  
   const menu = [
     {
-    title:"sandwitch",
-    path:"/"
+    title:"Subscriptions",
+    path:"/subscriptions"
   },
   {
-    title:"pizza",
-    path:"/p"
+    title:"carte prépaye",
+    path:"/carte"
   },
 ]
 
@@ -67,7 +67,7 @@ export async function Navbar() {
           </Suspense>
         </div>
         <div className="flex justify-end md:w-1/3">
-          {/* <CartModal /> */}
+          <CartModal />
         </div>
       </div>
     </nav>

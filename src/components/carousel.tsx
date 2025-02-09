@@ -1,45 +1,11 @@
 import Link from 'next/link';
 import { GridTileImage } from './grid/tile';
-
+import { GetCarsoul } from '@/lib/server/get';
+import type {Carsoul}from "@/lib/type/carsoul"
 export async function Carousel() {
   // Collections that start with `hidden-*` are hidden from the search page.
-  const products = [
-    {
-      id: "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzU0NDczMjUwMjQ0MjA=",
-      name: "New Short Sleeve T-Shirt",
-      vendor: "Next.js",
-      path: "/new-short-sleeve-t-shirt",
-      img:"/assets/cup-white.png",
-      slug: "new-short-sleeve-t-shirt",
-      price: { value: "25" , currencyCode: "USD" },
-      description: "Show off your love for Next.js and Vercel with this unique, limited edition t-shirt. This design is part of a limited run, numbered drop at the June 2021 Next.js Conf. It features a unique, handcrafted triangle design. Get it while supplies last - only 200 of these shirts will be made! All proceeds will be donated to charity.",
-     descriptionHtml: "<p><span>Show off your love for Next.js and Vercel with this unique,&nbsp;</span><strong>limited edition</strong><span>&nbsp;t-shirt. This design is part of a limited run, numbered drop at the June 2021 Next.js Conf. It features a unique, handcrafted triangle design. Get it while supplies last - only 200 of these shirts will be made!&nbsp;</span><strong>All proceeds will be donated to charity.</strong></p>",
-   
-    },
-    {
-      id: "Z2lkOi8vc2hvcGlmeS9Qcm9ksdWN0LzU0NDczMjUwMjQ0MjA=",
-      name: "Lightweight Jacket",
-      vendor: "Next.js",
-      path: "/lightweight-jacket",
-      slug: "lightweight-jacket",
-      img:"/assets/shoes-1.png",
-      price: { value: "249.99", currencyCode: "USD" },
-      description: "Show off your love for Next.js and Vercel with this unique, limited edition t-shirt. This design is part of a limited run, numbered drop at the June 2021 Next.js Conf. It features a unique, handcrafted triangle design. Get it while supplies last - only 200 of these shirts will be made! All proceeds will be donated to charity.",
-     descriptionHtml: "<p><span>Show off your love for Next.js and Vercel with this unique,&nbsp;</span><strong>limited edition</strong><span>&nbsp;t-shirt. This design is part of a limited run, numbered drop at the June 2021 Next.js Conf. It features a unique, handcrafted triangle design. Get it while supplies last – only 200 of these shirts will be made!&nbsp;</span><strong>All proceeds will be donated to charity.</strong></p>",
-    },
-    {
-      id: "Z2lkOis8vc2hvcGlmsddeS9Qcm9kdWN0LzU0NDczMjUwMjQ0MjA=",
-      name: "Shirt",
-      vendor: "Next.js",
-      path: "/shirt",
-      slug: "shirt",
-      img:"/assets/baby-cap-white.png",
-      price: { value: "25", currencyCode: "USD" },
-      description: "Show off your love for Next.js and Vercel with this unique, limited edition t-shirt. This design is part of a limited run, numbered drop at the June 2021 Next.js Conf. It features a unique, handcrafted triangle design. Get it while supplies last - only 200 of these shirts will be made! All proceeds will be donated to charity.",
-     descriptionHtml: "<p><span>Show off your love for Next.js and Vercel with this unique,&nbsp;</span><strong>limited edition</strong><span>&nbsp;t-shirt. This design is part of a limited run, numbered drop at the June 2021 Next.js Conf. It features a unique, handcrafted triangle design. Get it while supplies last – only 200 of these shirts will be made!&nbsp;</span><strong>All proceeds will be donated to charity.</strong></p>",
-    }
-  ]
-
+  const product =await GetCarsoul();
+  const products :Carsoul =product?.body
   if (!products?.length) return null;
 
   // Purposefully duplicating products to make the carousel loop and not run out of products on wide screens.
@@ -55,11 +21,11 @@ export async function Carousel() {
           >
             <Link href={`${product.path}`} className="relative h-full w-full">
               <GridTileImage
-                alt={product.name}
+                alt={product.title}
                 label={{
-                  title: product.name,
-                  amount: product.price.value,
-                  currencyCode: product.price.currencyCode
+                  title: product.title,
+                  amount: product.price,
+                  currencyCode:'tnd'
                 }}
                 src={product.img}
                 fill

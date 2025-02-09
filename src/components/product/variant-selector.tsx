@@ -1,8 +1,8 @@
 'use client';
 
 import clsx from 'clsx';
-import { useProduct, useUpdateURL } from '@/src/components/product/product-context';
-import { ProductOption, ProductVariant } from '@/src/lib/types';
+import { useProduct, useUpdateURL } from '@/components/product/product-context';
+import { ProductOption, ProductVariant } from '@/lib/types';
 
 type Combination = {
   id: string;

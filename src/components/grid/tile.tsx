@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import Image from 'next/image';
-import Label from '@/components/label';
-
+import Label from '../label';
+import {ComponentProps} from "react"
 export function GridTileImage({
   isInteractive = true,
   active,
@@ -16,7 +16,7 @@ export function GridTileImage({
     currencyCode: string;
     position?: 'bottom' | 'center';
   };
-} & React.ComponentProps<typeof Image>) {
+} & ComponentProps<typeof Image>) {
   return (
     <div
       className={clsx(
