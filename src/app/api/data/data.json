@@ -1,0 +1,97 @@
+{
+    "product":[ 
+        {
+      "id": "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzU0NDczMjUwMjQ0MjA=",
+      "handle": "new-short-sleeve-t-shirt",
+      "availableForSale": true,
+      "title": "New Short Sleeve T-Shirt",
+      "description": "Show off your love for Next.js and Vercel with this unique, limited edition t-shirt. This design is part of a limited run, numbered drop at the June 2021 Next.js Conf. It features a unique, handcrafted triangle design. Get it while supplies last - only 200 of these shirts will be made! All proceeds will be donated to charity.",
+      "descriptionHtml": "<p><span>Show off your love for Next.js and Vercel with this unique,&nbsp;</span><strong>limited edition</strong><span>&nbsp;t-shirt. This design is part of a limited run, numbered drop at the June 2021 Next.js Conf. It features a unique, handcrafted triangle design. Get it while supplies last – only 200 of these shirts will be made!&nbsp;</span><strong>All proceeds will be donated to charity.</strong></p>",
+      "options": [
+        {
+          "id": "ProductOption/123",
+          "name": "Color",
+          "values": ["Red", "Blue", "Green"]
+        },
+        {
+          "id": "ProductOption/456",
+          "name": "Size",
+          "values": ["S", "M", "L"]
+        }
+      ],
+      "priceRange": {
+        "maxVariantPrice": "49.99",
+        "minVariantPrice":"39.99"
+      },
+      "variants": [
+        {
+          "id": "ProductVariant/123456789",
+          "title": "Red / S",
+          "availableForSale": true,
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Red"
+            },
+            {
+              "name": "Size",
+              "value": "S"
+            }
+          ],
+          "price":"39.99"
+        },
+        {
+            "id": "ProductVariant/999999999989",
+            "title": "Red / S",
+            "availableForSale": true,
+            "selectedOptions": [
+              {
+                "name": "Color",
+                "value": "Green"
+              },
+              {
+                "name": "Size",
+                "value": "L"
+              }
+            ],
+            "price":"39.99"
+          }
+      ],
+      "featuredImage": {
+        "url": "/assets/t-shirt-0.png",
+        "altText": "Example Feature image",
+        "width": 1000,
+        "height": 1000
+      },
+      "images": [
+        {
+          "url": "/assets/lightweight-jacket-0.png",
+          "altText": "Example image 1",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "url": "/assets/lightweight-jacket-1.png",
+          "altText": "Example image 2",
+          "width": 800,
+          "height": 600
+        }
+        ,
+        {
+          "url": "/assets/lightweight-jacket-2.png",
+          "altText": "Example image 2",
+          "width": 800,
+          "height": 600
+        }
+      ],
+      "seo": {
+        "title": "Example Product SEO Title",
+        "description": "Example product SEO description."
+      },
+      "tags": ["example-tag-1", "example-tag-2"],
+      "updatedAt": "2023-09-01T12:00:00Z"
+    }
+ 
+]
+    
+  }
