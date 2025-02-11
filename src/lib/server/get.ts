@@ -10,8 +10,7 @@ export async function ServerFetch(endpoint:string) {
   
       const body = await result.json();
       return {
-        status: result.status,
-        body:body
+        body:body,
       };
     } catch (e) {
             console.log(e)
@@ -23,5 +22,5 @@ export async function GetOffre(){
 }
 export async function GetCarsoul(){
   const res = await ServerFetch("carsoul");
-  return res
+  return res?.body
 }

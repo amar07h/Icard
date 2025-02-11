@@ -35,6 +35,9 @@ importers:
       sonner:
         specifier: ^1.7.0
         version: 1.7.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      ui:
+        specifier: 'link:'
+        version: 'link:'
     devDependencies:
       '@tailwindcss/container-queries':
         specifier: ^0.1.1

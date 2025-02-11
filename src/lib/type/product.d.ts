@@ -45,6 +45,6 @@ export type SEO = {
     id:string,
     name:string,
     path:string,
-    priceRange:string,
     featuredImage:Image
   }
+  export type CarsoulType = Offre[]

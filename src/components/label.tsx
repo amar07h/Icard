@@ -5,8 +5,6 @@ const Label = ({
   position = 'bottom'
 }: {
   title: string;
-  amount: string;
-  currencyCode: string;
   position?: 'bottom' | 'center';
 }) => {
   return (
@@ -16,7 +14,7 @@ const Label = ({
       })}
     >
       <div className="flex items-center rounded-full border bg-white/70 p-1 text-xs font-semibold text-black backdrop-blur-md dark:border-neutral-800 dark:bg-black/70 dark:text-white">
-        <h3 className="mr-4 line-clamp-2 flex-grow pl-2 leading-none tracking-tight">{title}</h3>
+        <h3 className="mr-4 line-clamp-2 flex-grow pl-2 leading-none tracking-tight capitalize">{title}</h3>
 
       </div>
     </div>

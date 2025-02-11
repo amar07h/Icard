@@ -5,7 +5,6 @@
   "id":"4568786",
   "name":"offre-Gaming",
   "path":"/Gaming",
-  "priceRange":"1.00",
   "featuredImage":{
     "url": "/assets/offre/offre1.png",
     "altText": "Gaming-offre",
@@ -17,7 +16,6 @@
   "id":"4568vcxbreter786",
   "name":"offre-Streming",
   "path":"/streaming",
-  "priceRange":"7.00",
 
   "featuredImage":{
     "url": "/assets/offre/streaming.png",
@@ -30,7 +28,6 @@
   "id":"456dsqdqsvcx8786",
   "name":"Card-virtule",
   "path":"/card",
-  "priceRange":"15.00",
   "featuredImage":{
     "url": "/assets/offre/card.png",
     "altText": "Card-offre",

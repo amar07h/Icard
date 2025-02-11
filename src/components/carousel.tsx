@@ -1,18 +1,22 @@
 import Link from 'next/link';
+import {FC} from "react"
 import { GridTileImage } from './grid/tile';
-import { GetCarsoul } from '@/lib/server/get';
-import type {Carsoul}from "@/lib/type/carsoul"
-export async function Carousel() {
-  // Collections that start with `hidden-*` are hidden from the search page.
-  const product =await GetCarsoul();
-  const products :Carsoul =product?.body
+import type {CarsoulType}from "@/lib/type/product"
+interface ChildProps {
+  product: CarsoulType;
+  ComponentName:string
+}
+export const Carousel: FC<ChildProps> = ({ product,ComponentName }) => {
+  const products :CarsoulType =product
   if (!products?.length) return null;
-
   // Purposefully duplicating products to make the carousel loop and not run out of products on wide screens.
   const carouselProducts = [...products, ...products, ...products];
 
   return (
     <div className="w-full overflow-x-auto pb-6 pt-1">
+ <h3 className='ml-6 mb-3 text-3xl capitalize'>{ComponentName}</h3>
+         
+
       <ul className="flex animate-carousel gap-4">
         {carouselProducts.map((product) => (
           <li
@@ -21,13 +25,11 @@ export async function Carousel() {
           >
             <Link href={`${product.path}`} className="relative h-full w-full">
               <GridTileImage
-                alt={product.title}
+                alt={product.name}
                 label={{
-                  title: product.title,
-                  amount: product.price,
-                  currencyCode:'tnd'
+                  title: product.name,
                 }}
-                src={product.img}
+                src={product.featuredImage.url}
                 fill
                 sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
               />
