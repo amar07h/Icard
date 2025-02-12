@@ -15,12 +15,13 @@ export default async function Home() {
   const product =await GetCarsoul();
   const products :CarsoulType =product.result
   const products2 :CarsoulType =product.result2
-  console.log(products) 
   return (
     <>
           <ThreeItemGrid />
-           <Carousel product={products} ComponentName="Game"/>
-           <Carousel product={products2} ComponentName="fourja"/>
+           <Carousel product={products}  ComponentName="gameo" ComponentPath="/game" />
+           <ThreeItemGrid />
+           <Carousel product={products2} ComponentName="trend" ComponentPath="/card"/>
+
           <Footer />
     </>
   );

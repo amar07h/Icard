@@ -2,11 +2,11 @@
     "product":[ 
         {
       "id": "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzU0NDczMjUwMjQ0MjA=",
-      "handle": "new-short-sleeve-t-shirt",
+      "handle": "free-fire",
       "availableForSale": true,
-      "title": "New Short Sleeve T-Shirt",
-      "description": "Show off your love for Next.js and Vercel with this unique, limited edition t-shirt. This design is part of a limited run, numbered drop at the June 2021 Next.js Conf. It features a unique, handcrafted triangle design. Get it while supplies last - only 200 of these shirts will be made! All proceeds will be donated to charity.",
-      "descriptionHtml": "<p><span>Show off your love for Next.js and Vercel with this unique,&nbsp;</span><strong>limited edition</strong><span>&nbsp;t-shirt. This design is part of a limited run, numbered drop at the June 2021 Next.js Conf. It features a unique, handcrafted triangle design. Get it while supplies last – only 200 of these shirts will be made!&nbsp;</span><strong>All proceeds will be donated to charity.</strong></p>",
+      "title": "Free Fire Recharge By Id",
+      "description": "recharge votre compte free fire by id ",
+      "descriptionHtml": "<p><span>Recharge votre compte free fire by id ,&nbsp;</span><strong>service Instant</strong><span>&nbsp;Recharge diamond , numbered drop at the June 2021 Next.js Conf. It features a unique, handcrafted triangle design. Get it while supplies last – only 200 of these shirts will be made!&nbsp;</span><strong>All proceeds will be donated to charity.</strong></p>",
       "options": [
         {
           "id": "ProductOption/123",
@@ -58,35 +58,35 @@
           }
       ],
       "featuredImage": {
-        "url": "/assets/t-shirt-0.png",
-        "altText": "Example Feature image",
+        "url": "/assets/carsoul/freefire.jpg",
+        "altText": "recharge dimaond free fire",
         "width": 1000,
         "height": 1000
       },
       "images": [
         {
-          "url": "/assets/lightweight-jacket-0.png",
+          "url": "/assets/carsoul/freefire.jpg",
           "altText": "Example image 1",
           "width": 800,
           "height": 600
         },
         {
-          "url": "/assets/lightweight-jacket-1.png",
+          "url": "/assets/carsoul/freefire.jpg",
           "altText": "Example image 2",
           "width": 800,
           "height": 600
         }
         ,
         {
-          "url": "/assets/lightweight-jacket-2.png",
+          "url": "/assets/carsoul/freefire.jpg",
           "altText": "Example image 2",
           "width": 800,
           "height": 600
         }
       ],
       "seo": {
-        "title": "Example Product SEO Title",
-        "description": "Example product SEO description."
+        "title": "free Product SEO Title",
+        "description": "free fire product SEO description."
       },
       "tags": ["example-tag-1", "example-tag-2"],
       "updatedAt": "2023-09-01T12:00:00Z"

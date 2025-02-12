@@ -4,9 +4,10 @@ import { GridTileImage } from './grid/tile';
 import type {CarsoulType}from "@/lib/type/product"
 interface ChildProps {
   product: CarsoulType;
-  ComponentName:string
+  ComponentName:string;
+  ComponentPath:string;
 }
-export const Carousel: FC<ChildProps> = ({ product,ComponentName }) => {
+export const Carousel: FC<ChildProps> = ({ product,ComponentName,ComponentPath }) => {
   const products :CarsoulType =product
   if (!products?.length) return null;
   // Purposefully duplicating products to make the carousel loop and not run out of products on wide screens.
@@ -14,7 +15,12 @@ export const Carousel: FC<ChildProps> = ({ product,ComponentName }) => {
 
   return (
     <div className="w-full overflow-x-auto pb-6 pt-1">
- <h3 className='ml-6 mb-3 text-3xl capitalize'>{ComponentName}</h3>
+      <div className='flex justify-between text-3xl capitalize mb-3  mt-2'>
+      <h3 className='ml-6'>{ComponentName}</h3>
+      <Link href={`${ComponentPath}`}>
+<h3 className='mr-6 cursor-pointer border-b-2 hover:text-gray-400'>plus</h3>
+</Link>
+      </div>
          
 
       <ul className="flex animate-carousel gap-4">
@@ -23,7 +29,7 @@ export const Carousel: FC<ChildProps> = ({ product,ComponentName }) => {
             key={Math.random()}
             className="relative aspect-square h-[30vh] max-h-[275px] w-2/3 max-w-[475px] flex-none md:w-1/3"
           >
-            <Link href={`${product.path}`} className="relative h-full w-full">
+            <Link href={`/product/${product.path}`} className="relative h-full w-full">
               <GridTileImage
                 alt={product.name}
                 label={{

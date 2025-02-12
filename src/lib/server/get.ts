@@ -24,3 +24,7 @@ export async function GetCarsoul(){
   const res = await ServerFetch("carsoul");
   return res?.body
 }
+export async function GetSinglData($parms:string){
+  const res = await ServerFetch(`data?search=${$parms}`);
+  return res?.body
+}

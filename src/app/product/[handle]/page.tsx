@@ -5,25 +5,24 @@ import Footer from '@/components/layouts/footer';
 import { Gallery } from '@/components/product/gallery';
 import { ProductProvider } from '@/components/product/product-context';
 import { ProductDescription } from '@/components/product/product-description';
-//import { getProduct, getProductRecommendations } from 'lib/shopify';
-import products from '@/data.json';
+import {GetSinglData } from '@/lib/server/get';
 
-//import { Image } from '@/lib/types';
+import { Image } from '@/lib/type';
 import Link from 'next/link';
 import { Suspense } from 'react';
 
-/* export async function generateMetadata(props: {
+ export async function generateMetadata(props: {
   params: Promise<{ handle: string }>;
 }): Promise<Metadata> {
   const params = await props.params;
-  //const product = await getProduct(params.handle);
-  async function product(id:string) {
+  const product = await GetSinglData(params.handle);
+/*   async function product(id:string) {
     return products.find((product) => product.id === id);
-  }
+  } */
   if (!product) return notFound();
 
   const { url, width, height, altText: alt } = product.title || {};
-  const indexable = !product.tags.includes(HIDDEN_PRODUCT_TAG);
+  const indexable = !product.tags.includes('z');
 
   return {
     title: product.seo.title || product.title,
@@ -49,89 +48,11 @@ import { Suspense } from 'react';
         }
       : null
   };
-} */
+} 
 
 export default async function ProductPage(props: { params: Promise<{ handle: string }> }) {
   const params = await props.params;
-  //const product = //await getProduct(params.handle);  {
-    const products = [{
-     "id": "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzU0NDczMjUwMjQ0MjA=",
-    "title": "New Short Sleeve T-Shirt",
-    "vendor": "Next.js",
-    "handle": "new-short-sleeve-t-shirt",
-    "price": { "value": 25, "currencyCode": "tnd" },
-"featuredImage":{
-        "url": "/assets/t-shirt-circles-black.png",
-        "altText": "t-shirt-circles-blue",
-        "width": 1000,
-        "height": 1000
-      },
-     "availableForSale":true,
-    "priceRange":{
-     "minVariantPrice":{"currencyCode":"TND","amount":14},
-     "maxVariantPrice":{"amount":200}
-    },
-    "description": "Show off your love for Next.js and Vercel with this unique, limited edition t-shirt. This design is part of a limited run, numbered drop at the June 2021 Next.js Conf. It features a unique, handcrafted triangle design. Get it while supplies last - only 200 of these shirts will be made! All proceeds will be donated to charity.",
-    "descriptionHtml": "<p><span>Show off your love for Next.js and Vercel with this unique,&nbsp;</span><strong>limited edition</strong><span>&nbsp;t-shirt. This design is part of a limited run, numbered drop at the June 2021 Next.js Conf. It features a unique, handcrafted triangle design. Get it while supplies last - only 200 of these shirts will be made!&nbsp;</span><strong>All proceeds will be donated to charity.</strong></p>",
- "images": [
-        {
-          "url": "/assets/t-shirt-circles-black.png",
-          "altText": "Shirt",
-          "width": 1000,
-          "height": 1000
-        },
-        {
-          "url": "/assets/t-shirt-circles-white.png",
-          "altText": "Shirt",
-          "width": 1000,
-          "height": 1000
-        },
-        {
-          "url": "/assets/t-shirt-circles-blue.png",
-          "altText": "Shirt",
-          "width": 1000,
-          "height": 1000
-        }
-      ],
-  
-      "options": [
-        {
-          "id": "option-color",
-          "name": "Color",
-          "values": ["Green","red",'black']
-        },
-        {
-          "id": "option-size",
-          "name": "Size",
-          
-          "values":["L","M","XL" ]  
-          
-        }
-      ],
-      "variants": [
-        {
-          "id": "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzU0NDczMjUwMjQ0MjAss=",
-          "title": "New Short Sleeve T-Shirt",
-          "price":{"currencyCode":"TND","amount":500},
-          "availableForSale":true,
-          "selectedOptions": [
-            {"name": "Color", "value": "red", },
-            { "name": "Size", "value": "L", }
-      ],
-        },
-        {
-          "id": "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzU0NDczMjUwMjQ0MjAss=",
-          "title": "New Short Sleeve T-Shirt",
-          "price":{"currencyCode":"TND","amount":500},
-          "availableForSale":true,
-          "selectedOptions": [
-            {"name": "Color", "value": "Green", },
-            { "name": "Size", "value": "XL", }
-      ],
-        }
-      ],
-  }]
-  const product = products.find((product) => product.handle === params.handle)
+  const product = await GetSinglData(params.handle);
   if (!product) return notFound();
 
   const productJsonLd = {
@@ -145,9 +66,8 @@ export default async function ProductPage(props: { params: Promise<{ handle: str
       availability: product.availableForSale
         ? 'https://schema.org/InStock'
         : 'https://schema.org/OutOfStock',
-      priceCurrency: product.priceRange.minVariantPrice.currencyCode||"tnd",
-      highPrice: product.priceRange.maxVariantPrice.amount||"200",
-      lowPrice: product.priceRange.minVariantPrice.amount||"100"
+      highPrice: product.priceRange.maxVariantPrice||"200",
+      lowPrice: product.priceRange.minVariantPrice||"100"
     }
   };
 
@@ -167,12 +87,12 @@ export default async function ProductPage(props: { params: Promise<{ handle: str
                 <div className="relative aspect-square h-full max-h-[550px] w-full overflow-hidden" />
               }
             >
-              <Gallery
+               <Gallery
                 images={product.images.slice(0, 5).map((image: Image) => ({
                   src: image.url,
                   altText: image.altText
                 }))}
-              />
+              /> 
             </Suspense>
           </div>
 
@@ -182,8 +102,8 @@ export default async function ProductPage(props: { params: Promise<{ handle: str
             </Suspense>
           </div>
         </div>
-       <RelatedProducts id={product.id} />
-       </div>
+{/*        <RelatedProducts id={product.id} />
+ */}       </div>
       <Footer />
     </ProductProvider>
   );
@@ -284,8 +204,8 @@ export default async function ProductPage(props: { params: Promise<{ handle: str
                 alt={product.title}
                 label={{
                   title: product.title,
-                  amount: product.priceRange.maxVariantPrice.amount,
-                  currencyCode: product.priceRange.minVariantPrice.currencyCode
+             /*      amount: product.priceRange.maxVariantPrice,
+                  currencyCode: product.priceRange.minVariantPrice.currencyCode */
                 }}
                 src={product.featuredImage}
                 fill
