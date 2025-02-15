@@ -19,7 +19,6 @@ export default async function Home() {
     <>
           <ThreeItemGrid />
            <Carousel product={products}  ComponentName="gameo" ComponentPath="/game" />
-           <ThreeItemGrid />
            <Carousel product={products2} ComponentName="trend" ComponentPath="/card"/>
 
           <Footer />

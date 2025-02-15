@@ -7,7 +7,7 @@ import { ProductProvider } from '@/components/product/product-context';
 import { ProductDescription } from '@/components/product/product-description';
 import {GetSinglData } from '@/lib/server/get';
 
-import { Image } from '@/lib/type';
+import { Image,Product } from '@/lib/type';
 import Link from 'next/link';
 import { Suspense } from 'react';
 
@@ -52,7 +52,7 @@ import { Suspense } from 'react';
 
 export default async function ProductPage(props: { params: Promise<{ handle: string }> }) {
   const params = await props.params;
-  const product = await GetSinglData(params.handle);
+  const product:Product = await GetSinglData(params.handle);
   if (!product) return notFound();
 
   const productJsonLd = {
@@ -66,8 +66,8 @@ export default async function ProductPage(props: { params: Promise<{ handle: str
       availability: product.availableForSale
         ? 'https://schema.org/InStock'
         : 'https://schema.org/OutOfStock',
-      highPrice: product.priceRange.maxVariantPrice||"200",
-      lowPrice: product.priceRange.minVariantPrice||"100"
+      highPrice: product.priceRange||"200",
+      lowPrice: product.priceRange||"100"
     }
   };
 

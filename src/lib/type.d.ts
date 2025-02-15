@@ -16,11 +16,8 @@ export type OwnProduct = {
     description: string;
     descriptionHtml: string;
     options: ProductOption[];
-    priceRange: {
-      maxVariantPrice: string;
-      minVariantPrice: string;
-    };
-    variants: Connection<ProductVariant>;
+    priceRange: string;
+    variants: ProductVariant;
     featuredImage: Image;
     images: Connection<Image>;
     seo: SEO;

@@ -3,7 +3,7 @@ import { PlusIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
 import { addItem } from '@/components/cart/actions';
 import { useProduct } from '@/components/product/product-context';
-import { Product, ProductVariant } from '@/lib/types';
+import { Product, ProductVariant } from '@/lib/type/product';
 import { useActionState } from 'react';
 import { useCart } from './cart-context';
 
@@ -73,8 +73,13 @@ export function AddToCart({ product }: { product: Product }) {
   return (
     <form
       action={async () => {
-        addCartItem(finalVariant, product);
-       actionWithVariant();
+        try {
+         addCartItem(finalVariant, product);
+          actionWithVariant();
+        } catch (error) {
+          console.log(error)
+        }
+       
       }}
     >
       <SubmitButton availableForSale={availableForSale} selectedVariantId={selectedVariantId} />

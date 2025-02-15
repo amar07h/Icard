@@ -1,6 +1,7 @@
 'use client';
 
-import type { Cart, CartItem, Product, ProductVariant } from '@/lib/types';
+import type { Product, ProductVariant } from '@/lib/type/product';
+import type { Cart, CartItem } from '@/lib/type/cart';
 import React, { createContext, use, useContext, useMemo, useOptimistic } from 'react';
 
 type UpdateType = 'plus' | 'minus' | 'delete';
@@ -49,15 +50,14 @@ function createOrUpdateCartItem(
   product: Product
 ): CartItem {
   const quantity = existingItem ? existingItem.quantity + 1 : 1;
-  const totalAmount = calculateItemCost(quantity, variant.price.amount);
-
+  const totalAmount = calculateItemCost(quantity, variant.price);
   return {
     id: existingItem?.id,
     quantity,
     cost: {
       totalAmount: {
         amount: totalAmount,
-        currencyCode: variant.price.currencyCode
+        currencyCode: "tnd"
       }
     },
     merchandise: {
@@ -82,8 +82,8 @@ function updateCartTotals(lines: CartItem[]): Pick<Cart, 'totalQuantity' | 'cost
   return {
     totalQuantity,
     cost: {
-      subtotalAmount: { amount: totalAmount.toString(), currencyCode },
-      totalAmount: { amount: totalAmount.toString(), currencyCode },
+      subtotalAmount:{ amount: totalAmount.toString(), currencyCode },
+      totalAmount:{ amount: totalAmount.toString(), currencyCode },
       totalTaxAmount: { amount: '0', currencyCode }
     }
   };
@@ -96,9 +96,9 @@ function createEmptyCart(): Cart {
     totalQuantity: 0,
     lines: [],
     cost: {
-      subtotalAmount: { amount: '0', currencyCode: 'dt'},
-      totalAmount: { amount: '0', currencyCode: 'dt'},
-      totalTaxAmount: { amount: '0', currencyCode: 'dt'}
+      subtotalAmount: { amount: '0', currencyCode: 'tnd'},
+      totalAmount: { amount: '0', currencyCode: 'tnd'},
+      totalTaxAmount: { amount: '0', currencyCode: 'tnd'}
     }
   };
 }
@@ -134,6 +134,8 @@ function cartReducer(state: Cart | undefined, action: CartAction): Cart {
     case 'ADD_ITEM': {
       const { variant, product } = action.payload;
       const existingItem = currentCart.lines.find((item) => item.merchandise.id === variant.id);
+      console.log(currentCart.lines)
+
       const updatedItem = createOrUpdateCartItem(existingItem, variant, product);
 
       const updatedLines = existingItem
@@ -158,12 +160,21 @@ export function CartProvider({
   const [optimisticCart, updateOptimisticCart] = useOptimistic(initialCart, cartReducer);
 
   const updateCartItem = (merchandiseId: string, updateType: UpdateType) => {
+    console.log("her from cart context")
+
     updateOptimisticCart({ type: 'UPDATE_ITEM', payload: { merchandiseId, updateType } });
   };
 
   const addCartItem = (variant: ProductVariant, product: Product) => 
     {
-    updateOptimisticCart({ type: 'ADD_ITEM', payload: { variant, product } });
+try {
+  console.log("runn")
+
+ updateOptimisticCart({ type: 'ADD_ITEM', payload: { variant, product } });
+
+} catch (error) {
+  console.log(error)
+}
   };
 
   const value = useMemo(

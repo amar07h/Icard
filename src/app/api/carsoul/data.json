@@ -3,7 +3,7 @@
       {
         "id":"456dsqgdqsvcx8786",
         "name":"Mobile legend",
-        "path":"/mlbb",
+        "path":"/Mobile-legend",
         "featuredImage":{
           "url": "/assets/carsoul/mlbb.png",
           "altText": "recharge mobile legend",
@@ -24,19 +24,19 @@
        },
        {
         "id":"456dsqdqsvcsdfbv55dfddx8786",
-        "name":"call of duty",
-        "path":"/call-of-duty",
+        "name":"ea sports fc 25",
+        "path":"/EA-SPORTS-FC-25",
         "featuredImage":{
-          "url": "/assets/carsoul/callofduty.webp",
+          "url": "/assets/carsoul/fc25.jpg",
           "altText": "webp recharge dimaond call of duty",
           "width": 1000,
           "height": 1000
         }
        },
        {
-        "id":"4ghj56dsqdqsvcsdfbv55dfddx8786",
+        "id":"4ghj56dsqdqsvcfddx8786",
         "name":"Fortnite",
-        "path":"/fortnite",
+        "path":"/fortnite-v", 
         "featuredImage":{
           "url": "/assets/carsoul/fortnite.png",
           "altText": "webp recharge dimaond fortnite",
@@ -47,7 +47,7 @@
        {
         "id":"4ghj56dsqdqsvcsdfbv55dfddx8786",
         "name":"Pubg",
-        "path":"/pubg",
+        "path":"/pubg-mobile",
         "featuredImage":{
           "url": "/assets/carsoul/pubg.png",
           "altText": "webp recharge dimaond Pubg",
@@ -56,60 +56,28 @@
         }
        },
        {
-        "id":"4ghj56vcddsqdqsvcsdfbv55dfddx8786",
-        "name":"Steam",
-        "path":"/steam",
+        "id":"4ghj56dssdfbv55dfddx8786",
+        "name":"roblox",
+        "path":"/roblox-mobile",
         "featuredImage":{
-          "url": "/assets/carsoul/steam.png",
-          "altText": "webp recharge recharge un compte  steam",
+          "url": "/assets/carsoul/roblox.png",
+          "altText": "webp recharge dimaond roblox",
           "width": 1000,
           "height": 1000
         }
        },
        {
-        "id":"4ghj56vcddsqdqsvdfddx8786",
-        "name":"Xbox",
-        "path":"/xbox",
+        "id":"hj56dsvcsdfbv55dfddx8786",
+        "name":"apex legend",
+        "path":"/apex-legend",
         "featuredImage":{
-          "url": "/assets/carsoul/xbox.png",
-          "altText": "webp recharge recharge un compte  xbox",
-          "width": 1000,
-          "height": 1000
-        }
-       },
-       {
-        "id":"4ghj56vccddsqdqsvdfddx8786",
-        "name":"apple",
-        "path":"/apple",
-        "featuredImage":{
-          "url": "/assets/carsoul/apple.png",
-          "altText": "webp recharge recharge un compte  apple",
-          "width": 1000,
-          "height": 1000
-        }
-       },
-       {
-        "id":"4ghjfd56vcddsqdqsvcsdfbv55dfddx8786",
-        "name":"Play Sation",
-        "path":"/play-station",
-        "featuredImage":{
-          "url": "/assets/carsoul/ps.png",
-          "altText": "webp recharge recharge un compte  play station",
-          "width": 1000,
-          "height": 1000
-        }
-       },
-       {
-        "id":"4ghj56vcd874dsqdqsvcsdfbv55dfddx8786",
-        "name":"google play",
-        "path":"/google-play",
-        "featuredImage":{
-          "url": "/assets/carsoul/googleplay.png",
-          "altText": "webp recharge recharge un compte  play store",
+          "url": "/assets/carsoul/apex.png",
+          "altText": "webp recharge coins apex legend",
           "width": 1000,
           "height": 1000
         }
        }
+  
 ]
     
   }

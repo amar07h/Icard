@@ -1,61 +1,134 @@
 {
-    "product":[ 
-        {
+  "product": [
+    {
       "id": "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzU0NDczMjUwMjQ0MjA=",
       "handle": "free-fire",
       "availableForSale": true,
-      "title": "Free Fire Recharge By Id",
+      "title": "Free Fire Recharge diamond",
       "description": "recharge votre compte free fire by id ",
-      "descriptionHtml": "<p><span>Recharge votre compte free fire by id ,&nbsp;</span><strong>service Instant</strong><span>&nbsp;Recharge diamond , numbered drop at the June 2021 Next.js Conf. It features a unique, handcrafted triangle design. Get it while supplies last – only 200 of these shirts will be made!&nbsp;</span><strong>All proceeds will be donated to charity.</strong></p>",
+      "descriptionHtml": "<h3>description</h3><h5>Vous connaissez quelqu'un qui aime jouer au jeu mobile Free Fire ? Étant donné que Free Fire est devenu le jeu mobile le plus téléchargé au monde en 2019, il est probable que ce soit votre cas. Si vous cherchez à offrir à cette personne un cadeau original pour une occasion spéciale, pensez à lui offrir une carte-cadeau Free Fire. fama possibilite touslk + 5% men order mta3k</h5>",
       "options": [
         {
           "id": "ProductOption/123",
-          "name": "Color",
-          "values": ["Red", "Blue", "Green"]
+          "name": "Server",
+          "values": [
+            "global",
+            "euro",
+            "usa",
+            "middle east"
+          ]
         },
         {
           "id": "ProductOption/456",
-          "name": "Size",
-          "values": ["S", "M", "L"]
+          "name": "Qte",
+          "values": [
+            "50",
+            "100",
+            "210",
+            "580",
+            "1188",
+            "2400"
+          ]
         }
       ],
-      "priceRange": {
-        "maxVariantPrice": "49.99",
-        "minVariantPrice":"39.99"
-      },
+      "priceRange":"2",
       "variants": [
         {
           "id": "ProductVariant/123456789",
-          "title": "Red / S",
+          "title": "50",
           "availableForSale": true,
           "selectedOptions": [
             {
-              "name": "Color",
-              "value": "Red"
+              "name": "Server",
+              "value": "global"
             },
             {
-              "name": "Size",
-              "value": "S"
+              "name": "Qte",
+              "value": "50"
             }
           ],
-          "price":"39.99"
+          "price": "2"
         },
         {
-            "id": "ProductVariant/999999999989",
-            "title": "Red / S",
-            "availableForSale": true,
-            "selectedOptions": [
-              {
-                "name": "Color",
-                "value": "Green"
-              },
-              {
-                "name": "Size",
-                "value": "L"
-              }
-            ],
-            "price":"39.99"
-          }
+          "id": "ProductVariant/999999999989",
+          "title": "100",
+          "availableForSale": true,
+         "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "global"
+            },
+            {
+              "name": "Qte",
+              "value": "100"
+            }
+          ],
+          "price": "4"
+        }, 
+        {
+          "id": "ProductVariant/102",
+          "title": "210",
+          "availableForSale": true,
+          "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "global"
+            },
+            {
+              "name": "Qte",
+              "value": "210"
+            }
+          ],
+          "price": "8"
+        },
+        {
+          "id": "ProductVariant/1xz2",
+          "title": "530",
+          "availableForSale": true,
+         "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "global"
+            },
+            {
+              "name": "Qte",
+              "value": "580"
+            }
+          ],
+          "price": "20"
+        },
+        {
+          "id": "ProductVariant/1xzd2",
+          "title": "1188",
+          "availableForSale": true,
+         "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "global"
+            },
+            {
+              "name": "Qte",
+              "value": "1188"
+            }
+          ],
+          "price": "40"
+        },
+        {
+          "id": "ProductVariant/1xzcv2",
+          "title": "2400",
+          "availableForSale": true,
+         "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "global"
+            },
+            {
+              "name": "Qte",
+              "value": "2400"
+            }
+          ],
+          "price": "80"
+        }
       ],
       "featuredImage": {
         "url": "/assets/carsoul/freefire.jpg",
@@ -69,29 +142,808 @@
           "altText": "Example image 1",
           "width": 800,
           "height": 600
+        }
+      ],
+      "seo": {
+        "title": "Free Fire Recharge diamond in tunisie",
+        "description": "recharge votre compte free fire by id "
+      },
+      "tags": [
+        "example-tag-1",
+        "example-tag-2"
+      ],
+      "updatedAt": "2023-09-01T12:00:00Z"
+    },
+    {
+      "id": "Z2lkOid45s",
+      "handle": "Mobile-legend",
+      "availableForSale": true,
+      "title": "Carte cadeau Mobile Legends Diamonds",
+      "description": "recharge diamond votre compte mobile legend  by id in tunis",
+      "descriptionHtml": "<h3>description</h3><h5>Devenez un véritable champion de Mobile Legends ! Achetez dès aujourd'hui une carte cadeau Mobile Legends . Faites équipe avec vos amis et amusez-vous bien !</h5>",
+      "options": [
+        {
+          "id": "ProductOption/123",
+          "name": "Server",
+          "values": [
+            "global",
+            "turkey",
+            "usa",
+            "middle east"
+          ]
         },
         {
-          "url": "/assets/carsoul/freefire.jpg",
-          "altText": "Example image 2",
-          "width": 800,
-          "height": 600
+          "id": "ProductOption/456",
+          "name": "Qte",
+          "values": [
+            "11",
+            "55",
+            "275",
+            "565",
+            "1155",
+            "1765",
+            "2975"
+          ]
         }
-        ,
+      ],
+      "priceRange":"2",
+      "variants": [
         {
-          "url": "/assets/carsoul/freefire.jpg",
-          "altText": "Example image 2",
+          "id": "ProductVariant/123456789",
+          "title": "11",
+          "availableForSale": true,
+          "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "global"
+            },
+            {
+              "name": "Qte",
+              "value": "11"
+            }
+          ],
+          "price": "1"
+        },
+        {
+          "id": "ProductVariant/999999999989",
+          "title": "55",
+          "availableForSale": true,
+         "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "global"
+            },
+            {
+              "name": "Qte",
+              "value": "55"
+            }
+          ],
+          "price": "4"
+        }, 
+        {
+          "id": "ProductVariant/102",
+          "title": "275",
+          "availableForSale": true,
+          "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "global"
+            },
+            {
+              "name": "Qte",
+              "value": "275"
+            }
+          ],
+          "price": "20"
+        },
+        {
+          "id": "ProductVariant/1xz2",
+          "title": "565",
+          "availableForSale": true,
+         "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "global"
+            },
+            {
+              "name": "Qte",
+              "value": "565"
+            }
+          ],
+          "price": "40"
+        },
+        {
+          "id": "ProductVariant/1xzd2",
+          "title": "1155",
+          "availableForSale": true,
+         "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "global"
+            },
+            {
+              "name": "Qte",
+              "value": "1155"
+            }
+          ],
+          "price": "40"
+        },
+        {
+          "id": "ProductVariant/1xzcv2",
+          "title": "1765",
+          "availableForSale": true,
+         "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "global"
+            },
+            {
+              "name": "Qte",
+              "value": "1765"
+            }
+          ],
+          "price": "120"
+        },
+        {
+          "id": "ProductVariant/1xzcv2",
+          "title": "2975",
+          "availableForSale": true,
+         "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "global"
+            },
+            {
+              "name": "Qte",
+              "value": "2975"
+            }
+          ],
+          "price": "200"
+        }
+      ],
+      "featuredImage": {
+        "url": "/assets/carsoul/mlbb.png",
+        "altText": "recharge dimaond mobile legend",
+        "width": 1000,
+        "height": 1000
+      },
+      "images": [
+        {
+          "url": "/assets/carsoul/mlbb.png",
+          "altText": "Example image 1",
           "width": 800,
           "height": 600
         }
       ],
       "seo": {
-        "title": "free Product SEO Title",
-        "description": "free fire product SEO description."
+        "title": "Carte cadeau Mobile Legends Diamonds in tunisie",
+        "description": "Carte cadeau Mobile Legends Diamonds by id tunis"
       },
-      "tags": ["example-tag-1", "example-tag-2"],
+      "tags": [
+        "example-tag-1",
+        "example-tag-2"
+      ],
+      "updatedAt": "2023-09-01T12:00:00Z"
+    },
+    {
+      "id": "Z2lkOidhgns",
+      "handle": "pubg-mobile",
+      "availableForSale": true,
+      "title": "Carte cadeau PUBG Mobile",
+      "description": "Acheter une carte cadeau PUBG Mobile tunis",
+      "descriptionHtml": "<h3>description</h3><h5>Vous connaissez quelqu'un qui aime jouer à PUBG sur son téléphone portable ? Une carte cadeau PUBG Mobile fera un excellent cadeau pour tout joueur de PUBG Mobile, quelle que soit l'occasion. En achetant une carte cadeau PUBG Mobile, vous offrez à votre destinataire la possibilité d'acheter des armes et d'autres objets dans la boutique du jeu.</h5>",
+      "options": [
+        {
+          "id": "ProductOption/123",
+          "name": "Server",
+          "values": [
+            "global",
+            "ksa",
+            "usa",
+            "Qatar"
+          ]
+        },
+        {
+          "id": "ProductOption/456",
+          "name": "Qte",
+          "values": [
+            "60",
+            "325",
+            "1800",
+            "3850",
+            "8100"
+          ]
+        }
+      ],
+      "priceRange":"2",
+      "variants": [
+        {
+          "id": "ProductVariant/123456789",
+          "title": "60",
+          "availableForSale": true,
+          "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "global"
+            },
+            {
+              "name": "Qte",
+              "value": "60"
+            }
+          ],
+          "price": "4"
+        },
+        {
+          "id": "ProductVariant/999999f999989",
+          "title": "325",
+          "availableForSale": true,
+         "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "global"
+            },
+            {
+              "name": "Qte",
+              "value": "325"
+            }
+          ],
+          "price": "20"
+        }, 
+        {
+          "id": "ProductVariant/102",
+          "title": "275",
+          "availableForSale": true,
+          "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "global"
+            },
+            {
+              "name": "Qte",
+              "value": "660"
+            }
+          ],
+          "price": "40"
+        },
+        {
+          "id": "ProductVariant/1xz2",
+          "title": "1800",
+          "availableForSale": true,
+         "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "global"
+            },
+            {
+              "name": "Qte",
+              "value": "1800"
+            }
+          ],
+          "price": "100"
+        },
+        {
+          "id": "ProductVariant/1xzd2",
+          "title": "1155",
+          "availableForSale": true,
+         "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "global"
+            },
+            {
+              "name": "Qte",
+              "value": "3850"
+            }
+          ],
+          "price": "200"
+        },
+        {
+          "id": "ProductVariant/1xzcv2",
+          "title": "8100",
+          "availableForSale": true,
+         "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "global"
+            },
+            {
+              "name": "Qte",
+              "value": "8100"
+            }
+          ],
+          "price": "400"
+        }
+      ],
+      "featuredImage": {
+        "url": "/assets/carsoul/pubg.png",
+        "altText": "recharge dimaond pubg mobile",
+        "width": 1000,
+        "height": 1000
+      },
+      "images": [
+        {
+          "url": "/assets/carsoul/pubg.png",
+          "altText": "Example image 1",
+          "width": 800,
+          "height": 600
+        }
+      ],
+      "seo": {
+        "title": "Carte cadeau PUBG Mobile UC in tunisie",
+        "description": "Carte cadeau PUBG Mobile UC by id tunis شحن جواهر"
+      },
+      "tags": [
+        "example-tag-1",
+        "example-tag-2"
+      ],
+      "updatedAt": "2023-09-01T12:00:00Z"
+    },
+    {
+      "id": "Z2lkgfOvids",
+      "handle": "fortnite-v",
+      "availableForSale": true,
+      "title": "Fortnite V-Bucks carte cadeau",
+      "description": "Acheter une carte cadeau Fortnite V-Bucks tunis",
+      "descriptionHtml": "<h3>description</h3><h5>Fortnite est l'un des jeux les plus populaires du moment. Les enfants comme les adultes apprécient Fortnite pour son gameplay incroyablement excitant - il s'agit de survivre dans une arène de combat contre d'autres joueurs habiles. Si vous connaissez quelqu'un qui aime Fortnite, offrez-lui une carte-cadeau Fortnite.</h5>",
+      "options": [
+        {
+          "id": "ProductOption/123",
+          "name": "Server",
+          "values": [
+            "global",
+            "ksa",
+            "usa",
+            "france"
+          ]
+        },
+        {
+          "id": "ProductOption/456",
+          "name": "Qte",
+          "values": [
+            "1000",
+            "2800",
+            "5000",
+            "13500"
+          ]
+        }
+      ],
+      "priceRange":"100",
+      "variants": [
+        {
+          "id": "ProductVariant/102",
+          "title": "1000",
+          "availableForSale": true,
+          "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "global"
+            },
+            {
+              "name": "Qte",
+              "value": "1000"
+            }
+          ],
+          "price": "49.5"
+        },
+       
+        {
+          "id": "ProductVariant/1xz2",
+          "title": "2800",
+          "availableForSale": true,
+         "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "global"
+            },
+            {
+              "name": "Qte",
+              "value": "2800"
+            }
+          ],
+          "price": "96"
+        },
+        {
+          "id": "ProductVariant/1xz2",
+          "title": "5000",
+          "availableForSale": true,
+         "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "global"
+            },
+            {
+              "name": "Qte",
+              "value": "5000"
+            }
+          ],
+          "price": "165"
+        },
+         {
+          "id": "ProductVariant/123456789",
+          "title": "13500",
+          "availableForSale": true,
+          "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "global"
+            },
+            {
+              "name": "Qte",
+              "value": "13500"
+            }
+          ],
+          "price": "380"
+        }
+      ],
+      "featuredImage": {
+        "url": "/assets/carsoul/fortnite.png",
+        "altText": "recharge dimaond fortnite",
+        "width": 1000,
+        "height": 1000
+      },
+      "images": [
+        {
+          "url": "/assets/carsoul/fortnite.png",
+          "altText": "Example image 1",
+          "width": 1000,
+          "height": 1000
+        }
+      ],
+      "seo": {
+        "title": "Carte cadeau fortnite UC in tunisie",
+        "description": "Carte cadeau fortnite UC by id tunis شحن جواهر"
+      },
+      "tags": [
+        "example-tag-1",
+        "example-tag-2"
+      ],
+      "updatedAt": "2023-09-01T12:00:00Z"
+    },
+    {
+      "id": "Z2bvvlkgfvOids",
+      "handle": "EA-SPORTS-FC-25",
+      "availableForSale": true,
+      "title": "EA SPORTS FC 25 Points",
+      "description": "Acheter une carte cadeau EA SPORTS FC 25 Points tunis",
+      "descriptionHtml": "<h3>description</h3><h5>Elevate your gaming experience with EA Sports FC 25 Ultimate Team Points, the currency you need to unlock a world of possibilities in the highly anticipated EA SPORTS FC 25. Whether you're aiming to build a dream team, open exciting packs, or dive into the thrilling new 5v5 Rush mode, these points are your gateway to enhancing your gameplay and strategy.</h5>",
+      "options": [
+        {
+          "id": "ProductOption/123",
+          "name": "platform",
+          "values": [
+            "xbox",
+            "pc",
+            "ps5",
+            "point pc"
+          ]
+        },
+        {
+          "id": "ProductOption/456",
+          "name": "Qte",
+          "values": [
+            "Standard",
+            "Ultimate",
+            "1050",
+            "2800"
+          ]
+        }
+      ],
+      "priceRange":"40",
+      "variants": [
+        {
+          "id": "ProductVariant/102",
+          "title": "Standard",
+          "availableForSale": true,
+          "selectedOptions": [
+            {
+              "name": "platform",
+              "value": "pc"
+            },
+            {
+              "name": "Qte",
+              "value": "Standard"
+            }
+          ],
+          "price": "116"
+        },
+       
+        {
+          "id": "ProductVariant/1xz2",
+          "title": "Ultimate",
+          "availableForSale": true,
+         "selectedOptions": [
+            {
+              "name": "platform",
+              "value": "pc"
+            },
+            {
+              "name": "Qte",
+              "value": "Ultimate"
+            }
+          ],
+          "price": "260"
+        },
+        {
+          "id": "ProductVariant/1xz2",
+          "title": "1050",
+          "availableForSale": true,
+         "selectedOptions": [
+            {
+              "name": "platform",
+              "value": "point pc"
+            },
+            {
+              "name": "Qte",
+              "value": "1050"
+            }
+          ],
+          "price": "36"
+        },
+         {
+          "id": "ProductVariant/123456789",
+          "title": "2800",
+          "availableForSale": true,
+          "selectedOptions": [
+            {
+              "name": "platform",
+              "value": "point pc"
+            },
+            {
+              "name": "Qte",
+              "value": "2800"
+            }
+          ],
+          "price": "88"
+        }
+      ],
+      "featuredImage": {
+        "url": "/assets/carsoul/fc25.jpg",
+        "altText": "recharge dimaond fc 25",
+        "width": 1000,
+        "height": 1000
+      },
+      "images": [
+        {
+          "url": "/assets/carsoul/fc25.jpg",
+          "altText": "Example image 1",
+          "width": 1000,
+          "height": 1000
+        }
+      ],
+      "seo": {
+        "title": "Carte cadeau fc25 UC in tunisie",
+        "description": "Carte cadeau fc25 tunis شحن جواهر"
+      },
+      "tags": [
+        "example-tag-1",
+        "example-tag-2"
+      ],
+      "updatedAt": "2023-09-01T12:00:00Z"
+    },
+    {
+      "id": "Z2lbvkgfOvids",
+      "handle": "roblox-mobile",
+      "availableForSale": true,
+      "title": "Roblox Card Clé carte cadeau",
+      "description": "Acheter une carte cadeau Roblox Robux tunis",
+      "descriptionHtml": "<h3>description</h3><h5>Tu t'es déjà demandé ce que c'était que de développer ton propre jeu vidéo ? Avec Roblox, vous avez une chance de réaliser votre rêve ! Achetez votre carte cadeau Roblox et profitez des jeux Roblox créés par une communauté mondiale de développeurs. </h5>",
+      "options": [
+        {
+          "id": "ProductOption/123",
+          "name": "Server",
+          "values": [
+            "global",
+            "ksa",
+            "usa",
+            "france"
+          ]
+        },
+        {
+          "id": "ProductOption/456",
+          "name": "Qte",
+          "values": [
+            "100",
+            "400",
+            "800",
+            "1000"
+          ]
+        }
+      ],
+      "priceRange":"100",
+      "variants": [
+        {
+          "id": "ProductVariant/102",
+          "title": "100",
+          "availableForSale": true,
+          "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "global"
+            },
+            {
+              "name": "Qte",
+              "value": "100"
+            }
+          ],
+          "price": "10.5"
+        },
+       
+        {
+          "id": "ProductVariant/1xz2",
+          "title": "400",
+          "availableForSale": true,
+         "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "global"
+            },
+            {
+              "name": "Qte",
+              "value": "400"
+            }
+          ],
+          "price": "34.6"
+        },
+        {
+          "id": "ProductVariant/1xz2",
+          "title": "800",
+          "availableForSale": true,
+         "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "global"
+            },
+            {
+              "name": "Qte",
+              "value": "800"
+            }
+          ],
+          "price": "36"
+        },
+         {
+          "id": "ProductVariant/123456789",
+          "title": "1000",
+          "availableForSale": true,
+          "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "global"
+            },
+            {
+              "name": "Qte",
+              "value": "1000"
+            }
+          ],
+          "price": "46"
+        }
+      ],
+      "featuredImage": {
+        "url": "/assets/carsoul/roblox.png",
+        "altText": "recharge dimaond fortnite",
+        "width": 1000,
+        "height": 1000
+      },
+      "images": [
+        {
+          "url": "/assets/carsoul/roblox.png",
+          "altText": "recharge dimaond roblox",
+          "width": 1000,
+          "height": 1000
+        }
+      ],
+      "seo": {
+        "title": "Carte cadeau roblox robux in tunisie",
+        "description": "Carte cadeau robux UC by id tunis شحن جواهر"
+      },
+      "tags": [
+        "example-tag-1",
+        "example-tag-2"
+      ],
+      "updatedAt": "2023-09-01T12:00:00Z"
+    },
+    {
+      "id": "Z2lbvkgfOvids",
+      "handle": "apex-legend",
+      "availableForSale": true,
+      "title": "Apex Legends Card coins carte cadeau",
+      "description": "Acheter une carte cadeau Apex Legends tunis",
+      "descriptionHtml": "<h3>description</h3><h5>Apex Legends coins XBOX est une société de jeux spécialisée dans la fourniture aux joueurs de la meilleure expérience de jeu possible. Que vous soyez un joueur chevronné ou que vous débutiez, nous offrons une large gamme de produits et de services conçus pour répondre à tous vos besoins. </h5>",
+      "options": [
+        {
+          "id": "ProductOption/123",
+          "name": "Server",
+          "values": [
+            "global",
+            "ksa",
+            "usa",
+            "france"
+          ]
+        },
+        {
+          "id": "ProductOption/456",
+          "name": "Qte",
+          "values": [
+            "1000",
+            "2150",
+            "4350"
+          ]
+        }
+      ],
+      "priceRange":"1000",
+      "variants": [
+        {
+          "id": "ProductVariant/102",
+          "title": "1000",
+          "availableForSale": true,
+          "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "global"
+            },
+            {
+              "name": "Qte",
+              "value": "1000"
+            }
+          ],
+          "price": "42"
+        },
+       
+        {
+          "id": "ProductVariant/1xz2",
+          "title": "2150",
+          "availableForSale": true,
+         "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "global"
+            },
+            {
+              "name": "Qte",
+              "value": "2150"
+            }
+          ],
+          "price": "86"
+        },
+        {
+          "id": "ProductVariant/1xz2",
+          "title": "4350",
+          "availableForSale": true,
+         "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "global"
+            },
+            {
+              "name": "Qte",
+              "value": "4350"
+            }
+          ],
+          "price": "160"
+        }
+      ],
+      "featuredImage": {
+        "url": "/assets/carsoul/apex.png",
+        "altText": "recharge dimaond apex legend",
+        "width": 1000,
+        "height": 1000
+      },
+      "images": [
+        {
+          "url": "/assets/carsoul/apex.png",
+          "altText": "recharge dimaond apex",
+          "width": 1000,
+          "height": 1000
+        }
+      ],
+      "seo": {
+        "title": "Carte cadeau apex legend coins in tunisie carte cadeau ",
+        "description": "Carte cadeau apex legend coins by id tunis card cadeau carte cadeau شحن جواهر"
+      },
+      "tags": [
+        "example-tag-1",
+        "example-tag-2"
+      ],
       "updatedAt": "2023-09-01T12:00:00Z"
     }
- 
-]
-    
-  }
+  ]
+}

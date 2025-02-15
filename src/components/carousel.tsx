@@ -11,7 +11,7 @@ export const Carousel: FC<ChildProps> = ({ product,ComponentName,ComponentPath }
   const products :CarsoulType =product
   if (!products?.length) return null;
   // Purposefully duplicating products to make the carousel loop and not run out of products on wide screens.
-  const carouselProducts = [...products, ...products, ...products];
+  const carouselProducts = [...products, ...products];
 
   return (
     <div className="w-full overflow-x-auto pb-6 pt-1">
@@ -27,7 +27,7 @@ export const Carousel: FC<ChildProps> = ({ product,ComponentName,ComponentPath }
         {carouselProducts.map((product) => (
           <li
             key={Math.random()}
-            className="relative aspect-square h-[30vh] max-h-[275px] w-2/3 max-w-[475px] flex-none md:w-1/3"
+            className="relative aspect-square h-[30vh] max-h-[275px] w-2/6 max-w-[475px] flex-none md:w-1/6"
           >
             <Link href={`/product/${product.path}`} className="relative h-full w-full">
               <GridTileImage
