@@ -28,6 +28,7 @@ export default function CartModal() {
   const closeCart = () => setIsOpen(false);
 
   useEffect(() => {
+    console.log(cart)
     if (!cart) {
       createCartAndSetCookie();
     }

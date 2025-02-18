@@ -1,3 +1,4 @@
+import { Cart } from "@/lib/type/cart";
 const domain = "http://localhost:3000/api/"
 export async function ServerFetch(endpoint:string) {
     try {
@@ -27,4 +28,9 @@ export async function GetCarsoul(){
 export async function GetSinglData($parms:string){
   const res = await ServerFetch(`data?search=${$parms}`);
   return res?.body
+}
+export async function getCart(cartId: string | undefined): Promise<Cart | undefined> {
+  if (!cartId) {
+    return undefined;
+  }
 }

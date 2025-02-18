@@ -7,7 +7,7 @@ import { CartProvider } from '@/components/cart/cart-context';
 
 import { GeistSans } from 'geist/font/sans';
 import { ensureStartsWith } from '@/lib/utils'
-import { getCart } from '@/lib/api/index';
+import { getCart } from '@/lib/server/get';
 
 //? ui 
 import { Navbar } from '@/components/layouts/navbar';
@@ -45,6 +45,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const cartId = (await cookies()).get('cartId')?.value;
+  console.log(cartId)
   // Don't await the fetch, pass the Promise to the context provider
   const cart = getCart(cartId);
   return (
