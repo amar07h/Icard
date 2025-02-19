@@ -149,8 +149,8 @@
         "description": "recharge votre compte free fire by id "
       },
       "tags": [
-        "example-tag-1",
-        "example-tag-2"
+        "game",
+        "diamond"
       ],
       "updatedAt": "2023-09-01T12:00:00Z"
     },
@@ -320,7 +320,7 @@
         "description": "Carte cadeau Mobile Legends Diamonds by id tunis"
       },
       "tags": [
-        "example-tag-1",
+        "game",
         "example-tag-2"
       ],
       "updatedAt": "2023-09-01T12:00:00Z"
@@ -473,7 +473,7 @@
         "description": "Carte cadeau PUBG Mobile UC by id tunis شحن جواهر"
       },
       "tags": [
-        "example-tag-1",
+        "game",
         "example-tag-2"
       ],
       "updatedAt": "2023-09-01T12:00:00Z"
@@ -594,7 +594,7 @@
         "description": "Carte cadeau fortnite UC by id tunis شحن جواهر"
       },
       "tags": [
-        "example-tag-1",
+        "game",
         "example-tag-2"
       ],
       "updatedAt": "2023-09-01T12:00:00Z"
@@ -715,7 +715,7 @@
         "description": "Carte cadeau fc25 tunis شحن جواهر"
       },
       "tags": [
-        "example-tag-1",
+        "game",
         "example-tag-2"
       ],
       "updatedAt": "2023-09-01T12:00:00Z"
@@ -836,7 +836,7 @@
         "description": "Carte cadeau robux UC by id tunis شحن جواهر"
       },
       "tags": [
-        "example-tag-1",
+        "game",
         "example-tag-2"
       ],
       "updatedAt": "2023-09-01T12:00:00Z"
@@ -940,7 +940,7 @@
         "description": "Carte cadeau apex legend coins by id tunis card cadeau carte cadeau شحن جواهر"
       },
       "tags": [
-        "example-tag-1",
+        "game",
         "example-tag-2"
       ],
       "updatedAt": "2023-09-01T12:00:00Z"

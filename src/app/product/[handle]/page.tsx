@@ -5,8 +5,7 @@ import Footer from '@/components/layouts/footer';
 import { Gallery } from '@/components/product/gallery';
 import { ProductProvider } from '@/components/product/product-context';
 import { ProductDescription } from '@/components/product/product-description';
-import {GetSinglData } from '@/lib/server/get';
-
+import {GetSinglData,getProductRecommendations } from '@/lib/server/get';
 import { Image,Product } from '@/lib/type';
 import Link from 'next/link';
 import { Suspense } from 'react';
@@ -102,88 +101,17 @@ export default async function ProductPage(props: { params: Promise<{ handle: str
             </Suspense>
           </div>
         </div>
-{/*        <RelatedProducts id={product.id} />
- */}       </div>
+       <RelatedProducts tag={"game"} />
+        </div>
       <Footer />
     </ProductProvider>
   );
 }
 
- async function RelatedProducts({ id }: { id: string }) {
-  //const relatedProducts = await getProductRecommendations(id);
-  const relatedProducts=[{
-    "id": "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzU0NDczMjUwMjQ0MjA=",
-    "title": "New Short Sleeve T-Shirt",
-    "price": { "value": 25, "currencyCode": "USD" },
-    "featuredImage":"/assets/t-shirt-circles-blue.png",
-    "availableForSale":true,
-    "priceRange":{
-     "minVariantPrice":{"currencyCode":"TND","amount":"14"},
-     "maxVariantPrice":{"amount":"200"}
-    },
-    "description": "Show off your love for Next.js and Vercel with this unique, limited edition t-shirt. This design is part of a limited run, numbered drop at the June 2021 Next.js Conf. It features a unique, handcrafted triangle design. Get it while supplies last - only 200 of these shirts will be made! All proceeds will be donated to charity.",
-    "descriptionHtml": "<p><span>Show off your love for Next.js and Vercel with this unique,&nbsp;</span><strong>limited edition</strong><span>&nbsp;t-shirt. This design is part of a limited run, numbered drop at the June 2021 Next.js Conf. It features a unique, handcrafted triangle design. Get it while supplies last - only 200 of these shirts will be made!&nbsp;</span><strong>All proceeds will be donated to charity.</strong></p>",
-    
-  },
-  {
-    "id": "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzU0NDczMjUwMjQ0MjA=",
-    "title": "New Short Sleeve T-Shirt",
-    "price": { "value": 25, "currencyCode": "USD" },
-    "featuredImage":"/assets/t-shirt-circles-blue.png",
-    "availableForSale":true,
-    "priceRange":{
-     "minVariantPrice":{"currencyCode":"TND","amount":"14"},
-     "maxVariantPrice":{"amount":"200"}
-    },
-    "description": "Show off your love for Next.js and Vercel with this unique, limited edition t-shirt. This design is part of a limited run, numbered drop at the June 2021 Next.js Conf. It features a unique, handcrafted triangle design. Get it while supplies last - only 200 of these shirts will be made! All proceeds will be donated to charity.",
-    "descriptionHtml": "<p><span>Show off your love for Next.js and Vercel with this unique,&nbsp;</span><strong>limited edition</strong><span>&nbsp;t-shirt. This design is part of a limited run, numbered drop at the June 2021 Next.js Conf. It features a unique, handcrafted triangle design. Get it while supplies last - only 200 of these shirts will be made!&nbsp;</span><strong>All proceeds will be donated to charity.</strong></p>",
-    
-  },
-  {
-    "id": "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzU0NDczMjUwMjQ0MjA=",
-    "title": "New Short Sleeve T-Shirt",
-    "price": { "value": 25, "currencyCode": "USD" },
-    "featuredImage":"/assets/t-shirt-circles-blue.png",
-    "availableForSale":true,
-    "priceRange":{
-     "minVariantPrice":{"currencyCode":"TND","amount":"14"},
-     "maxVariantPrice":{"amount":"200"}
-    },
-    "description": "Show off your love for Next.js and Vercel with this unique, limited edition t-shirt. This design is part of a limited run, numbered drop at the June 2021 Next.js Conf. It features a unique, handcrafted triangle design. Get it while supplies last - only 200 of these shirts will be made! All proceeds will be donated to charity.",
-    "descriptionHtml": "<p><span>Show off your love for Next.js and Vercel with this unique,&nbsp;</span><strong>limited edition</strong><span>&nbsp;t-shirt. This design is part of a limited run, numbered drop at the June 2021 Next.js Conf. It features a unique, handcrafted triangle design. Get it while supplies last - only 200 of these shirts will be made!&nbsp;</span><strong>All proceeds will be donated to charity.</strong></p>",
-    
-  },
-  {
-    "id": "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzU0NDczMjUwMjQ0MjA=",
-    "title": "New Short Sleeve T-Shirt",
-    "price": { "value": 25, "currencyCode": "USD" },
-    "featuredImage":"/assets/t-shirt-circles-blue.png",
-    "availableForSale":true,
-    "priceRange":{
-     "minVariantPrice":{"currencyCode":"TND","amount":"14"},
-     "maxVariantPrice":{"amount":"200"}
-    },
-    "description": "Show off your love for Next.js and Vercel with this unique, limited edition t-shirt. This design is part of a limited run, numbered drop at the June 2021 Next.js Conf. It features a unique, handcrafted triangle design. Get it while supplies last - only 200 of these shirts will be made! All proceeds will be donated to charity.",
-    "descriptionHtml": "<p><span>Show off your love for Next.js and Vercel with this unique,&nbsp;</span><strong>limited edition</strong><span>&nbsp;t-shirt. This design is part of a limited run, numbered drop at the June 2021 Next.js Conf. It features a unique, handcrafted triangle design. Get it while supplies last - only 200 of these shirts will be made!&nbsp;</span><strong>All proceeds will be donated to charity.</strong></p>",
-    
-  },
-  {
-    "id": "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzU0NDczMjUwMjQ0MjA=",
-    "title": "New Short Sleeve T-Shirt",
-    "price": { "value": 25, "currencyCode": "USD" },
-    "featuredImage":"/assets/t-shirt-circles-blue.png",
-    "availableForSale":true,
-    "priceRange":{
-     "minVariantPrice":{"currencyCode":"TND","amount":"14"},
-     "maxVariantPrice":{"amount":"200"}
-    },
-    "description": "Show off your love for Next.js and Vercel with this unique, limited edition t-shirt. This design is part of a limited run, numbered drop at the June 2021 Next.js Conf. It features a unique, handcrafted triangle design. Get it while supplies last - only 200 of these shirts will be made! All proceeds will be donated to charity.",
-    "descriptionHtml": "<p><span>Show off your love for Next.js and Vercel with this unique,&nbsp;</span><strong>limited edition</strong><span>&nbsp;t-shirt. This design is part of a limited run, numbered drop at the June 2021 Next.js Conf. It features a unique, handcrafted triangle design. Get it while supplies last - only 200 of these shirts will be made!&nbsp;</span><strong>All proceeds will be donated to charity.</strong></p>",
-    
-  }]
+ async function RelatedProducts({ tag }: { tag: string }) {
+ const relatedProducts: Product[] = await getProductRecommendations(tag);
 
-
- // if (!relatedProducts.length) return null;
+ if (!relatedProducts.length) return null;
 
   return (
     <div className="py-8">
@@ -207,7 +135,7 @@ export default async function ProductPage(props: { params: Promise<{ handle: str
              /*      amount: product.priceRange.maxVariantPrice,
                   currencyCode: product.priceRange.minVariantPrice.currencyCode */
                 }}
-                src={product.featuredImage}
+                src={product.featuredImage.url}
                 fill
                 sizes="(min-width: 1024px) 20vw, (min-width: 768px) 25vw, (min-width: 640px) 33vw, (min-width: 475px) 50vw, 100vw"
               />

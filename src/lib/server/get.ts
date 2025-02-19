@@ -34,3 +34,8 @@ export async function getCart(cartId: string | undefined): Promise<Cart | undefi
     return undefined;
   }
 }
+export async function getProductRecommendations($parms:string) {
+  const res = await ServerFetch(`tag?tag=${$parms}`);
+  return res?.body
+
+}
