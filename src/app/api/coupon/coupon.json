@@ -1,0 +1,7 @@
+ {
+    "discount": [
+    {"code":"gaming","amount": "2.00" },
+    {"code":"gogo","amount": "1.00" },
+    {"code":"store","amount": "5.00" }
+ ]
+}

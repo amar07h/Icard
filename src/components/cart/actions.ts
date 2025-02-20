@@ -9,7 +9,7 @@ import { redirect } from 'next/navigation';
 
 
 export async function redirectToCheckout() {
-
+redirect("/checkout")
 }
 
 export async function createCartAndSetCookie() {

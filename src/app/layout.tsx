@@ -45,7 +45,6 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const cartId = (await cookies()).get('cartId')?.value;
-  console.log(cartId)
   // Don't await the fetch, pass the Promise to the context provider
   const cart = getCart(cartId);
   return (

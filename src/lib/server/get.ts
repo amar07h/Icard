@@ -37,5 +37,10 @@ export async function getCart(cartId: string | undefined): Promise<Cart | undefi
 export async function getProductRecommendations($parms:string) {
   const res = await ServerFetch(`tag?tag=${$parms}`);
   return res?.body
+}
+export async function VerifyCoupon($parms:string) {
+  const res = await ServerFetch(`coupon?coupon=${$parms}`);
+  console.log(res?.body)
+  return res?.body
 
 }

@@ -15,9 +15,6 @@ import { Suspense } from 'react';
 }): Promise<Metadata> {
   const params = await props.params;
   const product = await GetSinglData(params.handle);
-/*   async function product(id:string) {
-    return products.find((product) => product.id === id);
-  } */
   if (!product) return notFound();
 
   const { url, width, height, altText: alt } = product.title || {};
@@ -101,7 +98,7 @@ export default async function ProductPage(props: { params: Promise<{ handle: str
             </Suspense>
           </div>
         </div>
-       <RelatedProducts tag={"game"} />
+       <RelatedProducts tag={product.tags[0]||product.tags[1]||product.tags[3]} />
         </div>
       <Footer />
     </ProductProvider>
@@ -132,8 +129,6 @@ export default async function ProductPage(props: { params: Promise<{ handle: str
                 alt={product.title}
                 label={{
                   title: product.title,
-             /*      amount: product.priceRange.maxVariantPrice,
-                  currencyCode: product.priceRange.minVariantPrice.currencyCode */
                 }}
                 src={product.featuredImage.url}
                 fill

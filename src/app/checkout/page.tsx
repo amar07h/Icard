@@ -1,53 +1,37 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
+"use client"
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
-import { LockClosedIcon } from '@heroicons/react/20/solid'
+import { LockClosedIcon,ShoppingCartIcon } from '@heroicons/react/20/solid'
+import { useCart } from '@/components/cart/cart-context';
+import Price from '@/components/price';
+import { DeleteItemButton } from '@/components/cart/delete-item-button';
+import {VerifyCoupon } from '@/lib/server/get';
+import { useState } from 'react';
 
-const subtotal = '$210.00'
-const discount = { code: 'CHEAPSKATE', amount: '$24.00' }
-const taxes = '$23.68'
-const shipping = '$22.00'
-const total = '$341.68'
-const products = [
-  {
-    id: 1,
-    name: 'Micro Backpack',
-    href: '#',
-    price: '$70.00',
-    color: 'Moss',
-    size: '5L',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/checkout-page-04-product-01.jpg',
-    imageAlt:
-      'Moss green canvas compact backpack with double top zipper, zipper front pouch, and matching carry handle and backpack straps.',
-  },
-  // More products...
-]
+const subtotal = 'TND210.00'
+type discount = { code: string, amount: string }
+const taxes = '23.68'
+const livraison = '22.00'
 
-export default function Example() {
+export default function Checkout() {
+  const { cart,updateCartItem } = useCart();
+  const [coupon,SetCoupon ] = useState<string>("");
+  const [discount,Setdiscount ] = useState<discount>({code:"", amount:'0' });
+
+async function HandelCoupon($coupon:string){
+  const trim = $coupon.replaceAll(' ', '');
+  if(trim!==""){
+try {
+ const checked:discount=await VerifyCoupon(trim)
+ Setdiscount(checked)
+} catch (error) {
+  console.log(error)
+}
+}
+}
   return (
     <>
-      {/*
-        This example requires updating your template:
-
-        ```
-        <html class="h-full bg-white">
-        <body class="h-full">
-        ```
-      */}
-      <main className="lg:flex lg:flex-row-reverse lg:overflow-hidden h-auto bg-white">
-        <div className="px-4 py-6 sm:px-6 lg:hidden max-w-7xl">
+      <main className="lg:flex lg:flex-row-reverse lg:overflow-hidden h-[820px] bg-white">
+        <div className="px-4 py-6 sm:px-6 lg:hidden">
           <div className="mx-auto flex max-w-lg">
             <a href="#">
               <span className="sr-only">Your Company</span>
@@ -63,7 +47,7 @@ export default function Example() {
         <h1 className="sr-only">Checkout</h1>
 
         {/* Mobile order summary */}
-        <section aria-labelledby="order-heading" className="bg-gray-50 px-4 py-6 sm:px-6 lg:hidden">
+        <section aria-labelledby="order-heading" className="bg-gray-50 max-w-7xl px-4 py-6 sm:px-6 lg:hidden">
           <Disclosure as="div" className="mx-auto max-w-lg">
             <div className="flex items-center justify-between">
               <h2 id="order-heading" className="text-lg font-medium text-gray-900">
@@ -76,36 +60,57 @@ export default function Example() {
             </div>
 
             <DisclosurePanel>
+            {!cart || cart.lines.length === 0 ? (
+                
+                <div className="mt-20 flex w-full flex-col items-center justify-center text-gray-700 overflow-hidden">
+               
+                  <ShoppingCartIcon className="h-16" />
+                  <p className="mt-6 text-center text-2xl font-bold">Your cart is empty.</p>
+                  
+                </div>
+              ) : (
+                
               <ul role="list" className="divide-y divide-gray-200 border-b border-gray-200">
-                {products.map((product) => (
-                  <li key={product.id} className="flex space-x-6 py-6">
-                    <img
-                      alt={product.imageAlt}
-                      src={product.imageSrc}
-                      className="h-40 w-40 flex-none rounded-md bg-gray-200 object-cover object-center"
-                    />
-                    <div className="flex flex-col justify-between space-y-4">
-                      <div className="space-y-1 text-sm font-medium">
-                        <h3 className="text-gray-900">{product.name}</h3>
-                        <p className="text-gray-900">{product.price}</p>
-                        <p className="text-gray-500">{product.color}</p>
-                        <p className="text-gray-500">{product.size}</p>
-                      </div>
-                      <div className="flex space-x-4">
-                        <button type="button" className="text-sm font-medium text-indigo-600 hover:text-indigo-500">
-                          Edit
-                        </button>
-                        <div className="flex border-l border-gray-300 pl-4">
-                          <button type="button" className="text-sm font-medium text-indigo-600 hover:text-indigo-500">
-                            Remove
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                ))}
+               {cart?.lines
+                                .sort((a, b) =>
+                                  a.merchandise.product.title.localeCompare(b.merchandise.product.title)
+                                )
+                                .map((item, i) => {   return(
+                                  <li key={i} className="flex space-x-6 py-6">
+                                  <img
+                                    alt={item.merchandise.product.featuredImage.altText ||
+                                      item.merchandise.product.title}
+                                    src={item.merchandise.product.featuredImage.url}
+                                    className="h-40 w-40 flex-none rounded-md bg-gray-200 object-cover object-center"
+                                  />
+                                  <div className="flex flex-col justify-between space-y-4">
+                                    <div className="space-y-1 text-sm font-medium">
+                                      <h3 className="text-gray-700">{item.merchandise.title}</h3>
+                                      <Price
+                                  className="flex justify-end space-y-2 text-right text-sm"
+                                  amount={item.cost.totalAmount.amount}
+                                  currencyCode={item.cost.totalAmount.currencyCode}
+                                /> 
+  
+                                    </div>
+                                    <div className="flex space-x-4">
+                                      <button type="button" className="text-sm font-medium text-indigo-600 hover:text-indigo-500">
+                                        Edit
+                                      </button>
+                                      <div className="flex border-l border-gray-300 pl-4">
+                                        <button type="button" className="text-sm font-medium text-indigo-600 hover:text-indigo-500">
+                              <DeleteItemButton item={item} optimisticUpdate={updateCartItem} />
+                                          
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                )
+              } 
+                )}
               </ul>
-
+)}
               <form className="mt-10">
                 <label htmlFor="discount-code-mobile" className="block text-sm font-medium text-gray-700">
                   Discount code
@@ -115,10 +120,11 @@ export default function Example() {
                     id="discount-code-mobile"
                     name="discount-code-mobile"
                     type="text"
+                    onChange={(e)=>SetCoupon(e.target.value)}
                     className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                   />
                   <button
-                    type="submit"
+                    type="button" onClick={()=>HandelCoupon(coupon)}
                     className="rounded-md bg-gray-200 px-4 text-sm font-medium text-gray-600 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
                   >
                     Apply
@@ -133,65 +139,79 @@ export default function Example() {
                 </div>
                 <div className="flex justify-between">
                   <dt className="flex">
-                    Discount
+                    Coupon
                     <span className="ml-2 rounded-full bg-gray-200 px-2 py-0.5 text-xs tracking-wide text-gray-600">
-                      {discount.code}
+                    {discount.code==""?null:discount.code}
                     </span>
                   </dt>
                   <dd className="text-gray-900">-{discount.amount}</dd>
                 </div>
                 <div className="flex justify-between">
-                  <dt>Taxes</dt>
+                  <dt>TVA</dt>
                   <dd className="text-gray-900">{taxes}</dd>
                 </div>
                 <div className="flex justify-between">
-                  <dt>Shipping</dt>
-                  <dd className="text-gray-900">{shipping}</dd>
+                  <dt>livraison</dt>
+                  <dd className="text-gray-900">{livraison}</dd>
                 </div>
               </dl>
             </DisclosurePanel>
 
-            <p className="mt-6 flex items-center justify-between border-t border-gray-200 pt-6 text-sm font-medium text-gray-900">
+            <div className="mt-6 flex items-center justify-between border-t border-gray-200 pt-6 text-sm font-medium text-gray-900">
               <span className="text-base">Total</span>
-              <span className="text-base">{total}</span>
-            </p>
+              <Price
+                    className="text-right text-base text-gray-700"
+                    amount={cart?.cost.totalAmount.amount||"0"}
+                    currencyCode={cart?.cost.totalAmount.currencyCode||"TND"}
+                      />
+            </div>
           </Disclosure>
         </section>
 
         {/* Order summary */}
-        <section aria-labelledby="summary-heading" className="hidden w-full max-w-md flex-col bg-gray-50 lg:flex">
+        <section aria-labelledby="summary-heading" className="hidden w-full max-w-md h-[820px] flex-col bg-gray-50 lg:flex">
           <h2 id="summary-heading" className="sr-only">
             Order summary
           </h2>
 
           <ul role="list" className="flex-auto divide-y divide-gray-200 overflow-y-auto px-6">
-            {products.map((product) => (
-              <li key={product.id} className="flex space-x-6 py-6">
-                <img
-                  alt={product.imageAlt}
-                  src={product.imageSrc}
-                  className="h-40 w-40 flex-none rounded-md bg-gray-200 object-cover object-center"
-                />
-                <div className="flex flex-col justify-between space-y-4">
-                  <div className="space-y-1 text-sm font-medium">
-                    <h3 className="text-gray-900">{product.name}</h3>
-                    <p className="text-gray-900">{product.price}</p>
-                    <p className="text-gray-500">{product.color}</p>
-                    <p className="text-gray-500">{product.size}</p>
-                  </div>
-                  <div className="flex space-x-4">
-                    <button type="button" className="text-sm font-medium text-indigo-600 hover:text-indigo-500">
-                      Edit
-                    </button>
-                    <div className="flex border-l border-gray-300 pl-4">
-                      <button type="button" className="text-sm font-medium text-indigo-600 hover:text-indigo-500">
-                        Remove
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            ))}
+           {cart?.lines
+                                .sort((a, b) =>
+                                  a.merchandise.product.title.localeCompare(b.merchandise.product.title)
+                                )
+                                .map((item, i) => {          
+                                  return ( <li key={i} className="flex space-x-6 py-6">
+                                    <img
+                                      alt={item.merchandise.product.featuredImage.altText ||
+                                      item.merchandise.product.title}
+                                      src={item.merchandise.product.featuredImage.url}
+                                      className="h-40 w-40 flex-none rounded-md bg-gray-200 object-cover object-center"
+                                    />
+                                    <div className="flex flex-col justify-between space-y-4">
+                                      <div className="space-y-1 text-sm font-medium">
+                                        <h3 className="text-gray-900">{item.merchandise.title}</h3>
+                                        <Price
+                                  className="flex justify-end space-y-2 text-right text-sm"
+                                  amount={item.cost.totalAmount.amount}
+                                  currencyCode={item.cost.totalAmount.currencyCode}
+                                /> 
+                               
+                                      </div>
+                                      <div className="flex space-x-4">
+                                        <button type="button" className="text-sm font-medium text-indigo-600 hover:text-indigo-500">
+                                          Edit
+                                        </button>
+                                        <div className="flex border-l border-gray-300 pl-4">
+                                          <button type="button" className="text-sm font-medium text-indigo-600 hover:text-indigo-500">
+                                          <DeleteItemButton item={item} optimisticUpdate={updateCartItem} />
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li> );
+                                })}
+
+           
           </ul>
 
           <div className="sticky bottom-0 flex-none border-t border-gray-200 bg-gray-50 p-6">
@@ -203,11 +223,12 @@ export default function Example() {
                 <input
                   id="discount-code"
                   name="discount-code"
-                  type="text"
-                  className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                  type="text"               
+                  onChange={(e)=>SetCoupon(e.target.value)}
+                  className="block w-full rounded-md border-gray-300 shadow-sm text-gray-700 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                 />
                 <button
-                  type="submit"
+                  type="button" onClick={()=>HandelCoupon(coupon)}
                   className="rounded-md bg-gray-200 px-4 text-sm font-medium text-gray-600 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
                 >
                   Apply
@@ -224,7 +245,7 @@ export default function Example() {
                 <dt className="flex">
                   Discount
                   <span className="ml-2 rounded-full bg-gray-200 px-2 py-0.5 text-xs tracking-wide text-gray-600">
-                    {discount.code}
+                    {discount.code==""?null:discount.code}
                   </span>
                 </dt>
                 <dd className="text-gray-900">-{discount.amount}</dd>
@@ -234,12 +255,12 @@ export default function Example() {
                 <dd className="text-gray-900">{taxes}</dd>
               </div>
               <div className="flex justify-between">
-                <dt>Shipping</dt>
-                <dd className="text-gray-900">{shipping}</dd>
+                <dt>livraison</dt>
+                <dd className="text-gray-900">{livraison}</dd>
               </div>
               <div className="flex items-center justify-between border-t border-gray-200 pt-6 text-gray-900">
                 <dt className="text-base">Total</dt>
-                <dd className="text-base">{total}</dd>
+                <dd className="text-base">{cart?.cost.totalAmount.amount||"0"} TND</dd>
               </div>
             </dl>
           </div>
@@ -248,7 +269,7 @@ export default function Example() {
         {/* Checkout form */}
         <section
           aria-labelledby="payment-heading"
-          className="flex-auto overflow-y-auto px-4 pb-16 pt-12 sm:px-6 sm:pt-16 lg:px-8 lg:pb-24 lg:pt-0"
+          className="flex-auto overflow-y-auto max-w-7xl px-4 pb-16 pt-12 sm:px-6 sm:pt-16 lg:px-8 lg:pb-24 lg:pt-0"
         >
           <div className="mx-auto max-w-lg">
             <div className="hidden pb-16 pt-2 lg:flex">
@@ -262,29 +283,24 @@ export default function Example() {
               </a>
             </div>
 
-           {/*  <button
-              type="button"
-              className="flex w-full items-center justify-center rounded-md border border-transparent bg-black py-2 text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
-            >
-              <span className="sr-only">Pay with Apple Pay</span>
-              <svg fill="currentColor" viewBox="0 0 50 20" className="h-5 w-auto">
-                <path d="M9.536 2.579c-.571.675-1.485 1.208-2.4 1.132-.113-.914.334-1.884.858-2.484C8.565.533 9.564.038 10.374 0c.095.951-.276 1.884-.838 2.579zm.829 1.313c-1.324-.077-2.457.751-3.085.751-.638 0-1.6-.713-2.647-.694-1.362.019-2.628.79-3.323 2.017-1.429 2.455-.372 6.09 1.009 8.087.676.99 1.485 2.075 2.552 2.036 1.009-.038 1.409-.656 2.628-.656 1.228 0 1.58.656 2.647.637 1.104-.019 1.8-.99 2.475-1.979.771-1.122 1.086-2.217 1.105-2.274-.02-.019-2.133-.828-2.152-3.263-.02-2.036 1.666-3.007 1.742-3.064-.952-1.408-2.437-1.56-2.951-1.598zm7.645-2.76v14.834h2.305v-5.072h3.19c2.913 0 4.96-1.998 4.96-4.89 0-2.893-2.01-4.872-4.885-4.872h-5.57zm2.305 1.941h2.656c2 0 3.142 1.066 3.142 2.94 0 1.875-1.142 2.95-3.151 2.95h-2.647v-5.89zM32.673 16.08c1.448 0 2.79-.733 3.4-1.893h.047v1.779h2.133V8.582c0-2.14-1.714-3.52-4.351-3.52-2.447 0-4.256 1.399-4.323 3.32h2.076c.171-.913 1.018-1.512 2.18-1.512 1.41 0 2.2.656 2.2 1.865v.818l-2.876.171c-2.675.162-4.123 1.256-4.123 3.159 0 1.922 1.495 3.197 3.637 3.197zm.62-1.76c-1.229 0-2.01-.59-2.01-1.494 0-.933.752-1.475 2.19-1.56l2.562-.162v.837c0 1.39-1.181 2.379-2.743 2.379zM41.1 20c2.247 0 3.304-.856 4.227-3.454l4.047-11.341h-2.342l-2.714 8.763h-.047l-2.714-8.763h-2.409l3.904 10.799-.21.656c-.352 1.114-.923 1.542-1.942 1.542-.18 0-.533-.02-.676-.038v1.779c.133.038.705.057.876.057z" />
-              </svg>
-            </button> */}
-
-            <div className="relative mt-8">
-              <div aria-hidden="true" className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-gray-200" />
-              </div>
-              <div className="relative flex justify-center">
-                <span className="bg-white px-4 text-sm font-medium text-gray-500">or</span>
-              </div>
-            </div>
-
-            <form className="mt-6">
-              <div className="grid grid-cols-12 gap-x-4 gap-y-6">
+            <form className="mt-6 ">
+              <div className="grid grid-cols-12 gap-x-4 gap-y-6 text-gray-700">
+              <div className="col-span-full">
+                  <label htmlFor="Nom-et-Prenom" className="block text-sm font-medium">
+                   Nom et Prenom
+                  </label>
+                  <div className="mt-1">
+                    <input
+                      id="Nom-et-Prenom"
+                      name="Nom-et-Prenom"
+                      type="text"
+                      autoComplete="cc-name"
+                      className="block w-full  rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                    />
+                  </div>
+                </div>
                 <div className="col-span-full">
-                  <label htmlFor="email-address" className="block text-sm font-medium text-gray-700">
+                  <label htmlFor="email-address" className="block text-sm font-medium">
                     Email address
                   </label>
                   <div className="mt-1">
@@ -293,34 +309,18 @@ export default function Example() {
                       name="email-address"
                       type="email"
                       autoComplete="email"
-                      className="block w-full rounded-md text-gray-700 border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      className="block w-full rounded-md  border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                     />
                   </div>
                 </div>
-
                 <div className="col-span-full">
-                  <label htmlFor="name-on-card" className="block text-sm font-medium text-gray-700">
-                    Name on card
+                  <label htmlFor="whatsapp-number" className="block text-sm font-medium text-gray-700">
+                    Whatsapp
                   </label>
                   <div className="mt-1">
                     <input
-                      id="name-on-card"
-                      name="name-on-card"
-                      type="text"
-                      autoComplete="cc-name"
-                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                    />
-                  </div>
-                </div>
-
-                <div className="col-span-full">
-                  <label htmlFor="card-number" className="block text-sm font-medium text-gray-700">
-                    Card number
-                  </label>
-                  <div className="mt-1">
-                    <input
-                      id="card-number"
-                      name="card-number"
+                      id="whatsapp-number"
+                      name="whatsapp-number"
                       type="text"
                       autoComplete="cc-number"
                       className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
@@ -328,122 +328,19 @@ export default function Example() {
                   </div>
                 </div>
 
-                <div className="col-span-8 sm:col-span-9">
-                  <label htmlFor="expiration-date" className="block text-sm font-medium text-gray-700">
-                    Expiration date (MM/YY)
-                  </label>
-                  <div className="mt-1">
-                    <input
-                      id="expiration-date"
-                      name="expiration-date"
-                      type="text"
-                      autoComplete="cc-exp"
-                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                    />
-                  </div>
-                </div>
 
-                <div className="col-span-4 sm:col-span-3">
-                  <label htmlFor="cvc" className="block text-sm font-medium text-gray-700">
-                    CVC
-                  </label>
-                  <div className="mt-1">
-                    <input
-                      id="cvc"
-                      name="cvc"
-                      type="text"
-                      autoComplete="csc"
-                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                    />
-                  </div>
-                </div>
-
-                <div className="col-span-full">
-                  <label htmlFor="address" className="block text-sm font-medium text-gray-700">
-                    Address
-                  </label>
-                  <div className="mt-1">
-                    <input
-                      id="address"
-                      name="address"
-                      type="text"
-                      autoComplete="street-address"
-                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                    />
-                  </div>
-                </div>
-
-                <div className="col-span-full sm:col-span-4">
-                  <label htmlFor="city" className="block text-sm font-medium text-gray-700">
-                    City
-                  </label>
-                  <div className="mt-1">
-                    <input
-                      id="city"
-                      name="city"
-                      type="text"
-                      autoComplete="address-level2"
-                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                    />
-                  </div>
-                </div>
-
-                <div className="col-span-full sm:col-span-4">
-                  <label htmlFor="region" className="block text-sm font-medium text-gray-700">
-                    State / Province
-                  </label>
-                  <div className="mt-1">
-                    <input
-                      id="region"
-                      name="region"
-                      type="text"
-                      autoComplete="address-level1"
-                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                    />
-                  </div>
-                </div>
-
-                <div className="col-span-full sm:col-span-4">
-                  <label htmlFor="postal-code" className="block text-sm font-medium text-gray-700">
-                    Postal code
-                  </label>
-                  <div className="mt-1">
-                    <input
-                      id="postal-code"
-                      name="postal-code"
-                      type="text"
-                      autoComplete="postal-code"
-                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-6 flex space-x-2">
-                <div className="flex h-5 items-center">
-                  <input
-                    defaultChecked
-                    id="same-as-shipping"
-                    name="same-as-shipping"
-                    type="checkbox"
-                    className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                  />
-                </div>
-                <label htmlFor="same-as-shipping" className="text-sm font-medium text-gray-900">
-                  Billing address is the same as shipping address
-                </label>
               </div>
 
               <button
                 type="submit"
                 className="mt-6 w-full rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
-                Pay {total}
+                Pay {cart?.cost.totalAmount.amount||"0"} TND
               </button>
 
               <p className="mt-6 flex justify-center text-sm font-medium text-gray-500">
                 <LockClosedIcon aria-hidden="true" className="mr-1.5 h-5 w-5 text-gray-400" />
-                Payment details stored in plain text
+                Payment details 
               </p>
             </form>
           </div>
