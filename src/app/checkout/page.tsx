@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image';
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { LockClosedIcon,ShoppingCartIcon } from '@heroicons/react/20/solid'
 import { useCart } from '@/components/cart/cart-context';
@@ -181,21 +182,23 @@ try {
                                 )
                                 .map((item, i) => {          
                                   return ( <li key={i} className="flex space-x-6 py-6">
-                                    <img
+                                    <Image
+                                    width={400}
+                                    height={400}
                                       alt={item.merchandise.product.featuredImage.altText ||
                                       item.merchandise.product.title}
                                       src={item.merchandise.product.featuredImage.url}
-                                      className="h-40 w-40 flex-none rounded-md bg-gray-200 object-cover object-center"
+                                      className="h-40 w-40 flex-none rounded-md  object-cover object-center"
                                     />
                                     <div className="flex flex-col justify-between space-y-4">
                                       <div className="space-y-1 text-sm font-medium">
-                                        <h3 className="text-gray-900">{item.merchandise.title}</h3>
+                                        <h3 className="text-gray-900">{item.merchandise.product.title}</h3>
+                                        <h3 className="text-gray-900">{item.quantity}</h3>
                                         <Price
-                                  className="flex justify-end space-y-2 text-right text-sm"
+                                  className="flex justify-end space-y-2 text-gray-900 text-right text-sm"
                                   amount={item.cost.totalAmount.amount}
                                   currencyCode={item.cost.totalAmount.currencyCode}
                                 /> 
-                               
                                       </div>
                                       <div className="flex space-x-4">
                                         <button type="button" className="text-sm font-medium text-indigo-600 hover:text-indigo-500">
