@@ -1,14 +1,10 @@
+import {ReactNode} from "react"
 //? next import 
-import { cookies } from 'next/headers';
-
 import type { Metadata } from "next";
 import "./globals.css";
 import { CartProvider } from '@/components/cart/cart-context';
-
 import { GeistSans } from 'geist/font/sans';
 import { ensureStartsWith } from '@/lib/utils'
-import { getCart } from '@/lib/server/get';
-
 //? ui 
 import { Navbar } from '@/components/layouts/navbar';
 import { Toaster } from 'sonner';
@@ -42,13 +38,14 @@ export const metadata: Metadata = {
 export default async function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children:ReactNode;
 }>) {
+
   return (
     <html lang="en" className={GeistSans.variable}>
     <body className="bg-neutral-50 text-black selection:bg-teal-300 dark:bg-neutral-900 dark:text-white dark:selection:bg-pink-500 dark:selection:text-white">
     <CartProvider>
-          <Navbar />
+        <Navbar />
           <main>
             {children}
             <Toaster closeButton />

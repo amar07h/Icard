@@ -1,4 +1,4 @@
-"use client"
+"use client" 
 import Image from 'next/image';
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { LockClosedIcon,ShoppingCartIcon } from '@heroicons/react/20/solid'
@@ -20,6 +20,7 @@ export default function Checkout() {
 
 async function HandelCoupon($coupon:string){
   const trim = $coupon.replaceAll(' ', '');
+  console.log(cart)
   if(trim!==""){
 try {
  const checked:discount=await VerifyCoupon(trim)
@@ -31,7 +32,7 @@ try {
 }
   return (
     <>
-      <main className="lg:flex lg:flex-row-reverse lg:overflow-hidden h-[820px] bg-white">
+      <main className="lg:flex lg:flex-row-reverse lg:overflow-hidden h-screen bg-white">
         <div className="px-4 py-6 sm:px-6 lg:hidden">
           <div className="mx-auto flex max-w-lg">
             <a href="#">
@@ -48,7 +49,7 @@ try {
         <h1 className="sr-only">Checkout</h1>
 
         {/* Mobile order summary */}
-        <section aria-labelledby="order-heading" className="bg-gray-50 max-w-7xl px-4 py-6 sm:px-6 lg:hidden">
+        <section aria-labelledby="order-heading" className="max-w-7xl px-4 py-6 sm:px-6 lg:hidden">
           <Disclosure as="div" className="mx-auto max-w-lg">
             <div className="flex items-center justify-between">
               <h2 id="order-heading" className="text-lg font-medium text-gray-900">
@@ -76,18 +77,19 @@ try {
                                 .sort((a, b) =>
                                   a.merchandise.product.title.localeCompare(b.merchandise.product.title)
                                 )
-                                .map((item, i) => {   return(
+                                .map((item, i) => {   
+                                  return(
                                   <li key={i} className="flex space-x-6 py-6">
-                                  <img
+                                  <Image height={400} width={400}
                                     alt={item.merchandise.product.featuredImage.altText ||
-                                      item.merchandise.product.title}
+                                    item.merchandise.product.title}
                                     src={item.merchandise.product.featuredImage.url}
                                     className="h-40 w-40 flex-none rounded-md bg-gray-200 object-cover object-center"
                                   />
                                   <div className="flex flex-col justify-between space-y-4">
                                     <div className="space-y-1 text-sm font-medium">
-                                      <h3 className="text-gray-700">{item.merchandise.title}</h3>
-                                      <Price
+                                    <h3 className="text-gray-900 text-lg">{item.merchandise.product.title}</h3>
+                                    <h3 className="text-gray-700 text-sm">{item.merchandise.title} coins</h3>                                      <Price
                                   className="flex justify-end space-y-2 text-right text-sm"
                                   amount={item.cost.totalAmount.amount}
                                   currencyCode={item.cost.totalAmount.currencyCode}
@@ -170,7 +172,7 @@ try {
         </section>
 
         {/* Order summary */}
-        <section aria-labelledby="summary-heading" className="hidden w-full max-w-md h-[820px] flex-col bg-gray-50 lg:flex">
+        <section aria-labelledby="summary-heading" className="hidden w-full max-w-md h-screen flex-col lg:flex">
           <h2 id="summary-heading" className="sr-only">
             Order summary
           </h2>
@@ -181,19 +183,21 @@ try {
                                   a.merchandise.product.title.localeCompare(b.merchandise.product.title)
                                 )
                                 .map((item, i) => {          
-                                  return ( <li key={i} className="flex space-x-6 py-6">
+                                  return (
+                                     <li key={i} className="flex space-x-6 py-6">
                                     <Image
                                     width={400}
                                     height={400}
                                       alt={item.merchandise.product.featuredImage.altText ||
                                       item.merchandise.product.title}
+                                      
                                       src={item.merchandise.product.featuredImage.url}
                                       className="h-40 w-40 flex-none rounded-md  object-cover object-center"
                                     />
                                     <div className="flex flex-col justify-between space-y-4">
                                       <div className="space-y-1 text-sm font-medium">
-                                        <h3 className="text-gray-900">{item.merchandise.product.title}</h3>
-                                        <h3 className="text-gray-900">{item.quantity}</h3>
+                                        <h3 className="text-gray-900 text-xl">{item.merchandise.product.title}</h3>
+                                        <h3 className="text-gray-700 text-lg">{item.merchandise.title} coins</h3>
                                         <Price
                                   className="flex justify-end space-y-2 text-gray-900 text-right text-sm"
                                   amount={item.cost.totalAmount.amount}
@@ -217,7 +221,7 @@ try {
            
           </ul>
 
-          <div className="sticky bottom-0 flex-none border-t border-gray-200 bg-gray-50 p-6">
+          <div className="sticky bottom-0 flex-none border-t border-gray-200 p-6">
             <form>
               <label htmlFor="discount-code" className="block text-sm font-medium text-gray-700">
                 Discount code

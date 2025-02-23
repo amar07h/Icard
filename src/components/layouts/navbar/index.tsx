@@ -1,9 +1,10 @@
-
+"use client"
+import { usePathname } from 'next/navigation'
 import CartModal from '@/components/cart/modal';
 import LogoSquare from '@/components/logo-square';
 
 import Link from 'next/link';
-import { Suspense } from 'react';
+import { Fragment, Suspense } from 'react';
 import MobileMenu from './mobile-menu';
 import Search, { SearchSkeleton } from './search';
 
@@ -13,8 +14,9 @@ export type Menu = {
   title: string;
   path: string;
 };
-export async function Navbar() {
- 
+export function Navbar() {
+  const pathname = usePathname()
+console.log(pathname)
   const menu = [
     {
     title:"Subscriptions",
@@ -27,6 +29,8 @@ export async function Navbar() {
 ]
 
   return (
+    <Fragment>
+      {pathname==="/checkout"?null:
     <nav className="relative flex items-center justify-between p-4 lg:px-6">
       <div className="block flex-none md:hidden">
         <Suspense fallback={null}>
@@ -71,5 +75,8 @@ export async function Navbar() {
         </div>
       </div>
     </nav>
+    }
+    </Fragment>
+
   );
 }

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import {FC} from "react"
+import {FC, Fragment} from "react"
 import { GridTileImage } from './grid/tile';
 import type {CarsoulType}from "@/lib/type/product"
 interface ChildProps {
@@ -14,14 +14,14 @@ export const Carousel: FC<ChildProps> = ({ product,ComponentName,ComponentPath }
   const carouselProducts = [...products, ...products];
 
   return (
-    <div className="w-full overflow-x-auto pb-6 pt-1">
-      <div className='flex justify-between text-3xl capitalize mb-3  mt-2'>
+    <Fragment>
+         <div className='flex justify-between text-lg capitalize mb-3  mt-2'>
       <h3 className='ml-6'>{ComponentName}</h3>
       <Link href={`${ComponentPath}`}>
 <h3 className='mr-6 cursor-pointer border-b-2 hover:text-gray-400'>plus</h3>
 </Link>
       </div>
-         
+    <div className="w-full overflow-x-auto pb-6 pt-1">
 
       <ul className="flex animate-carousel gap-4">
         {carouselProducts.map((product) => (
@@ -44,5 +44,7 @@ export const Carousel: FC<ChildProps> = ({ product,ComponentName,ComponentPath }
         ))}
       </ul>
     </div>
+    </Fragment>
   );
 }
+

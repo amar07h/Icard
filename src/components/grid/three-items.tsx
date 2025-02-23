@@ -44,13 +44,13 @@ export async function ThreeItemGrid() {
   // Collections that start with `hidden-*` are hidden from the search page.
   //todo make this with real data 
   const homepage = await GetOffre();
-  const homepageItems=homepage?.body
+  const homepageItems=homepage
   if (!homepageItems || !homepageItems || !homepageItems) return null;
 
   const [firstProduct, secondProduct, thirdProduct] = homepageItems;
 
   return (
-    <section className="mx-auto grid max-w-screen-7xl gap-4 px-4 pb-4 md:grid-cols-6 md:grid-rows-2 lg:max-h-[calc(100vh-200px)]">
+    <section className="mx-auto grid max-w-screen-7xl gap-4 px-4 pb-4 mt-3 md:grid-cols-6 md:grid-rows-2 lg:max-h-[calc(100vh-200px)]">
       <ThreeItemGridItem size="full" item={firstProduct} priority={true} />
       <ThreeItemGridItem size="half" item={secondProduct} priority={true} />
       <ThreeItemGridItem size="half" item={thirdProduct} />

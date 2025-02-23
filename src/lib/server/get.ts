@@ -19,7 +19,7 @@ export async function ServerFetch(endpoint:string) {
   }
 export async function GetOffre(){
   const res = await ServerFetch("offre");
-  return res
+  return res?.body
 }
 export async function GetCarsoul(){
   const res = await ServerFetch("carsoul");
@@ -28,11 +28,6 @@ export async function GetCarsoul(){
 export async function GetSinglData($parms:string){
   const res = await ServerFetch(`data?search=${$parms}`);
   return res?.body
-}
-export async function getCart(cartId: string | undefined): Promise<Cart | undefined> {
-  if (!cartId) {
-    return undefined;
-  }
 }
 export async function getProductRecommendations($parms:string) {
   const res = await ServerFetch(`tag?tag=${$parms}`);
