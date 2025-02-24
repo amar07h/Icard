@@ -16,9 +16,9 @@ export const Carousel: FC<ChildProps> = ({ product,ComponentName,ComponentPath }
   return (
     <Fragment>
          <div className='flex justify-between text-lg capitalize mb-3  mt-2'>
-      <h3 className='ml-6'>{ComponentName}</h3>
+      <h3 className='ml-4 py-3 text-lg font-extrabold '>{ComponentName}</h3>
       <Link href={`${ComponentPath}`}>
-<h3 className='mr-6 cursor-pointer border-b-2 hover:text-gray-400'>plus</h3>
+<h3 className='mr-4 cursor-pointer border-b-2 hover:text-gray-400 py-3'>plus</h3>
 </Link>
       </div>
     <div className="w-full overflow-x-auto pb-6 pt-1">

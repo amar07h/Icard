@@ -12,7 +12,7 @@ interface ChildProps {
 const OPTIONS: EmblaOptionsType = { loop: true }
 export const Slider: FC<ChildProps> = ({ product }) =>{
   return (
-      <div className='mt-5 w-full mx-auto'>
+      <div className='lg:mt-5 mt-12 w-full mx-auto'>
             <Header />
 
         <EmblaCarousel slides={product} options={OPTIONS} />

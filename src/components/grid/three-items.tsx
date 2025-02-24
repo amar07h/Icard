@@ -1,6 +1,6 @@
 import { GridTileImage } from '@/components/grid/tile';
-import type { Offre } from '@/lib/type/product';
-import { GetOffre } from '@/lib/server/get';
+import type { CarsoulType, Offre } from '@/lib/type/product';
+import { GetOffre,GetCarsoul } from '@/lib/server/get';
 
 import Link from 'next/link';
 
@@ -54,6 +54,20 @@ export async function ThreeItemGrid() {
       <ThreeItemGridItem size="full" item={firstProduct} priority={true} />
       <ThreeItemGridItem size="half" item={secondProduct} priority={true} />
       <ThreeItemGridItem size="half" item={thirdProduct} />
+    </section>
+  );
+}
+export async function FourItemGrid() {
+  // Collections that start with `hidden-*` are hidden from the search page.
+  //todo make this with real data 
+  const data = await GetCarsoul();
+  const products :CarsoulType =data.result
+
+  return (
+    <section className="mx-auto mt-12 grid max-w-screen-2xl gap-4 px-4 pb-4 lg:mt-3 md:grid-cols-8 md:grid-rows-2 lg:max-h-[calc(100vh-200px)]">
+      {products.map((i)=>(
+      <ThreeItemGridItem key={i.id} size="half" item={i} priority={true} />
+    ))}
     </section>
   );
 }

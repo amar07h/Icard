@@ -8,7 +8,7 @@ import { Fragment, Suspense } from 'react';
 import MobileMenu from './mobile-menu';
 import Search, { SearchSkeleton } from './search';
 
-const { SITE_NAME } = process.env;
+const  SITE_NAME  = "Gaming Store";
 //? Menu Types
 export type Menu = {
   title: string;
@@ -16,7 +16,7 @@ export type Menu = {
 };
 export function Navbar() {
   const pathname = usePathname()
-console.log(pathname)
+
   const menu = [
     {
     title:"Subscriptions",
@@ -45,9 +45,6 @@ console.log(pathname)
             className="mr-2 flex w-full items-center justify-center md:w-auto lg:mr-6"
           >
             <LogoSquare />
-            <div className="ml-2 flex-none text-sm font-medium uppercase md:hidden lg:block">
-              {SITE_NAME}
-            </div>
           </Link>
           {menu.length ? (
             <ul className="hidden gap-6 text-sm md:flex md:items-center">

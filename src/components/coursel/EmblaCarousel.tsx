@@ -58,30 +58,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         </div>
       </div>
 
-      <div className="embla__controls">
-        <div className="embla__buttons">
-          <PrevButton
-            onClick={() => onAutoplayButtonClick(onPrevButtonClick)}
-            disabled={prevBtnDisabled}
-          />
-          <NextButton
-            onClick={() => onAutoplayButtonClick(onNextButtonClick)}
-            disabled={nextBtnDisabled}
-          />
-        </div>
-
-        <div
-          className={`embla__progress`.concat(
-            showAutoplayProgress ? '' : ' embla__progress--hidden'
-          )}
-        >
-          <div className="embla__progress__bar" ref={progressNode} />
-        </div>
-
-        <button className="embla__play" onClick={toggleAutoplay} type="button">
-          {autoplayIsPlaying ? 'Stop' : 'Start'}
-        </button>
-      </div>
+     
     </div>
   )
 }
