@@ -3,6 +3,8 @@
       {
         "id":"456dlsqgdqsvcx8786",
         "name":"netflix",
+        "categories":"/movies",
+
         "path":"/netflix",
         "featuredImage":{
           "url": "/assets/carsoul/netflix.png",
@@ -14,6 +16,7 @@
        {
         "id":"456dldssqgdqsvcx8786",
         "name":"prime",
+        "categories":"/movies",
         "path":"/prime",
         "featuredImage":{
           "url": "/assets/carsoul/prime.png",
@@ -26,6 +29,8 @@
         "id":"456nnbdlsqgdqsvcdsx8786",
         "name":"youtube prime",
         "path":"/youtube",
+        "categories":"/movies",
+
         "featuredImage":{
           "url": "/assets/carsoul/youtube.png",
           "altText": "recharge youtube",
@@ -36,6 +41,7 @@
        {
         "id":"456nnvcbbdlsqgdqsvcdsx8786",
         "name":"tiktok coin",
+        "categories":"/movies",
         "path":"/tiktok",
         "featuredImage":{
           "url": "/assets/carsoul/tiktok.png",
@@ -49,6 +55,8 @@
         "id":"dsvcv78998df",
         "name":"spotify",
         "path":"/spotify",
+        "categories":"/movies",
+
         "featuredImage":{
           "url": "/assets/carsoul/spotify.png",
           "altText": "recharge spotify",

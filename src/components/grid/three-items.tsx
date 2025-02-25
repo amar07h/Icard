@@ -1,9 +1,11 @@
+"use client";
+import { usePathname } from "next/navigation";
+
 import { GridTileImage } from '@/components/grid/tile';
 import type { CarsoulType, Offre } from '@/lib/type/product';
 import { GetOffre,GetCarsoul } from '@/lib/server/get';
-
 import Link from 'next/link';
-
+import { Fragment } from "react";
 function ThreeItemGridItem({
   item,
   size,
@@ -43,7 +45,7 @@ function ThreeItemGridItem({
 export async function ThreeItemGrid() {
   // Collections that start with `hidden-*` are hidden from the search page.
   //todo make this with real data 
-  const homepage = await GetOffre();
+  const homepage:CarsoulType = await GetOffre();
   const homepageItems=homepage
   if (!homepageItems || !homepageItems || !homepageItems) return null;
 
@@ -58,16 +60,22 @@ export async function ThreeItemGrid() {
   );
 }
 export async function FourItemGrid() {
-  // Collections that start with `hidden-*` are hidden from the search page.
-  //todo make this with real data 
-  const data = await GetCarsoul();
+  const pathname = usePathname();  
+  console.log(pathname)
+
+  const data = await GetCarsoul(pathname);
   const products :CarsoulType =data.result
 
   return (
+    <Fragment>         
+       <div className="text-7xl text-red-500 text-center "> header </div>       
     <section className="mx-auto mt-12 grid max-w-screen-2xl gap-4 px-4 pb-4 lg:mt-3 md:grid-cols-8 md:grid-rows-2 lg:max-h-[calc(100vh-200px)]">
+
       {products.map((i)=>(
       <ThreeItemGridItem key={i.id} size="half" item={i} priority={true} />
     ))}
     </section>
+    </Fragment>
+
   );
 }

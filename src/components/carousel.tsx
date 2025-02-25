@@ -1,13 +1,9 @@
 import Link from 'next/link';
 import {FC, Fragment} from "react"
 import { GridTileImage } from './grid/tile';
-import type {CarsoulType}from "@/lib/type/product"
-interface ChildProps {
-  product: CarsoulType;
-  ComponentName:string;
-  ComponentPath:string;
-}
-export const Carousel: FC<ChildProps> = ({ product,ComponentName,ComponentPath }) => {
+import type {CarouselData,CarsoulType}from "@/lib/type/product"
+
+export const Carousel: FC<CarouselData> = ({ product,ComponentName,ComponentPath }) => {
   const products :CarsoulType =product
   if (!products?.length) return null;
   // Purposefully duplicating products to make the carousel loop and not run out of products on wide screens.

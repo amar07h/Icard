@@ -1,10 +1,11 @@
-import { Fragment } from 'react'
+
+import { Fragment  } from 'react'
 import { FourItemGrid } from '@/components/grid/three-items';
 import Footer from '@/components/layouts/footer';
 
-export default function page() {
+export  default async function page() {
   return (
-    <Fragment>           
+    <Fragment>  
         <FourItemGrid />
         <Footer/>
     </Fragment>

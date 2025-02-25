@@ -14,7 +14,7 @@ export const metadata:Metadata = {
   }
 };
 export default async function Home() {
-  const product =await GetCarsoul();
+  const product =await GetCarsoul("all");
     const homepage = await GetOffre();
   
   const products :CarsoulType =product.result
@@ -23,8 +23,8 @@ export default async function Home() {
   return (
     <Fragment>          
 
-          <Slider product={offre} ComponentPath="/game"/>
-           <Carousel product={products}  ComponentName="Cartes cadeaux Jeux" ComponentPath="/game" />
+          <Slider product={offre} ComponentPath="/games"/>
+           <Carousel product={products}  ComponentName="Cartes cadeaux Jeux" ComponentPath="/games" />
            <div className="lg:block hidden">
            <ThreeItemGrid />
            </div>

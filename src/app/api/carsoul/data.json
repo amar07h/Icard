@@ -3,6 +3,7 @@
       {
         "id":"456dsqgdqsvcx8786",
         "name":"Mobile legend",
+        "categories":"/games",
         "path":"/Mobile-legend",
         "featuredImage":{
           "url": "/assets/carsoul/mlbb.png",
@@ -14,6 +15,7 @@
        {
         "id":"456dsqdqsvcsdfddx8786",
         "name":"Free fire",
+        "categories":"/games",
         "path":"/free-fire",
         "featuredImage":{
           "url": "/assets/carsoul/freefire.jpg",
@@ -26,6 +28,7 @@
         "id":"456dsqdqsvcsdfbv55dfddx8786",
         "name":"ea sports fc 25",
         "path":"/EA-SPORTS-FC-25",
+        "categories":"/games",
         "featuredImage":{
           "url": "/assets/carsoul/fc25.jpg",
           "altText": "webp recharge dimaond call of duty",
@@ -36,6 +39,7 @@
        {
         "id":"4ghj56dsqdqsvcfddx8786",
         "name":"Fortnite",
+        "categories":"/games",
         "path":"/fortnite-v", 
         "featuredImage":{
           "url": "/assets/carsoul/fortnite.png",
@@ -47,6 +51,7 @@
        {
         "id":"4ghj56dsqdqsvcsdfbv55dfddx8786",
         "name":"Pubg",
+        "categories":"/games",
         "path":"/pubg-mobile",
         "featuredImage":{
           "url": "/assets/carsoul/pubg.png",
@@ -58,6 +63,7 @@
        {
         "id":"4ghj56dssdfbv55dfddx8786",
         "name":"roblox",
+        "categories":"/games",
         "path":"/roblox-mobile",
         "featuredImage":{
           "url": "/assets/carsoul/roblox.png",
@@ -69,6 +75,7 @@
        {
         "id":"hj56dsvcsdfbv55dfddx8786",
         "name":"apex legend",
+        "categories":"/games",
         "path":"/apex-legend",
         "featuredImage":{
           "url": "/assets/carsoul/apex.png",

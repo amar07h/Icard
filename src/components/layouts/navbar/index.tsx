@@ -8,7 +8,6 @@ import { Fragment, Suspense } from 'react';
 import MobileMenu from './mobile-menu';
 import Search, { SearchSkeleton } from './search';
 
-const  SITE_NAME  = "Gaming Store";
 //? Menu Types
 export type Menu = {
   title: string;

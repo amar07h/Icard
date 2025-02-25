@@ -48,3 +48,8 @@ export type SEO = {
     featuredImage:Image
   }
   export type CarsoulType = Offre[]
+  export interface CarouselData {
+    product: CarsoulType;
+    ComponentName:string;
+    ComponentPath:string;
+  }

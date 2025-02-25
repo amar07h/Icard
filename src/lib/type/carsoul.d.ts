@@ -5,3 +5,4 @@ export type Carsoul = [{
     img: string;
     price:string
   }]
+  
