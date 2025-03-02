@@ -3,8 +3,6 @@ import data from "@/app/api/carsoul/data.json"
 import data2 from "@/app/api/carsoul/data2.json"
 export async function GET(req:NextRequest){
   const $params=req.url.split('=').reverse()[0]
-  console.log("$params")
-  console.log($params)
   if($params==="all"){
     try {
       const result = data.product;
@@ -18,9 +16,9 @@ export async function GET(req:NextRequest){
     }
   }
   else {
-    const result = data.product.filter(i => i.categories === $params);
-    console.log(result)
     try {
+
+    const result = data.product.filter(i => i.categories === $params);
       return NextResponse.json({result});
   } catch (error) {
       return NextResponse.json(

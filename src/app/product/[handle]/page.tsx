@@ -122,7 +122,7 @@ export default async function ProductPage(props: { params: Promise<{ handle: str
           >
             <Link
               className="relative h-full w-full"
-              href={`/product/${product.title}`}
+              href={`/product/${product.handle}`}
               prefetch={true}
             >
               <GridTileImage

@@ -1,12 +1,12 @@
 {
   "product": [
     {
-      "id": "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzU0NDczMjUwMjQ0MjA=",
+      "id": "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzU0NDczMjUwMjQ0",
       "handle": "free-fire",
       "availableForSale": true,
       "title": "Free Fire Recharge diamond",
       "description": "recharge votre compte free fire by id ",
-      "descriptionHtml": "<h3>description</h3><h5>Vous connaissez quelqu'un qui aime jouer au jeu mobile Free Fire ? Étant donné que Free Fire est devenu le jeu mobile le plus téléchargé au monde en 2019, il est probable que ce soit votre cas. Si vous cherchez à offrir à cette personne un cadeau original pour une occasion spéciale, pensez à lui offrir une carte-cadeau Free Fire. fama possibilite touslk + 5% men order mta3k</h5>",
+      "descriptionHtml": "<h3>How to Redeem Free Fire Diamonds</h3><h6>Once you purchase a Free Fire Diamonds code, follow these steps to activate it:</h6><ol><li>Login to your account at shop2game.com</li><li>Go to the Free Fire Mobile game credit top-up page and enter your Free Fire player ID</li><li>Navigate to the<strong>Redeem Code</strong> page and enter your redemption code.</li><li>Once redeemed, the Diamonds will be added to your Free Fire account in just a few moments.</li></ol> <p>Good luck in the game! We look forward to your return.</p>",
       "options": [
         {
           "id": "ProductOption/123",
@@ -22,38 +22,21 @@
           "id": "ProductOption/456",
           "name": "Qte",
           "values": [
-            "50",
             "100",
             "210",
-            "580",
-            "1188",
-            "2400"
+            "583",
+            "1080",
+            "2420"
           ]
         }
       ],
-      "priceRange":"2",
+      "priceRange":"3.5",
       "variants": [
         {
-          "id": "ProductVariant/123456789",
-          "title": "50",
-          "availableForSale": true,
-          "selectedOptions": [
-            {
-              "name": "Server",
-              "value": "global"
-            },
-            {
-              "name": "Qte",
-              "value": "50"
-            }
-          ],
-          "price": "2"
-        },
-        {
-          "id": "ProductVariant/999999999989",
+          "id": "7",
           "title": "100",
           "availableForSale": true,
-         "selectedOptions": [
+          "selectedOptions": [
             {
               "name": "Server",
               "value": "global"
@@ -63,13 +46,13 @@
               "value": "100"
             }
           ],
-          "price": "4"
-        }, 
+          "price": "3.5"
+        },
         {
-          "id": "ProductVariant/102",
+          "id": "8",
           "title": "210",
           "availableForSale": true,
-          "selectedOptions": [
+         "selectedOptions": [
             {
               "name": "Server",
               "value": "global"
@@ -79,7 +62,23 @@
               "value": "210"
             }
           ],
-          "price": "8"
+          "price": "7.7"
+        }, 
+        {
+          "id": "9",
+          "title": "583",
+          "availableForSale": true,
+          "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "global"
+            },
+            {
+              "name": "Qte",
+              "value": "583"
+            }
+          ],
+          "price": "20.8"
         },
         {
           "id": "ProductVariant/1xz2",
@@ -99,7 +98,7 @@
         },
         {
           "id": "ProductVariant/1xzd2",
-          "title": "1188",
+          "title": "1080",
           "availableForSale": true,
          "selectedOptions": [
             {
@@ -108,14 +107,14 @@
             },
             {
               "name": "Qte",
-              "value": "1188"
+              "value": "1080"
             }
           ],
           "price": "40"
         },
         {
           "id": "ProductVariant/1xzcv2",
-          "title": "2400",
+          "title": "2420",
           "availableForSale": true,
          "selectedOptions": [
             {
@@ -124,10 +123,10 @@
             },
             {
               "name": "Qte",
-              "value": "2400"
+              "value": "2420"
             }
           ],
-          "price": "80"
+          "price": "82.5"
         }
       ],
       "featuredImage": {
@@ -160,8 +159,8 @@
       "availableForSale": true,
       "title": "Carte cadeau Mobile Legends Diamonds",
       "description": "recharge diamond votre compte mobile legend  by id in tunis",
-      "descriptionHtml": "<h3>description</h3><h5>Devenez un véritable champion de Mobile Legends ! Achetez dès aujourd'hui une carte cadeau Mobile Legends . Faites équipe avec vos amis et amusez-vous bien !</h5>",
-      "options": [
+      "descriptionHtml": "<h3>How Do I Redeem Mobile Legends Codes?</h3><h6>Once you purchase a Mobile Legends Codes , follow these steps to activate it:</h6><ol><li>Go into the Moonton site <a href='https://m.mobilelegends.com/en/codexchange' target='_blank'><strong>by clicking here</strong></a></li><li>Enter your game ID</li><li>Click <strong>Send</strong>and then head to your in-game mailbox for verification code</li><li>Enter your verification code. </li><li>Copy a Mobile Legends code and press <strong>send</strong></li><li>After the code validation, the notification <strong>success</strong> appears</li><li>Go to your in-game mailbox to collect your rewards  </li></ol><p>Good luck in the game! We look forward to your return.</p>"
+      ,"options": [
         {
           "id": "ProductOption/123",
           "name": "Server",
@@ -178,18 +177,18 @@
           "values": [
             "11",
             "55",
-            "275",
-            "565",
-            "1155",
-            "1765",
-            "2975"
+            "284",
+            "712",
+            "1088",
+            "2976",
+            "Weekly Diamonds Pass"
           ]
         }
       ],
-      "priceRange":"2",
+      "priceRange":"1",
       "variants": [
         {
-          "id": "ProductVariant/123456789",
+          "id": "1",
           "title": "11",
           "availableForSale": true,
           "selectedOptions": [
@@ -205,7 +204,7 @@
           "price": "1"
         },
         {
-          "id": "ProductVariant/999999999989",
+          "id": "2",
           "title": "55",
           "availableForSale": true,
          "selectedOptions": [
@@ -221,8 +220,8 @@
           "price": "4"
         }, 
         {
-          "id": "ProductVariant/102",
-          "title": "275",
+          "id": "3",
+          "title": "284",
           "availableForSale": true,
           "selectedOptions": [
             {
@@ -231,14 +230,14 @@
             },
             {
               "name": "Qte",
-              "value": "275"
+              "value": "284"
             }
           ],
-          "price": "20"
+          "price": "21"
         },
         {
-          "id": "ProductVariant/1xz2",
-          "title": "565",
+          "id": "4",
+          "title": "712",
           "availableForSale": true,
          "selectedOptions": [
             {
@@ -247,14 +246,14 @@
             },
             {
               "name": "Qte",
-              "value": "565"
+              "value": "712"
             }
           ],
-          "price": "40"
+          "price": "55"
         },
         {
-          "id": "ProductVariant/1xzd2",
-          "title": "1155",
+          "id": "5",
+          "title": "1088",
           "availableForSale": true,
          "selectedOptions": [
             {
@@ -263,14 +262,14 @@
             },
             {
               "name": "Qte",
-              "value": "1155"
+              "value": "1088"
             }
           ],
-          "price": "40"
+          "price": "80"
         },
         {
-          "id": "ProductVariant/1xzcv2",
-          "title": "1765",
+          "id": "6",
+          "title": "Weekly Diamonds Pass",
           "availableForSale": true,
          "selectedOptions": [
             {
@@ -279,14 +278,14 @@
             },
             {
               "name": "Qte",
-              "value": "1765"
+              "value": "Weekly Diamonds Pass"
             }
           ],
-          "price": "120"
+          "price": "8"
         },
         {
-          "id": "ProductVariant/1xzcv2",
-          "title": "2975",
+          "id": "7",
+          "title": "2976",
           "availableForSale": true,
          "selectedOptions": [
             {
@@ -295,7 +294,7 @@
             },
             {
               "name": "Qte",
-              "value": "2975"
+              "value": "2976"
             }
           ],
           "price": "200"
@@ -317,7 +316,7 @@
       ],
       "seo": {
         "title": "Carte cadeau Mobile Legends Diamonds in tunisie",
-        "description": "Carte cadeau Mobile Legends Diamonds by id tunis"
+        "description": "Carte cadeau Mobile Legends Diamonds by id tunis Mobile Legends: Bang Bang ml wallper"
       },
       "tags": [
         "game",
@@ -331,7 +330,7 @@
       "availableForSale": true,
       "title": "Carte cadeau PUBG Mobile",
       "description": "Acheter une carte cadeau PUBG Mobile tunis",
-      "descriptionHtml": "<h3>description</h3><h5>Vous connaissez quelqu'un qui aime jouer à PUBG sur son téléphone portable ? Une carte cadeau PUBG Mobile fera un excellent cadeau pour tout joueur de PUBG Mobile, quelle que soit l'occasion. En achetant une carte cadeau PUBG Mobile, vous offrez à votre destinataire la possibilité d'acheter des armes et d'autres objets dans la boutique du jeu.</h5>",
+      "descriptionHtml": "<h3>How Do I Redeem PUBG Mobile Codes?</h3><h6>Once you purchase a PUBG Mobile Codes , follow these steps to activate it:</h6><ol><li>Go into the PUBG Mobile site <a href='https://pubg.com/en/events/redeem' target='_blank'></a><strong>by clicking her</strong></li><li>Enter your character ID in the first field</li><li>Enter the code you purchased</li><li>Enter your verification code shown</li><li>Redemption complete! Enjoy your purchases!</li></ol><p>Good luck in the game! We look forward to your return.</p>",
       "options": [
         {
           "id": "ProductOption/123",
@@ -349,16 +348,16 @@
           "values": [
             "60",
             "325",
+            "660",
             "1800",
-            "3850",
-            "8100"
+            "24300"
           ]
         }
       ],
       "priceRange":"2",
       "variants": [
         {
-          "id": "ProductVariant/123456789",
+          "id": "91",
           "title": "60",
           "availableForSale": true,
           "selectedOptions": [
@@ -371,10 +370,10 @@
               "value": "60"
             }
           ],
-          "price": "4"
+          "price": "3.5"
         },
         {
-          "id": "ProductVariant/999999f999989",
+          "id": "25",
           "title": "325",
           "availableForSale": true,
          "selectedOptions": [
@@ -387,11 +386,11 @@
               "value": "325"
             }
           ],
-          "price": "20"
+          "price": "17.6"
         }, 
         {
-          "id": "ProductVariant/102",
-          "title": "275",
+          "id": "102",
+          "title": "660",
           "availableForSale": true,
           "selectedOptions": [
             {
@@ -403,10 +402,10 @@
               "value": "660"
             }
           ],
-          "price": "40"
+          "price": "35"
         },
         {
-          "id": "ProductVariant/1xz2",
+          "id": "6554",
           "title": "1800",
           "availableForSale": true,
          "selectedOptions": [
@@ -419,11 +418,11 @@
               "value": "1800"
             }
           ],
-          "price": "100"
+          "price": "88"
         },
         {
-          "id": "ProductVariant/1xzd2",
-          "title": "1155",
+          "id": "xzd2",
+          "title": "24300",
           "availableForSale": true,
          "selectedOptions": [
             {
@@ -432,26 +431,10 @@
             },
             {
               "name": "Qte",
-              "value": "3850"
+              "value": "24300"
             }
           ],
-          "price": "200"
-        },
-        {
-          "id": "ProductVariant/1xzcv2",
-          "title": "8100",
-          "availableForSale": true,
-         "selectedOptions": [
-            {
-              "name": "Server",
-              "value": "global"
-            },
-            {
-              "name": "Qte",
-              "value": "8100"
-            }
-          ],
-          "price": "400"
+          "price": "1044"
         }
       ],
       "featuredImage": {
@@ -483,17 +466,16 @@
       "handle": "fortnite-v",
       "availableForSale": true,
       "title": "Fortnite V-Bucks carte cadeau",
-      "description": "Acheter une carte cadeau Fortnite V-Bucks tunis",
-      "descriptionHtml": "<h3>description</h3><h5>Fortnite est l'un des jeux les plus populaires du moment. Les enfants comme les adultes apprécient Fortnite pour son gameplay incroyablement excitant - il s'agit de survivre dans une arène de combat contre d'autres joueurs habiles. Si vous connaissez quelqu'un qui aime Fortnite, offrez-lui une carte-cadeau Fortnite.</h5>",
+      "description": "Acheter une carte cadeau Fortnite V-Bucks tunis ",
+      "descriptionHtml": "<h3>Comment échanger une carte cadeau Fortnite V-Bucks ?</h3><h6>Une fois que vous avez acheté un code Fortnite V-Bucks, suivez ces étapes pour l'activer :</h6><ol><li>Cliquez sur Se connecter dans le coin supérieur droit de la page d'accueil de Fortnite </li><li>Connectez-vous avec votre compte Epic Games</li> <li>Passez le curseur de votre souris sur le nom de votre compte dans le coin supérieur droit</li><li>Sélectionnez l'option Carte V-Bucks</li><li>Appuyez sur le bouton <strong>Get Started</strong></li><li>Entrez le code clé et cliquez sur Confirmer pour échanger votre carte cadeau Fortnite x V-Bucks !</li></ol><p>Good luck in the game! We look forward to your return.</p>",
       "options": [
         {
           "id": "ProductOption/123",
           "name": "Server",
           "values": [
-            "global",
-            "ksa",
-            "usa",
-            "france"
+            "PC",
+            "XBOX",
+            "PS5"
           ]
         },
         {
@@ -507,7 +489,7 @@
           ]
         }
       ],
-      "priceRange":"100",
+      "priceRange":"53",
       "variants": [
         {
           "id": "ProductVariant/102",
@@ -516,63 +498,126 @@
           "selectedOptions": [
             {
               "name": "Server",
-              "value": "global"
+              "value": "PC"
             },
             {
               "name": "Qte",
               "value": "1000"
             }
           ],
-          "price": "49.5"
+          "price": "54"
         },
-       
         {
-          "id": "ProductVariant/1xz2",
+          "id": "ro02",
+          "title": "1000",
+          "availableForSale": true,
+          "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "XBOX"
+            },
+            {
+              "name": "Qte",
+              "value": "1000"
+            }
+          ],
+          "price": "64"
+        },
+        {
+          "id": "Pr1xz2",
           "title": "2800",
           "availableForSale": true,
          "selectedOptions": [
             {
               "name": "Server",
-              "value": "global"
+              "value": "PC"
             },
             {
               "name": "Qte",
               "value": "2800"
             }
           ],
-          "price": "96"
+          "price": "107"
         },
         {
-          "id": "ProductVariant/1xz2",
+          "id": "Pr1xz2",
+          "title": "2800",
+          "availableForSale": true,
+         "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "XBOX"
+            },
+            {
+              "name": "Qte",
+              "value": "2800"
+            }
+          ],
+          "price": "122"
+        },
+        {
+          "id": "lkklhuio65",
           "title": "5000",
           "availableForSale": true,
          "selectedOptions": [
             {
               "name": "Server",
-              "value": "global"
+              "value": "PC"
             },
             {
               "name": "Qte",
               "value": "5000"
             }
           ],
-          "price": "165"
+          "price": "171"
         },
-         {
-          "id": "ProductVariant/123456789",
-          "title": "13500",
+        {
+          "id": "lELYOuio65",
+          "title": "5000",
           "availableForSale": true,
-          "selectedOptions": [
+         "selectedOptions": [
             {
               "name": "Server",
-              "value": "global"
+              "value": "XBOX"
+            },
+            {
+              "name": "Qte",
+              "value": "5000"
+            }
+          ],
+          "price": "181"
+        },
+        {
+          "id": "eyessio65",
+          "title": "13500",
+          "availableForSale": true,
+         "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "PC"
             },
             {
               "name": "Qte",
               "value": "13500"
             }
           ],
-          "price": "380"
+          "price": "385"
+        },
+        {
+          "id": "ELYOXBOX",
+          "title": "13500",
+          "availableForSale": true,
+         "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "XBOX"
+            },
+            {
+              "name": "Qte",
+              "value": "13500"
+            }
+          ],
+          "price": "424"
         }
       ],
       "featuredImage": {
@@ -594,7 +639,208 @@
         "description": "Carte cadeau fortnite UC by id tunis شحن جواهر"
       },
       "tags": [
-        "game",
+        "skine",
+        "example-tag-2"
+      ],
+      "updatedAt": "2023-09-01T12:00:00Z"
+    },
+    {
+      "id": "Z2lyujOvidsds",
+      "handle": "fortnite-rebirth",
+      "availableForSale": true,
+      "title": "Fortnite Rebirth Harley Quinn Skin (DLC) clé Epic Games",
+      "description": "Fortnite - Rebirth Harley Quinn Skin (DLC) clé Epic Games GLOBAL ",
+      "descriptionHtml": "<h3>Comment racheter le skin Rebirth Harley Quinn sur PC ?</h3><h6>Si vous souhaitez échanger un skin Fortnite, il vous suffit de suivre les instructions fournies ci-dessous :</h6><ol><li>Cliquez sur Se connecter dans le coin supérieur droit de la page d'accueil de Fortnite </li><li>Connectez-vous avec votre compte Epic Games</li> <li>Passez le curseur de votre souris sur le nom de votre compte dans le coin supérieur droit</li><li>Sélectionnez l'option Redeem Code</li><li>Entrez le code clé et<strong> cliquez sur Redeem</strong></li></ol><p>Good luck in the game! We look forward to your return.</p>",
+      "options": [
+        {
+          "id": "Production/123",
+          "name": "Server",
+          "values": [
+            "PC"
+          ]
+        },
+        {
+          "id": "ProductOpion/456",
+          "name": "Qte",
+          "values": [
+            "skin"
+          ]
+        }
+      ],
+      "priceRange":"22.5",
+      "variants": [
+        {
+          "id": "Produt/102",
+          "title": "skin",
+          "availableForSale": true,
+          "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "PC"
+            },
+            {
+              "name": "Qte",
+              "value": "skin"
+            }
+          ],
+          "price": "22.5"
+        }
+   
+      ],
+      "featuredImage": {
+        "url": "/assets/carsoul/fortnite-rebi.jpg",
+        "altText": "recharge dimaond fortnite",
+        "width": 1000,
+        "height": 1000
+      },
+      "images": [
+        {
+          "url": "/assets/carsoul/fortnite-rebi.jpg",
+          "altText": "Example image 1",
+          "width": 1000,
+          "height": 1000
+        }
+      ],
+      "seo": {
+        "title": "fortnite-Rebirth Harley Quinn Skin in tunisie",
+        "description": "fortnite-Rebirth Harley Quinn Skin by id tunis شحن جواهر"
+      },
+      "tags": [
+        "skine",
+        "example-tag-2"
+      ],
+      "updatedAt": "2023-09-01T12:00:00Z"
+    },
+    {
+      "id": "Z2lyujOvidsdskjkkj",
+      "handle": "fortnite-Back",
+      "availableForSale": true,
+      "title": "Fortnite - Harley Quinn's Revenge Back Bling (DLC) Clé Epic Games GLOBAL",
+      "description": "Fortnite - Harley Quinn's Revenge Back Bling (DLC) Clé Epic Games GLOBAL ",
+      "descriptionHtml": "<h3>Comment racheter le skin Rebirth Harley Quinn Revenge Back Bling sur PC ?</h3><h6>Si vous souhaitez échanger un skin Fortnite, il vous suffit de suivre les instructions fournies ci-dessous :</h6><ol><li>Cliquez sur Se connecter dans le coin supérieur droit de la page d'accueil de Fortnite </li><li>Connectez-vous avec votre compte Epic Games</li> <li>Passez le curseur de votre souris sur le nom de votre compte dans le coin supérieur droit</li><li>Sélectionnez l'option Redeem Code</li><li>Entrez le code clé et<strong> cliquez sur Redeem</strong></li></ol><p>Good luck in the game! We look forward to your return.</p>",
+      "options": [
+        {
+          "id": "Produion/123",
+          "name": "Server",
+          "values": [
+            "PC"
+          ]
+        },
+        {
+          "id": "ProductO456",
+          "name": "Qte",
+          "values": [
+            "skin"
+          ]
+        }
+      ],
+      "priceRange":"6.5",
+      "variants": [
+        {
+          "id": "Produt/102",
+          "title": "skin",
+          "availableForSale": true,
+          "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "PC"
+            },
+            {
+              "name": "Qte",
+              "value": "skin"
+            }
+          ],
+          "price": "6.5"
+        }
+   
+      ],
+      "featuredImage": {
+        "url": "/assets/carsoul/skin2.webp",
+        "altText": "recharge dimaond fortnite",
+        "width": 1000,
+        "height": 1000
+      },
+      "images": [
+        {
+          "url": "/assets/carsoul/skin2.webp",
+          "altText": "Example image 1",
+          "width": 1000,
+          "height": 1000
+        }
+      ],
+      "seo": {
+        "title": "fortnite-Rebirth Harley Quinn Skin in tunisie",
+        "description": "fortnite-Rebirth Harley Quinn Skin by id tunis شحن جواهر"
+      },
+      "tags": [
+        "skine",
+        "example-tag-2"
+      ],
+      "updatedAt": "2023-09-01T12:00:00Z"
+    },
+    {
+      "id": "Z2lyujOvid0141sdskjkkj",
+      "handle": "fortnite-pack",
+      "availableForSale": true,
+      "title": "Fortnite - Armored Batman Zero Skin (6 Codes Pack) (DLC) Clé Epic Games GLOBAL",
+      "description": "Fortnite - Armored Batman Zero Skin (6 Codes Pack) (DLC) Clé Epic Games GLOBAL ",
+      "descriptionHtml": "<h3>Comment racheter le skin Armored Batman Zero Skin sur PC ?</h3><h6>Si vous souhaitez échanger un skin Fortnite, il vous suffit de suivre les instructions fournies ci-dessous :</h6><ol><li>Cliquez sur Se connecter dans le coin supérieur droit de la page d'accueil de Fortnite </li><li>Connectez-vous avec votre compte Epic Games</li> <li>Passez le curseur de votre souris sur le nom de votre compte dans le coin supérieur droit</li><li>Sélectionnez l'option Redeem Code</li><li>Entrez le code clé et<strong> cliquez sur Redeem</strong></li></ol><p>Good luck in the game! We look forward to your return.</p>",
+      "options": [
+        {
+          "id": "Produion/123",
+          "name": "Server",
+          "values": [
+            "PC"
+          ]
+        },
+        {
+          "id": "ProductO456",
+          "name": "Qte",
+          "values": [
+            "skin"
+          ]
+        }
+      ],
+      "priceRange":"84",
+      "variants": [
+        {
+          "id": "Produt/102",
+          "title": "skin",
+          "availableForSale": true,
+          "selectedOptions": [
+            {
+              "name": "Server",
+              "value": "PC"
+            },
+            {
+              "name": "Qte",
+              "value": "skin"
+            }
+          ],
+          "price": "84"
+        }
+   
+      ],
+      "featuredImage": {
+        "url": "/assets/carsoul/batman.png",
+        "altText": "recharge dimaond fortnite",
+        "width": 1000,
+        "height": 1000
+      },
+      "images": [
+        {
+          "url": "/assets/carsoul/batman.png",
+          "altText": "Example image 1",
+          "width": 1000,
+          "height": 1000
+        }
+      ],
+      "seo": {
+        "title": "fortnite-Rebirth Harley Quinn Skin in tunisie",
+        "description": "fortnite-Rebirth Harley Quinn Skin by id tunis شحن جواهر"
+      },
+      "tags": [
+        "skine",
         "example-tag-2"
       ],
       "updatedAt": "2023-09-01T12:00:00Z"

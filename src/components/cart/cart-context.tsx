@@ -1,7 +1,8 @@
 'use client';
+import dynamic from 'next/dynamic'
 import type { Product, ProductVariant } from '@/lib/type/product';
 import type { Cart, CartItem } from '@/lib/type/cart';
-import React, { createContext, use, useContext, useEffect, useMemo, useReducer } from 'react';
+import { createContext, ReactNode, useContext, useEffect, useMemo, useReducer } from 'react';
 
 type UpdateType = 'plus' | 'minus' | 'delete';
 
@@ -144,11 +145,12 @@ function cartReducer(state: Cart | undefined, action: CartAction): Cart {
 }
 
 export function CartProvider({ children }: { 
-  children: React.ReactNode
+  children: ReactNode
 
  }) {
   const [cart, dispatch] = useReducer(cartReducer, createEmptyCart(), () => {
-    if (typeof window !== 'undefined') {
+  const cart=  localStorage.getItem('cart');
+    if (cart !== 'undefined') {
       const storedCart = localStorage.getItem('cart');
       return storedCart ? JSON.parse(storedCart) : createEmptyCart();
     }

@@ -6,7 +6,9 @@ export async function ServerFetch(endpoint:string) {
         headers: {
           'Content-Type': 'application/json',
         },
-      });
+        
+      }
+    );
   
       const body = await result.json();
       return {
@@ -20,6 +22,7 @@ export async function GetOffre(){
   const res = await ServerFetch("offre");
   return res?.body
 }
+
 export async function GetCarsoul($parms:string){
   const res = await ServerFetch(`carsoul?search=${$parms}`);
   return res?.body

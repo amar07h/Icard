@@ -10,8 +10,8 @@ import { Navbar } from '@/components/layouts/navbar';
 import { Toaster } from 'sonner';
 import { WelcomeToast } from '@/components/layouts/welcome-toast';
 //? cart context using conext hook
-
-const { FACEBOOK_CREATOR, FACEBOOK_SITE, SITE_NAME } = process.env;
+const SITE_NAME="Gaming Store"
+const { FACEBOOK_CREATOR, FACEBOOK_SITE } = process.env;
 const baseUrl = 'http://localhost:3000';
 const FACEBOOKCreator = FACEBOOK_CREATOR ? ensureStartsWith(FACEBOOK_CREATOR, '@') : undefined;
 const FACEBOOKSite = FACEBOOK_SITE ? ensureStartsWith(FACEBOOK_SITE, 'https://') : undefined;

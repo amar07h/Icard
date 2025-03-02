@@ -1,11 +1,8 @@
-"use client";
-import { usePathname } from "next/navigation";
-
 import { GridTileImage } from '@/components/grid/tile';
-import type { CarsoulType, Offre } from '@/lib/type/product';
+import type { CarsoulType, Offre ,CarouselData} from '@/lib/type/product';
 import { GetOffre,GetCarsoul } from '@/lib/server/get';
 import Link from 'next/link';
-import { Fragment } from "react";
+import { Fragment ,FC} from "react";
 function ThreeItemGridItem({
   item,
   size,
@@ -59,19 +56,19 @@ export async function ThreeItemGrid() {
     </section>
   );
 }
-export async function FourItemGrid() {
-  const pathname = usePathname();  
-  console.log(pathname)
+export  const FourItemGrid:FC<CarouselData> =({ product,ComponentName,ComponentPath }) => {
 
-  const data = await GetCarsoul(pathname);
-  const products :CarsoulType =data.result
+  const products :CarsoulType =product
+  
+  if (!products?.length) return null;
+  const itemsWithoutFirst = products.slice(1);
 
   return (
     <Fragment>         
-       <div className="text-7xl text-red-500 text-center "> header </div>       
+       <div className="text-7xl text-red-500 text-center "> {ComponentName} </div>       
     <section className="mx-auto mt-12 grid max-w-screen-2xl gap-4 px-4 pb-4 lg:mt-3 md:grid-cols-8 md:grid-rows-2 lg:max-h-[calc(100vh-200px)]">
 
-      {products.map((i)=>(
+      {itemsWithoutFirst.map((i)=>(
       <ThreeItemGridItem key={i.id} size="half" item={i} priority={true} />
     ))}
     </section>

@@ -18,8 +18,8 @@ export function Navbar() {
 
   const menu = [
     {
-    title:"Subscriptions",
-    path:"/subscriptions"
+    title:"Games",
+    path:"/games"
   },
   {
     title:"carte prépaye",
@@ -46,13 +46,13 @@ export function Navbar() {
             <LogoSquare />
           </Link>
           {menu.length ? (
-            <ul className="hidden gap-6 text-sm md:flex md:items-center">
+            <ul className="hidden gap-6 text-sm md:flex md:items-center ml-8">
               {menu.map((item: Menu) => (
                 <li key={item.title}>
                   <Link
                     href={item.path}
                     prefetch={true}
-                    className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300"
+                    className="text-neutral-500 capitalize text-lg underline-offset-4  hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300"
                   >
                     {item.title}
                   </Link>
