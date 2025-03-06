@@ -2,7 +2,7 @@
 import { AddToCart } from '@/components/cart/add-to-cart';
 import Price from '@/components/price';
 import Prose from '@/components/prose';
-import { Product } from '@/lib/type';
+import { Product } from '@/lib/type/product';
 import { VariantSelector } from './variant-selector';
 import { useState } from 'react';
 export function ProductDescription({ product }: { product: Product }) {
@@ -27,13 +27,14 @@ if(result){
         </div>
       </div>
       <VariantSelector options={product.options} variants={product.variants} sendDataToParent={handleChildData} />
+      <AddToCart product={product} />
+
       {product.descriptionHtml ? (
         <Prose
           className="mb-6 text-sm leading-tight dark:text-white/[60%]"
           html={product.descriptionHtml}
         />
       ) : null}
-      <AddToCart product={product} />
     </>
   );
 }

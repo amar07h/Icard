@@ -18,18 +18,18 @@ export default async function Home() {
   const product =await GetCarsoul("all");
     const homepage = await GetOffre();
   
-  const products :CarsoulType =product.result
+  const games :CarsoulType =product.games.slice(1)
   const offre :CarsoulType =homepage
-  const products2 :CarsoulType =product.result2
+  const streaming :CarsoulType =product.console.slice(1)
   return (
     <Fragment>          
 
           <Slider product={offre} ComponentPath="/games"/>
-           <Carousel product={products}  ComponentName="Cartes cadeaux Jeux" ComponentPath="/games" />
+           <Carousel product={games}  ComponentName="Cartes cadeaux Jeux" ComponentPath="/games" />
            <div className="lg:block hidden">
            <ThreeItemGrid />
            </div>
-           <Carousel product={products2} ComponentName="trend" ComponentPath="/card"/>
+           <Carousel product={streaming} ComponentName="streaming" ComponentPath="/streaming"/>
 
     </Fragment>
   );

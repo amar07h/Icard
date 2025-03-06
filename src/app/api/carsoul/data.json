@@ -109,6 +109,18 @@
         }
        },
        {
+        "id":"4ghj56vcdsqdqsvcsdfbv55dfddx8786",
+        "name":"GTA-V",
+        "categories":"games",
+        "path":"/gta-v",
+        "featuredImage":{
+          "url": "/assets/carsoul/pc.webp",
+          "altText": "webp recharge dimaond Pubg",
+          "width": 1000,
+          "height": 1000
+        }
+       },
+       {
         "id":"4ghj56dssdfbv55dfddx8786",
         "name":"roblox",
         "categories":"games",
@@ -131,8 +143,178 @@
           "width": 1000,
           "height": 1000
         }
+       },
+       {
+        "id":"456dlsdqgdqsvcx8786",
+        "name":"seo",
+        "categories":"streaming",
+        "path":"point de voint streaming",
+        "featuredImage":{
+          "url": "/assets/carsoul/netflix.png",
+          "altText": "recharge netflix",
+          "width": 1000,
+          "height": 1000
+        }
+       }, 
+       {
+        "id":"456dlsqgdqsvcx8786",
+        "name":"netflix",
+        "categories":"streaming",
+        "path":"/netflix-movies",
+        "featuredImage":{
+          "url": "/assets/carsoul/netflix.png",
+          "altText": "recharge netflix",
+          "width": 1000,
+          "height": 1000
+        }
+       },
+       {
+        "id":"456dldssqgdqsvcx8786",
+        "name":"prime",
+        "categories":"streaming",
+        "path":"/prime-amazon",
+        "featuredImage":{
+          "url": "/assets/carsoul/prime.png",
+          "altText": "recharge account prime",
+          "width": 1000,
+          "height": 1000
+        }
+       },
+       {
+        "id":"456nnbdlsqgdqsvcdsx8786",
+        "name":"youtube prime",
+        "path":"/youtube-prime",
+        "categories":"streaming",
+        "featuredImage":{
+          "url": "/assets/carsoul/youtube.png",
+          "altText": "recharge youtube",
+          "width": 1000,
+          "height": 1000
+        }
        }
-  
+       ,
+       {
+        "id":"456qgdqcsvcdsx8786",
+        "name":"hulu",
+        "path":"/hulu-streaming",
+        "categories":"streaming",
+        "featuredImage":{
+          "url": "/assets/carsoul/hulu.png",
+          "altText": "recharge hulu",
+          "width": 1000,
+          "height": 1000
+        }
+       }
+       ,
+       {
+        "id":"456qgdqcsvcdsx878bv6",
+        "name":"spotify",
+        "path":"/spotify-music",
+        "categories":"streaming",
+        "featuredImage":{
+          "url": "/assets/carsoul/spotify.png",
+          "altText": "recharge spotify",
+          "width": 1000,
+          "height": 1000
+        }
+       },
+       {
+        "id":"45vc6qgdqcsvcdsx878bv6",
+        "name":"dezzer",
+        "path":"/dezzer-music",
+        "categories":"streaming",
+        "featuredImage":{
+          "url": "/assets/carsoul/dezzer.png",
+          "altText": "recharge dezzer",
+          "width": 1000,
+          "height": 1000
+        }
+       }
+       ,
+       {
+        "id":"45vc6qgdvbqcsvcdsx878bv6",
+        "name":"appel tv +",
+        "path":"/appel-Tv",
+        "categories":"streaming",
+        "featuredImage":{
+          "url": "/assets/carsoul/appeltv+.png",
+          "altText": "recharge appel tv +",
+          "width": 1000,
+          "height": 1000
+        }
+       },
+       {
+        "id":"45vc6qgdvbqcsvcdsxds878bv6",
+        "name":"shaied",
+        "path":"/shaied-vip",
+        "categories":"streaming",
+        "featuredImage":{
+          "url": "/assets/carsoul/shahed.png",
+          "altText": "recharge shaied",
+          "width": 1000,
+          "height": 1000
+        }
+       }
+       ,{
+        "id":"4ghj56vcddsqdqsvcsdfbv55dfddx8786",
+        "name":"Steam",
+        "path":"/steam",
+        "categories":"console",
+        "featuredImage":{
+          "url": "/assets/carsoul/steam.png",
+          "altText": "webp recharge recharge un compte  steam",
+          "width": 1000,
+          "height": 1000
+        }
+       },
+       {
+        "id":"4ghj56vcddsqdqsvdfddx8786",
+        "name":"Xbox",
+        "categories":"console",
+        "path":"/xbox-gamepass",
+        "featuredImage":{
+          "url": "/assets/carsoul/xbox.png",
+          "altText": "webp recharge recharge un compte  xbox",
+          "width": 1000,
+          "height": 1000
+        }
+       },
+       {
+        "id":"4ghj56vccddsqdqsvdfddx8786",
+        "name":"apple",
+        "path":"/apple",      
+          "categories":"console",
+        "featuredImage":{
+          "url": "/assets/carsoul/apple.png",
+          "altText": "webp recharge recharge un compte  apple",
+          "width": 1000,
+          "height": 1000
+        }
+       },
+       {
+        "id":"4ghjfd56vcddsqdqsvcsdfbv55dfddx8786",
+        "name":"Play Sation",
+        "path":"/play-station",
+        "categories":"console",
+        "featuredImage":{
+          "url": "/assets/carsoul/ps.png",
+          "altText": "webp recharge recharge un compte  play station",
+          "width": 1000,
+          "height": 1000
+        }
+       },
+       {
+        "id":"4ghj56vcd874dsqdqsvcsdfbv55dfddx8786",
+        "name":"google play",
+        "categories":"console",
+        "path":"/google-play",
+        "featuredImage":{
+          "url": "/assets/carsoul/googleplay.png",
+          "altText": "webp recharge recharge un compte  play store",
+          "width": 1000,
+          "height": 1000
+        }
+       }
 ]
     
   }

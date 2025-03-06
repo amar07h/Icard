@@ -1,3 +1,5 @@
+import { notFound } from "next/navigation";
+
 const domain = "http://localhost:3000/api/"
 export async function ServerFetch(endpoint:string) {
     try {
@@ -29,6 +31,7 @@ export async function GetCarsoul($parms:string){
 }
 export async function GetSinglData($parms:string){
   const res = await ServerFetch(`data?search=${$parms}`);
+if(res?.body==="not found") return notFound();
   return res?.body
 }
 export async function getProductRecommendations($parms:string) {

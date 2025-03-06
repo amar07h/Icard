@@ -22,8 +22,8 @@ export function Navbar() {
     path:"/games"
   },
   {
-    title:"carte prépaye",
-    path:"/carte"
+    title:"Streming",
+    path:"/streaming"
   },
 ]
 

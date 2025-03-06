@@ -6,7 +6,7 @@ import { Gallery } from '@/components/product/gallery';
 import { ProductProvider } from '@/components/product/product-context';
 import { ProductDescription } from '@/components/product/product-description';
 import {GetSinglData,getProductRecommendations } from '@/lib/server/get';
-import { Image,Product } from '@/lib/type';
+import { Image,Product } from '@/lib/type/product';
 import Link from 'next/link';
 import { Suspense } from 'react';
 
@@ -116,8 +116,7 @@ export default async function ProductPage(props: { params: Promise<{ handle: str
       <ul className="flex w-full gap-4 overflow-x-auto pt-1">
         {relatedProducts.map((product) => (
           <li
-          //todo make this with product id or title
-            key={Math.random()}
+            key={product.id}
             className="aspect-square w-full flex-none min-[475px]:w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5"
           >
             <Link

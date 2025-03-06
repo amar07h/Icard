@@ -53,3 +53,9 @@ export type SEO = {
     ComponentName:string;
     ComponentPath:string;
   }
+  export type Image = {
+    url: string;
+    altText: string;
+    width: number;
+    height: number;
+  };
