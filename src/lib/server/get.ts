@@ -22,11 +22,14 @@ export async function ServerFetch(endpoint:string) {
   }
 export async function GetOffre(){
   const res = await ServerFetch("offre");
+  if(res?.body==="not found") return notFound();
   return res?.body
 }
 
 export async function GetCarsoul($parms:string){
   const res = await ServerFetch(`carsoul?search=${$parms}`);
+  if(res?.body==="not found") return notFound();
+
   return res?.body
 }
 export async function GetSinglData($parms:string){
@@ -40,7 +43,6 @@ export async function getProductRecommendations($parms:string) {
 }
 export async function VerifyCoupon($parms:string) {
   const res = await ServerFetch(`coupon?coupon=${$parms}`);
-  console.log(res?.body)
   return res?.body
 
 }

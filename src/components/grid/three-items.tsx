@@ -66,7 +66,7 @@ export  const FourItemGrid:FC<CarouselData> =({ product,ComponentName,ComponentP
   return (
     <Fragment>         
        <div className="text-7xl text-red-500 text-center "> {ComponentName} </div>       
-    <section className="mx-auto mt-12 grid max-w-screen-2xl gap-4 px-4 pb-4 lg:mt-3 md:grid-cols-8 md:grid-rows-2 lg:max-h-[calc(100vh-200px)]">
+    <section className="mx-auto mt-12 grid max-w-screen-2xl gap-4 px-4 pb-4 lg:mt-3 md:grid-cols-12 md:grid-rows-2 lg:max-h-[calc(100vh-200px)]">
 
       {itemsWithoutFirst.map((i)=>(
       <ThreeItemGridItem key={i.id} size="half" item={i} priority={true} />

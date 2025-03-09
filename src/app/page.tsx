@@ -29,7 +29,7 @@ export default async function Home() {
            <div className="lg:block hidden">
            <ThreeItemGrid />
            </div>
-           <Carousel product={streaming} ComponentName="streaming" ComponentPath="/streaming"/>
+           <Carousel product={streaming} ComponentName="streaming" ComponentPath="/console"/>
 
     </Fragment>
   );

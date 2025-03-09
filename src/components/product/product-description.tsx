@@ -8,7 +8,7 @@ import { useState } from 'react';
 export function ProductDescription({ product }: { product: Product }) {
   //?handel the price base on selector
   const [prix,SetPrix]=useState<string>('2')
-  const handleChildData = (childValue:string) => {
+  const handlePriceByVarientSelector = (childValue:string) => {
     const result = product.variants.find(i => i.title === childValue);
 if(result){
     SetPrix (result.price);
@@ -26,7 +26,7 @@ if(result){
           />
         </div>
       </div>
-      <VariantSelector options={product.options} variants={product.variants} sendDataToParent={handleChildData} />
+      <VariantSelector options={product.options} variants={product.variants} sendDataToParent={handlePriceByVarientSelector} />
       <AddToCart product={product} />
 
       {product.descriptionHtml ? (

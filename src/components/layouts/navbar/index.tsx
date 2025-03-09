@@ -22,8 +22,16 @@ export function Navbar() {
     path:"/games"
   },
   {
+    title:"Console",
+    path:"/console"
+  },
+  {
     title:"Streming",
     path:"/streaming"
+  },
+  {
+    title:"card banker",
+    path:"/financier"
   },
 ]
 

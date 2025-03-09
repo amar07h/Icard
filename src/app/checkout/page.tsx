@@ -7,6 +7,7 @@ import Price from '@/components/price';
 import { DeleteItemButton } from '@/components/cart/delete-item-button';
 import {VerifyCoupon } from '@/lib/server/get';
 import { useState } from 'react';
+import Link from 'next/link';
 
 const subtotal = 'TND210.00'
 type discount = { code: string, amount: string }
@@ -32,24 +33,23 @@ try {
 }
   return (
     <>
-      <main className="lg:flex lg:flex-row-reverse lg:overflow-hidden h-screen bg-white">
+      <main className="lg:flex lg:flex-row-reverse lg:overflow-hidden max-h-screen bg-white">
         <div className="px-4 py-6 sm:px-6 lg:hidden">
-          <div className="mx-auto flex max-w-lg">
-            <a href="#">
-              <span className="sr-only">Your Company</span>
-              <img
+          <div className="flex justify-center">
+              <span className="sr-only">Gaming Store</span>
+              <Image
                 alt=""
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                className="h-8 w-auto"
+                src="/logo.webp"
+                className="size-52"
+                height={500} width={500}
               />
-            </a>
           </div>
         </div>
 
         <h1 className="sr-only">Checkout</h1>
 
         {/* Mobile order summary */}
-        <section aria-labelledby="order-heading" className="max-w-7xl px-4 py-6 sm:px-6 lg:hidden">
+        <section aria-labelledby="order-heading" className="max-w-7xl px-4 py-6 sm:px-6 lg:hidden bg-white">
           <Disclosure as="div" className="mx-auto max-w-lg">
             <div className="flex items-center justify-between">
               <h2 id="order-heading" className="text-lg font-medium text-gray-900">
@@ -97,14 +97,10 @@ try {
   
                                     </div>
                                     <div className="flex space-x-4">
-                                      <button type="button" className="text-sm font-medium text-indigo-600 hover:text-indigo-500">
-                                        Edit
-                                      </button>
+                                    
                                       <div className="flex border-l border-gray-300 pl-4">
-                                        <button type="button" className="text-sm font-medium text-indigo-600 hover:text-indigo-500">
                               <DeleteItemButton item={item} optimisticUpdate={updateCartItem} />
                                           
-                                        </button>
                                       </div>
                                     </div>
                                   </div>
@@ -177,7 +173,7 @@ try {
             Order summary
           </h2>
 
-          <ul role="list" className="flex-auto divide-y divide-gray-200 overflow-y-auto px-6">
+          <ul role="list" className="flex-auto divide-y divide-gray-200 overflow-y-auto px-6 bg-white">
            {cart?.lines
                                 .sort((a, b) =>
                                   a.merchandise.product.title.localeCompare(b.merchandise.product.title)
@@ -205,13 +201,9 @@ try {
                                 /> 
                                       </div>
                                       <div className="flex space-x-4">
-                                        <button type="button" className="text-sm font-medium text-indigo-600 hover:text-indigo-500">
-                                          Edit
-                                        </button>
+                                        
                                         <div className="flex border-l border-gray-300 pl-4">
-                                          <button type="button" className="text-sm font-medium text-indigo-600 hover:text-indigo-500">
                                           <DeleteItemButton item={item} optimisticUpdate={updateCartItem} />
-                                          </button>
                                         </div>
                                       </div>
                                     </div>
@@ -276,18 +268,17 @@ try {
         {/* Checkout form */}
         <section
           aria-labelledby="payment-heading"
-          className="flex-auto overflow-y-auto max-w-7xl px-4 pb-16 pt-12 sm:px-6 sm:pt-16 lg:px-8 lg:pb-24 lg:pt-0"
+          className="flex-auto overflow-y-auto max-w-7xl px-4 pb-16 pt-12 sm:px-6 bg-white sm:pt-16 lg:px-8 lg:pb-24 lg:pt-0"
         >
           <div className="mx-auto max-w-lg">
-            <div className="hidden pb-16 pt-2 lg:flex">
-              <a href="#">
-                <span className="sr-only">Your Company</span>
-                <img
-                  alt=""
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                  className="h-8 w-auto"
-                />
-              </a>
+            <div className="hidden pb-16 pt-2 lg:flex justify-center">
+                <h3 className="sr-only">Gaming Store </h3>
+                <Image
+                alt=""
+                src="/logo.webp"
+                className="size-52"
+                height={500} width={500}
+              />
             </div>
 
             <form className="mt-6 ">
