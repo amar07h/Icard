@@ -28,6 +28,7 @@
     "ui": "link:"
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "^15.2.2",
     "@tailwindcss/container-queries": "0.1.1",
     "@tailwindcss/forms": "0.5.10",
     "@tailwindcss/typography": "0.5.15",
@@ -36,6 +37,7 @@
     "@types/react": "19.0.0",
     "@types/react-dom": "19.0.1",
     "autoprefixer": "10.4.20",
+    "eslint": "^9.22.0",
     "postcss": "8.4.49",
     "prettier": "3.4.2",
     "prettier-plugin-tailwindcss": "0.6.9",

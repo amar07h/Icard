@@ -1,10 +1,6 @@
-import { useRef } from 'react';
 import { EmblaOptionsType } from 'embla-carousel';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
-import { useAutoplay } from './EmblaCarouselAutoplay';
-import { useAutoplayProgress } from './EmblaCarouselAutoplayProgress';
-import { NextButton, PrevButton, usePrevNextButtons } from './EmblaCarouselArrowButtons';
 import type { CarsoulType } from '@/lib/type/product';
 import { GridTileImage } from '@/components/grid/tile';
 
@@ -15,17 +11,12 @@ type PropType = {
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
   const { slides, options } = props;
-  const progressNode = useRef(null);
-  const [emblaRef, emblaApi] = useEmblaCarousel(options, [
+  const [emblaRef
+
+  ] = useEmblaCarousel(options, [
     Autoplay({ playOnInit: true, delay: 3000 })
   ]);
 
-  const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } =
-    usePrevNextButtons(emblaApi);
-
-  const { autoplayIsPlaying, toggleAutoplay, onAutoplayButtonClick } = useAutoplay(emblaApi);
-
-  const { showAutoplayProgress } = useAutoplayProgress(emblaApi, progressNode);
 
   return (
     <div className="embla">
