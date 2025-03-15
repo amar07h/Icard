@@ -1,40 +1,31 @@
-import { useRef } from 'react'
-import { EmblaOptionsType } from 'embla-carousel'
-import useEmblaCarousel from 'embla-carousel-react'
-import Autoplay from 'embla-carousel-autoplay'
-import { useAutoplay } from './EmblaCarouselAutoplay'
-import { useAutoplayProgress } from './EmblaCarouselAutoplayProgress'
-import {
-  NextButton,
-  PrevButton,
-  usePrevNextButtons
-} from './EmblaCarouselArrowButtons'
-import type {CarsoulType}from "@/lib/type/product"
+import { useRef } from 'react';
+import { EmblaOptionsType } from 'embla-carousel';
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
+import { useAutoplay } from './EmblaCarouselAutoplay';
+import { useAutoplayProgress } from './EmblaCarouselAutoplayProgress';
+import { NextButton, PrevButton, usePrevNextButtons } from './EmblaCarouselArrowButtons';
+import type { CarsoulType } from '@/lib/type/product';
 import { GridTileImage } from '@/components/grid/tile';
 
 type PropType = {
   slides: CarsoulType;
-  options?: EmblaOptionsType
-}
+  options?: EmblaOptionsType;
+};
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
-  const { slides, options } = props
-  const progressNode = useRef(null)
+  const { slides, options } = props;
+  const progressNode = useRef(null);
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [
     Autoplay({ playOnInit: true, delay: 3000 })
-  ])
+  ]);
 
-  const {
-    prevBtnDisabled,
-    nextBtnDisabled,
-    onPrevButtonClick,
-    onNextButtonClick
-  } = usePrevNextButtons(emblaApi)
+  const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } =
+    usePrevNextButtons(emblaApi);
 
-  const { autoplayIsPlaying, toggleAutoplay, onAutoplayButtonClick } =
-    useAutoplay(emblaApi)
+  const { autoplayIsPlaying, toggleAutoplay, onAutoplayButtonClick } = useAutoplay(emblaApi);
 
-  const { showAutoplayProgress } = useAutoplayProgress(emblaApi, progressNode)
+  const { showAutoplayProgress } = useAutoplayProgress(emblaApi, progressNode);
 
   return (
     <div className="embla">
@@ -43,24 +34,22 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           {slides.map((index) => (
             <div className="embla__slide" key={Math.random()}>
               <div className="embla__slide__number">
-              <GridTileImage
-                              alt={index.name}
-                              label={{
-                                title: index.name,
-                              }}
-                              src={index.featuredImage.url}
-                              fill
-                              sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
-                            />
+                <GridTileImage
+                  alt={index.name}
+                  label={{
+                    title: index.name
+                  }}
+                  src={index.featuredImage.url}
+                  fill
+                  sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
+                />
               </div>
             </div>
           ))}
         </div>
       </div>
-
-     
     </div>
-  )
-}
+  );
+};
 
-export default EmblaCarousel
+export default EmblaCarousel;

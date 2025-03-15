@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter, useSearchParams } from 'next/navigation';
-import React, { createContext, useContext, useMemo, useOptimistic } from 'react';
+import  { createContext, useContext, useMemo, useOptimistic } from 'react';
 
 type ProductState = {
   [key: string]: string;

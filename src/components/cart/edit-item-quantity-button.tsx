@@ -47,7 +47,7 @@ export function EditItemQuantityButton({
     >
       <SubmitButton type={type} />
       <p aria-live="polite" className="sr-only" role="status">
-        {"error with addiding data to cart"}
+        {'error with addiding data to cart'}
       </p>
     </form>
   );

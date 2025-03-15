@@ -76,17 +76,12 @@ export default function CartModal() {
               </div>
 
               {!cart || cart.lines.length === 0 ? (
-                
                 <div className="mt-20 flex w-full flex-col items-center justify-center overflow-hidden">
-               
                   <ShoppingCartIcon className="h-16" />
                   <p className="mt-6 text-center text-2xl font-bold">Your cart is empty.</p>
-                  
                 </div>
               ) : (
-                
                 <div className="flex h-full flex-col justify-between overflow-hidden p-1">
-
                   <ul className="flex-grow overflow-auto py-4">
                     {cart.lines
                       .sort((a, b) =>
@@ -95,7 +90,6 @@ export default function CartModal() {
                       .map((item, i) => {
                         const merchandiseSearchParams = {} as MerchandiseSearchParams;
 
-                      
                         const merchandiseUrl = createUrl(
                           `/product/${item.merchandise.product.handle}`,
                           new URLSearchParams(merchandiseSearchParams)
@@ -120,7 +114,7 @@ export default function CartModal() {
                                       item.merchandise.product.featuredImage.altText ||
                                       item.merchandise.product.title
                                     }
-                                    property=''
+                                    property=""
                                     src={item.merchandise.product.featuredImage.url}
                                   />
                                 </div>
@@ -133,7 +127,7 @@ export default function CartModal() {
                                     <span className="leading-tight">
                                       {item.merchandise.product.title}
                                     </span>
-                                    {item.merchandise.title !=="default" ? (
+                                    {item.merchandise.title !== 'default' ? (
                                       <p className="text-sm text-neutral-500 dark:text-neutral-400">
                                         {item.merchandise.product.title}
                                       </p>
@@ -169,9 +163,7 @@ export default function CartModal() {
                       })}
                   </ul>
                   <div className="py-4 text-sm text-neutral-500 dark:text-neutral-400">
-                    <div className="mb-3 flex items-center justify-between border-b border-neutral-200 pb-1 dark:border-neutral-700">
-                  
-                    </div>
+                    <div className="mb-3 flex items-center justify-between border-b border-neutral-200 pb-1 dark:border-neutral-700"></div>
                     <div className="mb-3 flex items-center justify-between border-b border-neutral-200 pb-1 pt-1 dark:border-neutral-700">
                       <p>Shipping</p>
                       <p className="text-right">Calculated at checkout</p>

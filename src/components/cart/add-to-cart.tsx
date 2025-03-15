@@ -69,12 +69,12 @@ export function AddToCart({ product }: { product: Product }) {
   return (
     <form
       action={async () => {
-         addCartItem(finalVariant, product)
+        addCartItem(finalVariant, product);
       }}
     >
       <SubmitButton availableForSale={availableForSale} selectedVariantId={selectedVariantId} />
       <p aria-live="polite" className="sr-only" role="status">
-        {"error 504"}
+        {'error 504'}
       </p>
     </form>
   );

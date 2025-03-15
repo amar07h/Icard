@@ -11,23 +11,12 @@
         {
           "id": "ProductOption/123",
           "name": "Server",
-          "values": [
-            "global",
-            "euro",
-            "usa",
-            "middle east"
-          ]
+          "values": ["global", "euro", "usa", "middle east"]
         },
         {
           "id": "ProductOption/456",
           "name": "Qte",
-          "values": [
-            "100",
-            "210",
-            "583",
-            "1080",
-            "2420"
-          ]
+          "values": ["100", "210", "583", "1080", "2420"]
         }
       ],
       "priceRange": "3.5",
@@ -147,10 +136,7 @@
         "title": "Free Fire Recharge diamond in tunisie",
         "description": "recharge votre compte free fire by id "
       },
-      "tags": [
-        "game",
-        "diamond"
-      ],
+      "tags": ["game", "diamond"],
       "updatedAt": "2023-09-01T12:00:00Z"
     },
     {
@@ -164,25 +150,12 @@
         {
           "id": "ProductOption/123",
           "name": "Server",
-          "values": [
-            "global",
-            "turkey",
-            "usa",
-            "middle east"
-          ]
+          "values": ["global", "turkey", "usa", "middle east"]
         },
         {
           "id": "ProductOption/456",
           "name": "Qte",
-          "values": [
-            "11",
-            "55",
-            "284",
-            "712",
-            "1088",
-            "2976",
-            "Weekly Diamonds Pass"
-          ]
+          "values": ["11", "55", "284", "712", "1088", "2976", "Weekly Diamonds Pass"]
         }
       ],
       "priceRange": "1",
@@ -318,10 +291,7 @@
         "title": "Carte cadeau Mobile Legends Diamonds in tunisie",
         "description": "Carte cadeau Mobile Legends Diamonds by id tunis Mobile Legends: Bang Bang ml wallper"
       },
-      "tags": [
-        "game",
-        "example-tag-2"
-      ],
+      "tags": ["game", "example-tag-2"],
       "updatedAt": "2023-09-01T12:00:00Z"
     },
     {
@@ -335,23 +305,12 @@
         {
           "id": "ProductOption/123",
           "name": "Server",
-          "values": [
-            "global",
-            "ksa",
-            "usa",
-            "Qatar"
-          ]
+          "values": ["global", "ksa", "usa", "Qatar"]
         },
         {
           "id": "ProductOption/456",
           "name": "Qte",
-          "values": [
-            "60",
-            "325",
-            "660",
-            "1800",
-            "24300"
-          ]
+          "values": ["60", "325", "660", "1800", "24300"]
         }
       ],
       "priceRange": "2",
@@ -455,10 +414,7 @@
         "title": "Carte cadeau PUBG Mobile UC in tunisie",
         "description": "Carte cadeau PUBG Mobile UC by id tunis شحن جواهر"
       },
-      "tags": [
-        "game",
-        "example-tag-2"
-      ],
+      "tags": ["game", "example-tag-2"],
       "updatedAt": "2023-09-01T12:00:00Z"
     },
     {
@@ -472,21 +428,12 @@
         {
           "id": "ProductOption/123",
           "name": "Server",
-          "values": [
-            "PC",
-            "XBOX",
-            "PS5"
-          ]
+          "values": ["PC", "XBOX", "PS5"]
         },
         {
           "id": "ProductOption/456",
           "name": "Qte",
-          "values": [
-            "1000",
-            "2800",
-            "5000",
-            "13500"
-          ]
+          "values": ["1000", "2800", "5000", "13500"]
         }
       ],
       "priceRange": "53",
@@ -638,10 +585,7 @@
         "title": "Carte cadeau fortnite UC in tunisie",
         "description": "Carte cadeau fortnite UC by id tunis شحن جواهر"
       },
-      "tags": [
-        "skine",
-        "example-tag-2"
-      ],
+      "tags": ["skine", "example-tag-2"],
       "updatedAt": "2023-09-01T12:00:00Z"
     },
     {
@@ -655,16 +599,12 @@
         {
           "id": "Production/123",
           "name": "Server",
-          "values": [
-            "PC"
-          ]
+          "values": ["PC"]
         },
         {
           "id": "ProductOpion/456",
           "name": "Qte",
-          "values": [
-            "skin"
-          ]
+          "values": ["skin"]
         }
       ],
       "priceRange": "22.5",
@@ -704,10 +644,7 @@
         "title": "fortnite-Rebirth Harley Quinn Skin in tunisie",
         "description": "fortnite-Rebirth Harley Quinn Skin by id tunis شحن جواهر"
       },
-      "tags": [
-        "skine",
-        "example-tag-2"
-      ],
+      "tags": ["skine", "example-tag-2"],
       "updatedAt": "2023-09-01T12:00:00Z"
     },
     {
@@ -721,16 +658,12 @@
         {
           "id": "Produion/123",
           "name": "Server",
-          "values": [
-            "PC"
-          ]
+          "values": ["PC"]
         },
         {
           "id": "ProductO456",
           "name": "Qte",
-          "values": [
-            "skin"
-          ]
+          "values": ["skin"]
         }
       ],
       "priceRange": "6.5",
@@ -770,10 +703,7 @@
         "title": "fortnite-Rebirth Harley Quinn Skin in tunisie",
         "description": "fortnite-Rebirth Harley Quinn Skin by id tunis شحن جواهر"
       },
-      "tags": [
-        "skine",
-        "example-tag-2"
-      ],
+      "tags": ["skine", "example-tag-2"],
       "updatedAt": "2023-09-01T12:00:00Z"
     },
     {
@@ -787,16 +717,12 @@
         {
           "id": "Produion/123",
           "name": "Server",
-          "values": [
-            "PC"
-          ]
+          "values": ["PC"]
         },
         {
           "id": "ProductO456",
           "name": "Qte",
-          "values": [
-            "skin"
-          ]
+          "values": ["skin"]
         }
       ],
       "priceRange": "84",
@@ -836,10 +762,7 @@
         "title": "fortnite-Rebirth Harley Quinn Skin in tunisie",
         "description": "fortnite-Rebirth Harley Quinn Skin by id tunis شحن جواهر"
       },
-      "tags": [
-        "skine",
-        "example-tag-2"
-      ],
+      "tags": ["skine", "example-tag-2"],
       "updatedAt": "2023-09-01T12:00:00Z"
     },
     {
@@ -853,22 +776,12 @@
         {
           "id": "ProductOption/123",
           "name": "platform",
-          "values": [
-            "xbox",
-            "pc",
-            "ps",
-            "mobile"
-          ]
+          "values": ["xbox", "pc", "ps", "mobile"]
         },
         {
           "id": "ProductOption/456",
           "name": "Qte",
-          "values": [
-            "1050",
-            "1600",
-            "2800",
-            "5900"
-          ]
+          "values": ["1050", "1600", "2800", "5900"]
         }
       ],
       "priceRange": "29.2",
@@ -1148,10 +1061,7 @@
         "title": "Carte cadeau fc25 FC point in tunisie",
         "description": "Carte cadeau fc25 tunis شحن جواهر"
       },
-      "tags": [
-        "game",
-        "example-tag-2"
-      ],
+      "tags": ["game", "example-tag-2"],
       "updatedAt": "2023-09-01T12:00:00Z"
     },
     {
@@ -1165,20 +1075,12 @@
         {
           "id": "ProductOption/123",
           "name": "Server",
-          "values": [
-            "global",
-            "europe"
-          ]
+          "values": ["global", "europe"]
         },
         {
           "id": "ProductOption/456",
           "name": "Qte",
-          "values": [
-            "100",
-            "400",
-            "800",
-            "2500"
-          ]
+          "values": ["100", "400", "800", "2500"]
         }
       ],
       "priceRange": "100",
@@ -1266,10 +1168,7 @@
         "title": "Carte cadeau roblox robux in tunisie",
         "description": "Carte cadeau robux UC by id tunis شحن جواهر"
       },
-      "tags": [
-        "game",
-        "example-tag-2"
-      ],
+      "tags": ["game", "example-tag-2"],
       "updatedAt": "2023-09-01T12:00:00Z"
     },
     {
@@ -1283,19 +1182,12 @@
         {
           "id": "ProductOption/123",
           "name": "Server",
-          "values": [
-            "global"
-          ]
+          "values": ["global"]
         },
         {
           "id": "ProductOption/456",
           "name": "Qte",
-          "values": [
-            "1000",
-            "2150",
-            "4350",
-            "6700"
-          ]
+          "values": ["1000", "2150", "4350", "6700"]
         }
       ],
       "priceRange": "1000",
@@ -1383,10 +1275,7 @@
         "title": "Carte cadeau apex legend coins in tunisie carte cadeau ",
         "description": "Carte cadeau apex legend coins by id tunis card cadeau carte cadeau شحن جواهر"
       },
-      "tags": [
-        "game",
-        "example-tag-2"
-      ],
+      "tags": ["game", "example-tag-2"],
       "updatedAt": "2023-09-01T12:00:00Z"
     },
     {
@@ -1400,22 +1289,12 @@
         {
           "id": "ProductOption/123",
           "name": "Server",
-          "values": [
-            "pc",
-            "xbox",
-            "ps4"
-          ]
+          "values": ["pc", "xbox", "ps4"]
         },
         {
           "id": "ProductOption/456",
           "name": "Qte",
-          "values": [
-            "global",
-            "usa",
-            "europ",
-            "eur",
-            "us"
-          ]
+          "values": ["global", "usa", "europ", "eur", "us"]
         }
       ],
       "priceRange": "38.5",
@@ -1531,10 +1410,7 @@
         "title": "Grand Theft Auto V (GTA V) : Premium Online Edition, clé Rockstar Games GLOBAL",
         "description": "Grand Theft Auto V (GTA V) : Premium Online Edition, clé Rockstar Games GLOBAL free download "
       },
-      "tags": [
-        "download",
-        "diamond"
-      ],
+      "tags": ["download", "diamond"],
       "updatedAt": "2023-09-01T12:00:00Z"
     },
     {
@@ -1548,20 +1424,12 @@
         {
           "id": "ProductOp23",
           "name": "Abonnement",
-          "values": [
-            "1 moins",
-            "2 moins",
-            "3 moins"
-          ]
+          "values": ["1 moins", "2 moins", "3 moins"]
         },
         {
           "id": "ProductOption/456",
           "name": "plan",
-          "values": [
-            "Basic",
-            "standard",
-            "Premium"
-          ]
+          "values": ["Basic", "standard", "Premium"]
         }
       ],
       "priceRange": "12",
@@ -1729,10 +1597,7 @@
         "title": "Abonnement compte netflix tunis",
         "description": "Regardez Netflix Officiel sur votre smartphone Android /iOS, Smart TV et Ordinateur, à un tarif fixe très attractif Sans contrat ni frais supplémentaires – Abonnement: 1, 3, 6 ou 12 Mois – Vous avez la possibilité de regarder le service sur un seul écran. Découvrez de nouveaux films et séries TV chaque semaine, il y en a pour tous les goûts . Une vaste sélection de séries TV, films, animes, documentaires et autres programmes primés sur des milliers d’appareils connectés à Internet. Téléchargez vos séries préférées pour les regarder hors connexion. vous offre l’opportunité d’avoir un compte Netflix en Tunisie."
       },
-      "tags": [
-        "streaming",
-        "diamond"
-      ],
+      "tags": ["streaming", "diamond"],
       "updatedAt": "2023-09-01T12:00:00Z"
     },
     {
@@ -1746,20 +1611,12 @@
         {
           "id": "ProductOp23",
           "name": "plan",
-          "values": [
-            "Basic",
-            "standard",
-            "Premium"
-          ]
+          "values": ["Basic", "standard", "Premium"]
         },
         {
           "id": "ProductOption/456",
           "name": "Abonnement",
-          "values": [
-            "1 moins",
-            "3 moins",
-            "6 moins"
-          ]
+          "values": ["1 moins", "3 moins", "6 moins"]
         }
       ],
       "priceRange": "12",
@@ -1831,10 +1688,7 @@
         "title": "Abonnement compte netflix tunis",
         "description": "Regardez Netflix Officiel sur votre smartphone Android /iOS, Smart TV et Ordinateur, à un tarif fixe très attractif Sans contrat ni frais supplémentaires – Abonnement: 1, 3, 6 ou 12 Mois – Vous avez la possibilité de regarder le service sur un seul écran. Découvrez de nouveaux films et séries TV chaque semaine, il y en a pour tous les goûts . Une vaste sélection de séries TV, films, animes, documentaires et autres programmes primés sur des milliers d’appareils connectés à Internet. Téléchargez vos séries préférées pour les regarder hors connexion. vous offre l’opportunité d’avoir un compte Netflix en Tunisie."
       },
-      "tags": [
-        "streaming",
-        "diamond"
-      ],
+      "tags": ["streaming", "diamond"],
       "updatedAt": "2023-09-01T12:00:00Z"
     },
     {
@@ -1848,16 +1702,12 @@
         {
           "id": "ProductOp23",
           "name": "plan",
-          "values": [
-            "4k"
-          ]
+          "values": ["4k"]
         },
         {
           "id": "ProductOption/456",
           "name": "Abonnement",
-          "values": [
-            "1 moins"
-          ]
+          "values": ["1 moins"]
         }
       ],
       "priceRange": "12",
@@ -1897,10 +1747,7 @@
         "title": "Abonnement compte netflix tunis",
         "description": "Regardez Netflix Officiel sur votre smartphone Android /iOS, Smart TV et Ordinateur, à un tarif fixe très attractif Sans contrat ni frais supplémentaires – Abonnement: 1, 3, 6 ou 12 Mois – Vous avez la possibilité de regarder le service sur un seul écran. Découvrez de nouveaux films et séries TV chaque semaine, il y en a pour tous les goûts . Une vaste sélection de séries TV, films, animes, documentaires et autres programmes primés sur des milliers d’appareils connectés à Internet. Téléchargez vos séries préférées pour les regarder hors connexion. vous offre l’opportunité d’avoir un compte Netflix en Tunisie."
       },
-      "tags": [
-        "streaming",
-        "diamond"
-      ],
+      "tags": ["streaming", "diamond"],
       "updatedAt": "2023-09-01T12:00:00Z"
     },
     {
@@ -1914,16 +1761,12 @@
         {
           "id": "ProductOp23",
           "name": "plan",
-          "values": [
-            "4k"
-          ]
+          "values": ["4k"]
         },
         {
           "id": "ProductOption/456",
           "name": "Abonnement",
-          "values": [
-            "1 moins"
-          ]
+          "values": ["1 moins"]
         }
       ],
       "priceRange": "12",
@@ -1963,10 +1806,7 @@
         "title": "Abonnement compte hulu tunis",
         "description": "Regardez hulu Officiel sur votre smartphone Android /iOS, Smart TV et Ordinateur, à un tarif fixe très attractif Sans contrat ni frais supplémentaires – Abonnement: 1, 3, 6 ou 12 Mois – Vous avez la possibilité de regarder le service sur un seul écran. Découvrez de nouveaux films et séries TV chaque semaine, il y en a pour tous les goûts . Une vaste sélection de séries TV, films, animes, documentaires et autres programmes primés sur des milliers d’appareils connectés à Internet. Téléchargez vos séries préférées pour les regarder hors connexion. vous offre l’opportunité d’avoir un compte Netflix en Tunisie."
       },
-      "tags": [
-        "music",
-        "diamond"
-      ],
+      "tags": ["music", "diamond"],
       "updatedAt": "2023-09-01T12:00:00Z"
     },
     {
@@ -1980,16 +1820,12 @@
         {
           "id": "ProductOp23",
           "name": "plan",
-          "values": [
-            "4k"
-          ]
+          "values": ["4k"]
         },
         {
           "id": "ProductOption/456",
           "name": "Abonnement",
-          "values": [
-            "1 moins"
-          ]
+          "values": ["1 moins"]
         }
       ],
       "priceRange": "12",
@@ -2029,10 +1865,7 @@
         "title": "Abonnement compte spotify tunis",
         "description": "Regardez spotify Officiel sur votre smartphone Android /iOS, Smart TV et Ordinateur, à un tarif fixe très attractif Sans contrat ni frais supplémentaires – Abonnement: 1, 3, 6 ou 12 Mois – Vous avez la possibilité de regarder le service sur un seul écran. Découvrez de nouveaux films et séries TV chaque semaine, il y en a pour tous les goûts . Une vaste sélection de séries TV, films, animes, documentaires et autres programmes primés sur des milliers d’appareils connectés à Internet. Téléchargez vos séries préférées pour les regarder hors connexion. vous offre l’opportunité d’avoir un compte Netflix en Tunisie."
       },
-      "tags": [
-        "music",
-        "diamond"
-      ],
+      "tags": ["music", "diamond"],
       "updatedAt": "2023-09-01T12:00:00Z"
     },
     {
@@ -2046,16 +1879,12 @@
         {
           "id": "ProductOp23",
           "name": "plan",
-          "values": [
-            "4k"
-          ]
+          "values": ["4k"]
         },
         {
           "id": "ProductOption/456",
           "name": "Abonnement",
-          "values": [
-            "1 moins"
-          ]
+          "values": ["1 moins"]
         }
       ],
       "priceRange": "12",
@@ -2095,10 +1924,7 @@
         "title": "Abonnement compte dezzer tunis",
         "description": "Regardez spotify Officiel sur votre smartphone Android /iOS, Smart TV et Ordinateur, à un tarif fixe très attractif Sans contrat ni frais supplémentaires – Abonnement: 1, 3, 6 ou 12 Mois – Vous avez la possibilité de regarder le service sur un seul écran. Découvrez de nouveaux films et séries TV chaque semaine, il y en a pour tous les goûts . Une vaste sélection de séries TV, films, animes, documentaires et autres programmes primés sur des milliers d’appareils connectés à Internet. Téléchargez vos séries préférées pour les regarder hors connexion. vous offre l’opportunité d’avoir un compte Netflix en Tunisie."
       },
-      "tags": [
-        "music",
-        "diamond"
-      ],
+      "tags": ["music", "diamond"],
       "updatedAt": "2023-09-01T12:00:00Z"
     },
     {
@@ -2112,19 +1938,12 @@
         {
           "id": "ProductOp23",
           "name": "plan",
-          "values": [
-            "1 moins"
-          ]
+          "values": ["1 moins"]
         },
         {
           "id": "ProductOption/456",
           "name": "Abonnement",
-          "values": [
-            "VIP",
-            "VIP Sports",
-            "VIP Mobile",
-            "Ultimate"
-          ]
+          "values": ["VIP", "VIP Sports", "VIP Mobile", "Ultimate"]
         }
       ],
       "priceRange": "12",
@@ -2212,10 +2031,7 @@
         "title": "Abonnement compte dezzer tunis",
         "description": "Regardez spotify Officiel sur votre smartphone Android /iOS, Smart TV et Ordinateur, à un tarif fixe très attractif Sans contrat ni frais supplémentaires – Abonnement: 1, 3, 6 ou 12 Mois – Vous avez la possibilité de regarder le service sur un seul écran. Découvrez de nouveaux films et séries TV chaque semaine, il y en a pour tous les goûts . Une vaste sélection de séries TV, films, animes, documentaires et autres programmes primés sur des milliers d’appareils connectés à Internet. Téléchargez vos séries préférées pour les regarder hors connexion. vous offre l’opportunité d’avoir un compte Netflix en Tunisie."
       },
-      "tags": [
-        "streaming",
-        "diamond"
-      ],
+      "tags": ["streaming", "diamond"],
       "updatedAt": "2023-09-01T12:00:00Z"
     },
     {
@@ -2229,22 +2045,12 @@
         {
           "id": "a",
           "name": "region",
-          "values": [
-            "usa",
-            "france",
-            "Allemagne",
-            "italy"
-          ]
+          "values": ["usa", "france", "Allemagne", "italy"]
         },
         {
           "id": "Produ",
           "name": "valeur",
-          "values": [
-            "3",
-            "10",
-            "20",
-            "50"
-          ]
+          "values": ["3", "10", "20", "50"]
         }
       ],
       "priceRange": "12",
@@ -2524,10 +2330,7 @@
         "title": "recharge Abonnement compte playstion",
         "description": "recharge Abonnement compte playstion playstion 3 playstion 4 playstion 6 "
       },
-      "tags": [
-        "console",
-        "diamond"
-      ],
+      "tags": ["console", "diamond"],
       "updatedAt": "2023-09-01T12:00:00Z"
     },
     {
@@ -2541,22 +2344,12 @@
         {
           "id": "ProductOp2c3",
           "name": "region",
-          "values": [
-            "usa",
-            "france",
-            "Allemagne",
-            "italy"
-          ]
+          "values": ["usa", "france", "Allemagne", "italy"]
         },
         {
           "id": "ProductOption/456",
           "name": "valeur",
-          "values": [
-            "1 moins",
-            "3 moins",
-            "6 moins",
-            "12 moins"
-          ]
+          "values": ["1 moins", "3 moins", "6 moins", "12 moins"]
         }
       ],
       "priceRange": "12",
@@ -2836,10 +2629,7 @@
         "title": "Abonnement compte xbox tunis",
         "description": "acheter Abonnement Xbox Game Pass Ultimate en Tunisie."
       },
-      "tags": [
-        "console",
-        "diamond"
-      ],
+      "tags": ["console", "diamond"],
       "updatedAt": "2023-09-01T12:00:00Z"
     },
     {
@@ -2853,22 +2643,12 @@
         {
           "id": "abv",
           "name": "region",
-          "values": [
-            "usa",
-            "france",
-            "Allemagne",
-            "italy"
-          ]
+          "values": ["usa", "france", "Allemagne", "italy"]
         },
         {
           "id": "Produ",
           "name": "valeur",
-          "values": [
-            "5",
-            "10",
-            "15",
-            "20"
-          ]
+          "values": ["5", "10", "15", "20"]
         }
       ],
       "priceRange": "1245",
@@ -3148,10 +2928,7 @@
         "title": "recharge Abonnement compte playstion",
         "description": "recharge Abonnement compte playstion playstion 3 playstion 4 playstion 6 "
       },
-      "tags": [
-        "console",
-        "diamond"
-      ],
+      "tags": ["console", "diamond"],
       "updatedAt": "2023-09-01T12:00:00Z"
     },
     {
@@ -3165,24 +2942,12 @@
         {
           "id": "abvbv",
           "name": "region",
-          "values": [
-            "usa",
-            "france",
-            "Allemagne",
-            "italy"
-          ]
+          "values": ["usa", "france", "Allemagne", "italy"]
         },
         {
           "id": "Procxvdu",
           "name": "valeur",
-          "values": [
-            "3",
-            "9",
-            "15",
-            "20",
-            "5",
-            "10"
-          ]
+          "values": ["3", "9", "15", "20", "5", "10"]
         }
       ],
       "priceRange": "12",
@@ -3462,10 +3227,7 @@
         "title": "recharge Abonnement compte Steam Wallet Gift Card",
         "description": "recharge Abonnement compte Steam Wallet Gift Card "
       },
-      "tags": [
-        "console",
-        "diamond"
-      ],
+      "tags": ["console", "diamond"],
       "updatedAt": "2023-09-01T12:00:00Z"
     },
     {
@@ -3479,24 +3241,12 @@
         {
           "id": "abvbv",
           "name": "region",
-          "values": [
-            "usa",
-            "france",
-            "Allemagne",
-            "italy"
-          ]
+          "values": ["usa", "france", "Allemagne", "italy"]
         },
         {
           "id": "Procxvdu",
           "name": "valeur",
-          "values": [
-            "3",
-            "5",
-            "9",
-            "10",
-            "15",
-            "20"
-          ]
+          "values": ["3", "5", "9", "10", "15", "20"]
         }
       ],
       "priceRange": "12",
@@ -3776,10 +3526,7 @@
         "title": "recharge Abonnement compte SGoogle Play Gift Card",
         "description": "recharge Abonnement compte Google Play Gift Card "
       },
-      "tags": [
-        "console",
-        "diamond"
-      ],
+      "tags": ["console", "diamond"],
       "updatedAt": "2023-09-01T12:00:00Z"
     },
     {
@@ -3793,24 +3540,12 @@
         {
           "id": "abvbv",
           "name": "region",
-          "values": [
-            "usa",
-            "france",
-            "Allemagne",
-            "italy"
-          ]
+          "values": ["usa", "france", "Allemagne", "italy"]
         },
         {
           "id": "Procxvdu",
           "name": "valeur",
-          "values": [
-            "3",
-            "5",
-            "9",
-            "10",
-            "15",
-            "20"
-          ]
+          "values": ["3", "5", "9", "10", "15", "20"]
         }
       ],
       "priceRange": "12",
@@ -4138,10 +3873,7 @@
         "title": "recharge Abonnement compte Apple iTunes Gift Card  Gift Card",
         "description": "recharge Abonnement compte Apple iTunes Gift Card  "
       },
-      "tags": [
-        "console",
-        "diamond"
-      ],
+      "tags": ["console", "diamond"],
       "updatedAt": "2023-09-01T12:00:00Z"
     },
     {
@@ -4155,20 +3887,12 @@
         {
           "id": "abvbv",
           "name": "region",
-          "values": [
-            "États Unis",
-            "Europe"
-          ]
+          "values": ["États Unis", "Europe"]
         },
         {
           "id": "Procxvdu",
           "name": "valeur",
-          "values": [
-            "15",
-            "20",
-            "25",
-            "30"
-          ]
+          "values": ["15", "20", "25", "30"]
         }
       ],
       "priceRange": "12",
@@ -4320,10 +4044,7 @@
         "title": "recharge Abonnement compte Twitch  Twitch  Gift Card  Gift Card",
         "description": "recharge Abonnement compte Twitch  pple iTunes Gift Card  "
       },
-      "tags": [
-        "streaming",
-        "diamond"
-      ],
+      "tags": ["streaming", "diamond"],
       "updatedAt": "2023-09-01T12:00:00Z"
     },
     {
@@ -4337,18 +4058,12 @@
         {
           "id": "abvbv",
           "name": "Subscription",
-          "values": [
-            "Basic",
-            "Nitro"
-          ]
+          "values": ["Basic", "Nitro"]
         },
         {
           "id": "Procxvdu",
           "name": "valeur",
-          "values": [
-            "1 moins",
-            "30 jours"
-          ]
+          "values": ["1 moins", "30 jours"]
         }
       ],
       "priceRange": "12",
@@ -4404,13 +4119,9 @@
         "title": "recharge Abonnement compte Discord   Gift Card  Gift Card",
         "description": "recharge Abonnement compte Discord   pple iTunes Gift Card  "
       },
-      "tags": [
-        "streaming",
-        "diamond"
-      ],
+      "tags": ["streaming", "diamond"],
       "updatedAt": "2023-09-01T12:00:00Z"
-    }
-    ,
+    },
     {
       "id": "Z2lkOikdfsvcqdWbdN0fvcxds",
       "handle": "tiktok",
@@ -4422,19 +4133,12 @@
         {
           "id": "abvbv",
           "name": "region",
-          "values": [
-            "global"
-          ]
+          "values": ["global"]
         },
         {
           "id": "Procxvdu",
           "name": "valeur",
-          "values": [
-            "5",
-            "10",
-            "15",
-            "20"
-          ]
+          "values": ["5", "10", "15", "20"]
         }
       ],
       "priceRange": "12",
@@ -4486,8 +4190,7 @@
             }
           ],
           "price": "61"
-        }
-        ,
+        },
         {
           "id": "bv8bn",
           "title": "20",
@@ -4523,13 +4226,9 @@
         "title": "recharge Abonnement compte tiktok   Gift Card ",
         "description": "recharge coins Abonnement compte tiktok"
       },
-      "tags": [
-        "streaming",
-        "diamond"
-      ],
+      "tags": ["streaming", "diamond"],
       "updatedAt": "2023-09-01T12:00:00Z"
-    }
-    ,
+    },
     {
       "id": "Z2lkOikdfsvcqdfWbdN0fvcxds",
       "handle": "visacard-Anonimy",
@@ -4541,19 +4240,12 @@
         {
           "id": "abvbv",
           "name": "region",
-          "values": [
-            "global"
-          ]
+          "values": ["global"]
         },
         {
           "id": "Procxvdu",
           "name": "valeur",
-          "values": [
-            "5",
-            "10",
-            "15",
-            "20"
-          ]
+          "values": ["5", "10", "15", "20"]
         }
       ],
       "priceRange": "12",
@@ -4605,8 +4297,7 @@
             }
           ],
           "price": "61"
-        }
-        ,
+        },
         {
           "id": "bv8bn",
           "title": "20",
@@ -4642,13 +4333,9 @@
         "title": "acheter VISA Card USD Gift ",
         "description": "acheter VISA Card USD Voucher GLOBAL Card Key Tunisie"
       },
-      "tags": [
-        "financier",
-        "diamond"
-      ],
+      "tags": ["financier", "diamond"],
       "updatedAt": "2023-09-01T12:00:00Z"
-    }
-    ,
+    },
     {
       "id": "Z2lkOikdfsvcqdfWCXXWbdN0fvcxds",
       "handle": "visacard-Qeta",
@@ -4660,19 +4347,12 @@
         {
           "id": "abvbv",
           "name": "region",
-          "values": [
-            "global"
-          ]
+          "values": ["global"]
         },
         {
           "id": "Procxvdu",
           "name": "valeur",
-          "values": [
-            "5",
-            "10",
-            "15",
-            "20"
-          ]
+          "values": ["5", "10", "15", "20"]
         }
       ],
       "priceRange": "12",
@@ -4724,8 +4404,7 @@
             }
           ],
           "price": "61"
-        }
-        ,
+        },
         {
           "id": "bv8bn",
           "title": "20",
@@ -4761,13 +4440,9 @@
         "title": "acheter VISA Card USD Gift ",
         "description": "acheter VISA Card USD Voucher GLOBAL Card Key Tunisie"
       },
-      "tags": [
-        "financier",
-        "diamond"
-      ],
+      "tags": ["financier", "diamond"],
       "updatedAt": "2023-09-01T12:00:00Z"
-    }
-    ,
+    },
     {
       "id": "Z2lkOikdffgfsvcqdfWbdN0fvcxds",
       "handle": "mastercard-Anonimy",
@@ -4779,19 +4454,12 @@
         {
           "id": "abvbv",
           "name": "region",
-          "values": [
-            "global"
-          ]
+          "values": ["global"]
         },
         {
           "id": "Procxvdu",
           "name": "valeur",
-          "values": [
-            "5",
-            "10",
-            "15",
-            "20"
-          ]
+          "values": ["5", "10", "15", "20"]
         }
       ],
       "priceRange": "12",
@@ -4843,8 +4511,7 @@
             }
           ],
           "price": "61"
-        }
-        ,
+        },
         {
           "id": "bv8bn",
           "title": "20",
@@ -4880,13 +4547,9 @@
         "title": "acheter mastercard Card USD Gift ",
         "description": "acheter mastercard Card USD Voucher GLOBAL Card Key Tunisie"
       },
-      "tags": [
-        "financier",
-        "diamond"
-      ],
+      "tags": ["financier", "diamond"],
       "updatedAt": "2023-09-01T12:00:00Z"
-    }
-    ,
+    },
     {
       "id": "Z2lkOikdfsvcqdfWCXXs5WbdNfd0fvcxds",
       "handle": "mastercard-qeta",
@@ -4898,19 +4561,12 @@
         {
           "id": "abvbv",
           "name": "region",
-          "values": [
-            "global"
-          ]
+          "values": ["global"]
         },
         {
           "id": "Procxvdu",
           "name": "valeur",
-          "values": [
-            "5",
-            "10",
-            "15",
-            "20"
-          ]
+          "values": ["5", "10", "15", "20"]
         }
       ],
       "priceRange": "12",
@@ -4962,8 +4618,7 @@
             }
           ],
           "price": "61"
-        }
-        ,
+        },
         {
           "id": "bv8bn",
           "title": "20",
@@ -4999,13 +4654,9 @@
         "title": "acheter mastercard Card USD Gift ",
         "description": "acheter mastercard Card USD Voucher GLOBAL Card Key Tunisie"
       },
-      "tags": [
-        "financier",
-        "diamond"
-      ],
+      "tags": ["financier", "diamond"],
       "updatedAt": "2023-09-01T12:00:00Z"
-    }
-    ,
+    },
     {
       "id": "Z2lkOikdfsvcqdfWCXXvcs5WbdNfd0fvcxds",
       "handle": "paypal",
@@ -5017,19 +4668,12 @@
         {
           "id": "abvbv",
           "name": "region",
-          "values": [
-            "global"
-          ]
+          "values": ["global"]
         },
         {
           "id": "Procxvdu",
           "name": "valeur",
-          "values": [
-            "5",
-            "10",
-            "15",
-            "20"
-          ]
+          "values": ["5", "10", "15", "20"]
         }
       ],
       "priceRange": "12",
@@ -5081,8 +4725,7 @@
             }
           ],
           "price": "61"
-        }
-        ,
+        },
         {
           "id": "bv8bn",
           "title": "20",
@@ -5118,10 +4761,7 @@
         "title": "acheter paypal Card USD Gift ",
         "description": "acheter paypal Card USD Voucher GLOBAL Card Key Tunisie"
       },
-      "tags": [
-        "financier",
-        "diamond"
-      ],
+      "tags": ["financier", "diamond"],
       "updatedAt": "2023-09-01T12:00:00Z"
     }
   ]

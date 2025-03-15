@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import Image from 'next/image';
 import Label from '../label';
-import {ComponentProps} from "react"
+import { ComponentProps } from 'react';
 export function GridTileImage({
   isInteractive = true,
   active,
@@ -34,12 +34,7 @@ export function GridTileImage({
           {...props}
         />
       ) : null}
-      {label ? (
-        <Label
-          title={label.title}
-          position={label.position}
-        />
-      ) : null}
+      {label ? <Label title={label.title} position={label.position} /> : null}
     </div>
   );
 }

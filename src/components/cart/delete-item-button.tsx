@@ -26,7 +26,7 @@ export function DeleteItemButton({
         <XMarkIcon className="mx-[1px] h-4 w-4 text-white dark:text-black" />
       </button>
       <p aria-live="polite" className="sr-only" role="status">
-        {"error with deleting data"}
+        {'error with deleting data'}
       </p>
     </form>
   );

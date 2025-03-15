@@ -2,7 +2,7 @@
 
 import clsx from 'clsx';
 import { useProduct, useUpdateURL } from '@/components/product/product-context';
-import { ProductOption, ProductVariant } from '@/lib/type';
+import { ProductOption, ProductVariant } from '@/lib/type/product';
 
 type Combination = {
   id: string;
@@ -13,7 +13,7 @@ type Combination = {
 export function VariantSelector({
   options,
   variants,
-  sendDataToParent 
+  sendDataToParent
 }: {
   options: ProductOption[];
   variants: ProductVariant[];
@@ -21,7 +21,7 @@ export function VariantSelector({
 }) {
   const { state, updateOption } = useProduct();
   const updateURL = useUpdateURL();
-  const sendData = ($data:string) => {
+  const sendData = ($data: string) => {
     sendDataToParent($data);
   };
   const hasNoOptionsOrJustOneOption =
@@ -70,7 +70,7 @@ export function VariantSelector({
               <button
                 formAction={() => {
                   const newState = updateOption(optionNameLowerCase, value);
-                  sendData(value)
+                  sendData(value);
                   updateURL(newState);
                 }}
                 key={value}

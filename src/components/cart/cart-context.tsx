@@ -1,5 +1,5 @@
 'use client';
-import dynamic from 'next/dynamic'
+import dynamic from 'next/dynamic';
 import type { Product, ProductVariant } from '@/lib/type/product';
 import type { Cart, CartItem } from '@/lib/type/cart';
 import { createContext, ReactNode, useContext, useEffect, useMemo, useReducer } from 'react';
@@ -57,7 +57,7 @@ function createOrUpdateCartItem(
     cost: {
       totalAmount: {
         amount: totalAmount,
-        currencyCode: "tnd"
+        currencyCode: 'tnd'
       }
     },
     merchandise: {
@@ -82,29 +82,26 @@ function updateCartTotals(lines: CartItem[]): Pick<Cart, 'totalQuantity' | 'cost
   return {
     totalQuantity,
     cost: {
-      subtotalAmount:{ amount: totalAmount.toString(), currencyCode },
-      totalAmount:{ amount: totalAmount.toString(), currencyCode },
+      subtotalAmount: { amount: totalAmount.toString(), currencyCode },
+      totalAmount: { amount: totalAmount.toString(), currencyCode },
       totalTaxAmount: { amount: '0', currencyCode }
     }
   };
 }
 
 function createEmptyCart(): Cart {
-  
   return {
     id: undefined,
     checkoutUrl: '',
     totalQuantity: 0,
     lines: [],
     cost: {
-      subtotalAmount: { amount: '0', currencyCode: 'tnd'},
-      totalAmount: { amount: '0', currencyCode: 'tnd'},
-      totalTaxAmount: { amount: '0', currencyCode: 'tnd'}
+      subtotalAmount: { amount: '0', currencyCode: 'tnd' },
+      totalAmount: { amount: '0', currencyCode: 'tnd' },
+      totalTaxAmount: { amount: '0', currencyCode: 'tnd' }
     }
   };
 }
-
-
 
 function cartReducer(state: Cart | undefined, action: CartAction): Cart {
   const currentCart = state || createEmptyCart();
@@ -144,12 +141,9 @@ function cartReducer(state: Cart | undefined, action: CartAction): Cart {
   }
 }
 
-export function CartProvider({ children }: { 
-  children: ReactNode
-
- }) {
+export function CartProvider({ children }: { children: ReactNode }) {
   const [cart, dispatch] = useReducer(cartReducer, createEmptyCart(), () => {
-  const cart=  localStorage.getItem('cart');
+    const cart = localStorage.getItem('cart');
     if (cart !== 'undefined') {
       const storedCart = localStorage.getItem('cart');
       return storedCart ? JSON.parse(storedCart) : createEmptyCart();
@@ -169,10 +163,7 @@ export function CartProvider({ children }: {
   const updateCartItem = (merchandiseId: string, updateType: UpdateType) => {
     dispatch({ type: 'UPDATE_ITEM', payload: { merchandiseId, updateType } });
   };
-  const value = useMemo(
-    () => ({ cart, addCartItem,updateCartItem }),
-    [cart]
-  );
+  const value = useMemo(() => ({ cart, addCartItem, updateCartItem }), [cart]);
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }

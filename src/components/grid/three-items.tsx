@@ -1,8 +1,8 @@
 import { GridTileImage } from '@/components/grid/tile';
-import type { CarsoulType, Offre ,CarouselData} from '@/lib/type/product';
-import { GetOffre,GetCarsoul } from '@/lib/server/get';
+import type { CarsoulType, Offre, CarouselData } from '@/lib/type/product';
+import { GetOffre } from '@/lib/server/get';
 import Link from 'next/link';
-import { Fragment ,FC} from "react";
+import { Fragment, FC } from 'react';
 function ThreeItemGridItem({
   item,
   size,
@@ -31,7 +31,7 @@ function ThreeItemGridItem({
           alt={item.name}
           label={{
             position: size === 'full' ? 'center' : 'bottom',
-            title: item.name as string,
+            title: item.name as string
           }}
         />
       </Link>
@@ -41,38 +41,35 @@ function ThreeItemGridItem({
 
 export async function ThreeItemGrid() {
   // Collections that start with `hidden-*` are hidden from the search page.
-  //todo make this with real data 
-  const homepage:CarsoulType = await GetOffre();
-  const homepageItems=homepage
+  //todo make this with real data
+  const homepage: CarsoulType = await GetOffre();
+  const homepageItems = homepage;
   if (!homepageItems || !homepageItems || !homepageItems) return null;
 
   const [firstProduct, secondProduct, thirdProduct] = homepageItems;
 
   return (
-    <section className="mx-auto grid max-w-screen-7xl gap-4 px-4 pb-4 mt-3 md:grid-cols-6 md:grid-rows-2 lg:max-h-[calc(100vh-200px)]">
+    <section className="max-w-screen-7xl mx-auto mt-3 grid gap-4 px-4 pb-4 md:grid-cols-6 md:grid-rows-2 lg:max-h-[calc(100vh-200px)]">
       <ThreeItemGridItem size="full" item={firstProduct} priority={true} />
       <ThreeItemGridItem size="half" item={secondProduct} priority={true} />
       <ThreeItemGridItem size="half" item={thirdProduct} />
     </section>
   );
 }
-export  const FourItemGrid:FC<CarouselData> =({ product,ComponentName,ComponentPath }) => {
+export const FourItemGrid: FC<CarouselData> = ({ product, ComponentName }) => {
+  const products: CarsoulType = product;
 
-  const products :CarsoulType =product
-  
   if (!products?.length) return null;
   const itemsWithoutFirst = products.slice(1);
 
   return (
-    <Fragment>         
-       <div className="text-7xl text-red-500 text-center "> {ComponentName} </div>       
-    <section className="mx-auto mt-12 grid max-w-screen-2xl gap-4 px-4 pb-4 lg:mt-3 md:grid-cols-12 md:grid-rows-2 lg:max-h-[calc(100vh-200px)]">
-
-      {itemsWithoutFirst.map((i)=>(
-      <ThreeItemGridItem key={i.id} size="half" item={i} priority={true} />
-    ))}
-    </section>
+    <Fragment>
+      <div className="text-center text-xl text-red-500"> {ComponentName} </div>
+      <section className="mx-auto mt-12 grid max-w-screen-2xl gap-4 px-4 pb-4 md:grid-cols-12 md:grid-rows-2 lg:mt-3 lg:max-h-[calc(100vh-200px)]">
+        {itemsWithoutFirst.map((i) => (
+          <ThreeItemGridItem key={i.id} size="half" item={i} priority={true} />
+        ))}
+      </section>
     </Fragment>
-
   );
-}
+};

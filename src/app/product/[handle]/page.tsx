@@ -1,16 +1,15 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { GridTileImage } from '@/components/grid/tile';
-import Footer from '@/components/layouts/footer';
 import { Gallery } from '@/components/product/gallery';
 import { ProductProvider } from '@/components/product/product-context';
 import { ProductDescription } from '@/components/product/product-description';
-import {GetSinglData,getProductRecommendations } from '@/lib/server/get';
-import { Image,Product } from '@/lib/type/product';
+import { GetSinglData, getProductRecommendations } from '@/lib/server/get';
+import { Image, Product } from '@/lib/type/product';
 import Link from 'next/link';
 import { Suspense } from 'react';
 
- export async function generateMetadata(props: {
+export async function generateMetadata(props: {
   params: Promise<{ handle: string }>;
 }): Promise<Metadata> {
   const params = await props.params;
@@ -44,11 +43,11 @@ import { Suspense } from 'react';
         }
       : null
   };
-} 
+}
 
 export default async function ProductPage(props: { params: Promise<{ handle: string }> }) {
   const params = await props.params;
-  const product:Product = await GetSinglData(params.handle);
+  const product: Product = await GetSinglData(params.handle);
   if (!product) return notFound();
 
   const productJsonLd = {
@@ -62,8 +61,8 @@ export default async function ProductPage(props: { params: Promise<{ handle: str
       availability: product.availableForSale
         ? 'https://schema.org/InStock'
         : 'https://schema.org/OutOfStock',
-      highPrice: product.priceRange||"200",
-      lowPrice: product.priceRange||"100"
+      highPrice: product.priceRange || '200',
+      lowPrice: product.priceRange || '100'
     }
   };
 
@@ -83,12 +82,12 @@ export default async function ProductPage(props: { params: Promise<{ handle: str
                 <div className="relative aspect-square h-full max-h-[550px] w-full overflow-hidden" />
               }
             >
-               <Gallery
+              <Gallery
                 images={product.images.slice(0, 5).map((image: Image) => ({
                   src: image.url,
                   altText: image.altText
                 }))}
-              /> 
+              />
             </Suspense>
           </div>
 
@@ -98,17 +97,16 @@ export default async function ProductPage(props: { params: Promise<{ handle: str
             </Suspense>
           </div>
         </div>
-       <RelatedProducts tag={product.tags[0]||product.tags[1]||product.tags[3]} />
-        </div>
-      <Footer />
+        <RelatedProducts tag={product.tags[0] || product.tags[1] || product.tags[3]} />
+      </div>
     </ProductProvider>
   );
 }
 
- async function RelatedProducts({ tag }: { tag: string }) {
- const relatedProducts: Product[] = await getProductRecommendations(tag);
+async function RelatedProducts({ tag }: { tag: string }) {
+  const relatedProducts: Product[] = await getProductRecommendations(tag);
 
- if (!relatedProducts.length) return null;
+  if (!relatedProducts.length) return null;
 
   return (
     <div className="py-8">
@@ -127,7 +125,7 @@ export default async function ProductPage(props: { params: Promise<{ handle: str
               <GridTileImage
                 alt={product.title}
                 label={{
-                  title: product.title,
+                  title: product.title
                 }}
                 src={product.featuredImage.url}
                 fill
@@ -139,4 +137,4 @@ export default async function ProductPage(props: { params: Promise<{ handle: str
       </ul>
     </div>
   );
-} 
+}
